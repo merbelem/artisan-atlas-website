@@ -1,0 +1,24 @@
+{%- comment -%} Perf: warm up Shopify CDN and preload Spitzkant 
+   Custom heading font family override (Spitzkant)
+   Use Spitzkant for all heading families via theme variables
+   We keep Theme Editor typography controls (sizes/weights/spacing), but force
+   heading font-family to Spitzkant across the theme.
+   If theme updates ever rename these variables, re-apply this block.
+{%- endcomment -%}
+
+<link rel="preload" as="font" type="font/woff2"
+  href="{{ 'spitzkant-head-regular.woff2' | asset_url }}"
+  crossorigin>
+
+<style>
+@font-face{
+  font-family: 'Spitzkant';
+  src:
+    url('{{ 'spitzkant-head-regular.woff2' | asset_url }}') format('woff2'),
+    url('{{ 'spitzkant-head-regular.woff'  | asset_url }}') format('woff');
+  font-weight: 400;   /* you own regular only */
+  font-style: normal;
+  font-display: swap;
+}
+</style>
+

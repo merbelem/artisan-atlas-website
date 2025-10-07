@@ -1,0 +1,139 @@
+/* === Artisan Atlas — Shape Masks & Edge Utilities ===================== */
+
+/* --- Generic mask for images/blocks (photo clipped to a shape) --- */
+.mask {
+  --mask-url: none;
+  display:block;
+  overflow:hidden;
+  -webkit-mask-image: var(--mask-url);
+          mask-image: var(--mask-url);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain; /* use 'cover' for edge-to-edge */
+          mask-size: contain;
+}
+.mask > img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Map mask names to SVGs (add more as you export them) */
+.mask--arch { --mask-url: url('{{ "mask-arch.svg" | asset_url }}'); }
+/* .mask--vase-wide  { --mask-url: url('{{ "mask-vase-wide.svg"  | asset_url }}'); } */
+/* .mask--flower-8   { --mask-url: url('{{ "mask-flower-8.svg"   | asset_url }}'); } */
+
+/* --- Bottom edge on photos/blocks (wave cut-off) --- */
+.photo-edge { position:relative; }
+.photo-edge img { display:block; width:100%; height:auto; object-fit:cover; }
+.photo-edge::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-1px; /* hide hairline seams */
+  height: var(--edge-height, 120px);
+  background: var(--edge-color, var(--sand));
+  pointer-events:none;
+  -webkit-mask-image: var(--edge-mask);
+          mask-image: var(--edge-mask);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: bottom center;
+          mask-position: bottom center;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+
+/* Optional: flip for top edges */
+.edge-top { transform: scaleY(-1); }
+
+/* Map edge names to your wave SVGs */
+.edge--wave-low           { --edge-mask: url('{{ "edge-wave-low.png"            | asset_url }}'); }
+.edge--wave-high          { --edge-mask: url('{{ "edge-wave-high.svg"           | asset_url }}'); }
+.edge--wave-rect-rounded  { --edge-mask: url('{{ "edge-wave-rect-rounded.svg"   | asset_url }}'); }
+.edge--wave-rect-straight { --edge-mask: url('{{ "edge-wave-rect-straight.svg"  | asset_url }}'); }
+.edge--wave-stack-3       { --edge-mask: url('{{ "edge-wave-stack-3.svg"        | asset_url }}'); }
+
+/* Height presets for waves */
+.edge-h-120 { --edge-height:120px; }
+.edge-h-140 { --edge-height:140px; }
+.edge-h-160 { --edge-height:160px; }
+.edge-h-200 { --edge-height:200px; }
+/* matches mockups across breakpoints with one class */
+.edge--h-fluid { --edge-height: clamp(90px, 12vw, 180px); }
+
+/* Color presets (matching brand palette) */
+.edge--color-sand  { --edge-color: var(--sand); }
+.edge--color-linen { --edge-color: var(--linen); }
+.edge--color-clay  { --edge-color: var(--clay); }
+.edge--color-espresso { --edge-color: var(--espresso); }
+
+/* Make a block span the full viewport width even inside a page-width container */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Pull the wave up so it “attaches” to the section above */
+.edge-overlap-prev {
+  margin-top: calc(var(--edge-height, 120px) * -1);
+}
+
+/* ---------------------HELP--------------------- */
+/* ----- Full-width wave separator (hero bottom) ----------------------- */
+.edge-separator{
+  position: relative;
+  width: 100%;
+  /* unified height system */
+  block-size: var(--edge-height, 140px);
+  line-height: 0;
+  /* IMPORTANT: the wrapper itself must NOT be masked */
+  background: transparent;
+  /* keep the art's aspect ratio and center it */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: cover;      /* fills the width, no distortion */
+  mask-size: cover;
+
+  /* Horizontal cropping (scale the SVG wider to avoid seeing straight ends) */
+  --edge-scale-x: 1;
+}
+
+/* Draw only the wave using a pseudo element */
+.edge-separator::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--edge-fill, currentColor); /* your cream fill */
+  /* mask on the pseudo only */
+  -webkit-mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x)) 100% no-repeat;
+          mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x)) 100% no-repeat;
+}
+
+/* Presets you already use */
+.edge--wave-low  { --edge-mask: url('{{ "edge-wave-low.png"  | asset_url }}'); }
+.edge--fill-cream{ --edge-fill: var(--sand); }
+
+/* Height presets */
+.edge--h-fluid { --edge-height: clamp(110px, 12vw, 190px); }
+.edge--h-220   { --edge-height: 220px; }
+.edge--h-240   { --edge-height: 240px; }
+
+/* Pull the wave up over the hero and layer it above */
+.edge--overlap-prev{
+  margin-block-start: calc(var(--edge-height) * -0.62);
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Full-bleed helper */
+.full-bleed{
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+/* Horizontal “crop” helpers (hide the flat ends) */
+.edge--crop-10 { --edge-scale-x: 1.10; }
+.edge--crop-15 { --edge-scale-x: 1.15; }
+.edge--crop-20 { --edge-scale-x: 1.20; }
+.edge--crop-25 { --edge-scale-x: 1.25; } /* use this if the ends ever show */

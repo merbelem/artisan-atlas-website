@@ -1,0 +1,91 @@
+/* ===========================
+   Artisan Atlas – Brand tokens
+   Prefix variables with --aa- so they never collide with theme defaults.
+   =========================== */
+
+/* ---- Fonts (names only; sources live in fonts-custom.liquid) ---- */
+:root {
+  --aa-font-display: "Spitzkant", ui-serif, Georgia, "Times New Roman", serif;
+  --aa-font-body: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Palette (hex) ---- */
+  --sand: #F2F2ED; 
+  --linen: #D9D0C2;
+  --espresso: #4F413A;
+  --clay: #785C53;
+  --ashwood: #8D756D;
+
+  /* ---- Semantic aliases (what the UI actually uses) ---- */
+  --aa-bg:        var(--sand);
+  --aa-fg:        var(--espresso);
+  --aa-primary:   var(--clay);
+  /* fallback first */
+  /* Older iOS/Safari versions (and some email clients) don’t support color-mix. Put a plain RGBA first, then override it when supported. */
+  --aa-muted: rgba(79, 65, 58, .45);
+  --aa-border: rgba(229, 227, 225, 1);
+
+  /* ---- Radii, shadows, spacing ---- */
+  --aa-radius-sm: 8px;
+  --aa-radius-md: 16px;
+  --aa-radius-lg: 28px;
+
+  --aa-shadow-sm: 0 1px 2px rgb(0 0 0 / 8%);
+  --aa-shadow-md: 0 6px 18px rgb(0 0 0 / 10%);
+
+  --aa-space-2xs: .25rem;
+  --aa-space-xs:  .5rem;
+  --aa-space-sm:  .75rem;
+  --aa-space-md:  1rem;
+  --aa-space-lg:  1.5rem;
+  --aa-space-xl:  2rem;
+
+  /* ---- Fluid type scale (Utopia-like) ---- */
+  --aa-step--2: clamp(.74rem, .71rem + .15vw, .80rem);
+  --aa-step--1: clamp(.88rem, .83rem + .28vw, 1.00rem);
+  --aa-step-0:  clamp(1.00rem, .95rem + .45vw, 1.25rem);
+  --aa-step-1:  clamp(1.25rem, 1.16rem + .67vw, 1.56rem);
+  --aa-step-2:  clamp(1.56rem, 1.40rem + .96vw, 1.95rem);
+  --aa-step-3:  clamp(1.95rem, 1.69rem + 1.33vw, 2.44rem);
+  --aa-step-4:  clamp(2.44rem, 2.03rem + 1.81vw, 3.05rem);
+  --aa-step-5:  clamp(3.05rem, 2.43rem + 2.42vw, 3.82rem);
+}
+@supports (color-mix(in oklab, black, white)) {
+    :root { 
+    --aa-muted: color-mix(in oklab, var(--espresso), transparent 60%); 
+    --aa-border: color-mix(in oklab, var(--espresso), white 85%);
+    }
+}
+
+/* --- Typography hygiene -------------------------------------------------- */
+html { font-synthesis: weight style; }  /* allow fake bold/italic in body */
+h1, h2, h3, .font-display, .display, .logo { font-synthesis: none; } /* lock brand-critical text */
+
+/* set global body font + colors from tokens */
+body { 
+  font-family: var(--aa-font-body);
+  color: var(--aa-fg);
+  background: var(--aa-bg);
+}
+
+/* ---- Brand utilities (optional, lightweight) ---- */
+.text-display { font-family: var(--aa-font-display); }
+.text-body    { font-family: var(--aa-font-body); }
+
+/* Display headings use the real 400 face */
+.h1, .h2, .h3 { font-weight: 400; letter-spacing: -0.01em; }
+
+.lead { font-size: var(--aa-step-1); color: var(--aa-muted); }
+
+.text-muted  { color: var(--aa-muted); }
+.text-primary{ color: var(--aa-primary); }
+.bg-clay    { background: var(--clay); }
+.bg-sand    { background: var(--sand); }
+.border      { border: 1px solid var(--aa-border); border-radius: var(--aa-radius-md); }
+.shadow      { box-shadow: var(--aa-shadow-sm); }
+/* to let edge (wave) to go edge-to-edge outside a boxed layout */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
