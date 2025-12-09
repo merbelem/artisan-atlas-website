@@ -70,17 +70,6 @@
         "padding-block-end": 0
       }
     },
-    "custom_liquid_hyDYWm": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"edge-separator\n            edge--wave-low\n            edge--h-fluid\n            edge--fill-cream\n            edge--overlap-prev\n            edge--crop-20\n            full-bleed\"></div>",
-        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "section_width": "full-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "section_kKbYjr": {
       "type": "section",
       "blocks": {
@@ -433,7 +422,6 @@
   },
   "order": [
     "hero_iyt6zg",
-    "custom_liquid_hyDYWm",
     "section_kKbYjr",
     "section_7XbgwJ",
     "hero_MVUtj6"
