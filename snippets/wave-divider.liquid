@@ -2,7 +2,7 @@
   Reusable wave divider. Uses edge-separator helpers from assets/shapes.css.liquid.
   Params:
     - fill: color for the wave fill (defaults to brand sand/cream)
-    - mask: svg asset filename to mask with (defaults to edge-wave-low.svg)
+    - mask: svg asset filename to mask with (defaults to edge-wave-low-continuous.svg)
     - height_class: CSS helper for height (edge--h-fluid, edge--h-220, etc.)
     - crop_class: CSS helper to crop flat ends (edge--crop-15, edge--crop-20, etc.)
     - extra_class: any extra classes to append
@@ -10,7 +10,7 @@
     - full_bleed: boolean; if true (default), stretch to viewport width
 {% endcomment %}
 {% liquid
-  assign mask = mask | default: 'edge-wave-low.svg'
+  assign mask = mask | default: 'edge-wave-low-continuous.svg'
   assign fill = fill | default: 'var(--sand)'
   assign height_class = height_class | default: 'edge--h-fluid'
   assign crop_class = crop_class | default: 'edge--crop-15'

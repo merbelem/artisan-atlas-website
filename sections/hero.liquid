@@ -317,6 +317,11 @@
     }
   }
 
+  /* Allow wave overlays to extend full-bleed */
+  .hero:has(.wave-divider--overlay) .hero__container {
+    overflow: visible;
+  }
+
   .hero__content-wrapper.page-width {
     grid-column: 2 / 3;
   }
@@ -785,12 +790,12 @@
       "id": "wave_mask",
       "label": "Wave shape",
       "options": [
-        { "value": "edge-wave-low.svg", "label": "Low wave" },
+        { "value": "edge-wave-low-continuous.svg", "label": "Low wave (continuous)" },
         { "value": "edge-wave-high.svg", "label": "High wave" },
         { "value": "edge-wave-rect-rounded.svg", "label": "Rounded rectangle" },
         { "value": "edge-wave-rect-straight.svg", "label": "Straight rectangle" }
       ],
-      "default": "edge-wave-low.svg",
+      "default": "edge-wave-low-continuous.svg",
       "visible_if": "{{ section.settings.show_wave_edge }}"
     },
     {

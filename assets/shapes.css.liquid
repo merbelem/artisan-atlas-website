@@ -44,7 +44,7 @@
 .edge-top { transform: scaleY(-1); }
 
 /* Map edge names to your wave SVGs */
-.edge--wave-low           { --edge-mask: url('{{ "edge-wave-low.svg"            | asset_url }}'); }
+.edge--wave-low           { --edge-mask: url('{{ "edge-wave-low-continuous.svg"            | asset_url }}'); }
 .edge--wave-high          { --edge-mask: url('{{ "edge-wave-high.svg"           | asset_url }}'); }
 .edge--wave-rect-rounded  { --edge-mask: url('{{ "edge-wave-rect-rounded.svg"   | asset_url }}'); }
 .edge--wave-rect-straight { --edge-mask: url('{{ "edge-wave-rect-straight.svg"  | asset_url }}'); }
@@ -105,12 +105,12 @@
   inset: 0;
   background: var(--edge-fill, currentColor); /* your cream fill */
   /* mask on the pseudo only */
-  -webkit-mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x)) 100% no-repeat;
-          mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x)) 100% no-repeat;
+  -webkit-mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x, 1)) 100% no-repeat;
+          mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x, 1)) 100% no-repeat;
 }
 
 /* Presets you already use */
-.edge--wave-low  { --edge-mask: url('{{ "edge-wave-low.svg"  | asset_url }}'); }
+.edge--wave-low  { --edge-mask: url('{{ "edge-wave-low-continuous.svg"  | asset_url }}'); }
 .edge--fill-cream{ --edge-fill: var(--sand); }
 
 /* Height presets */
@@ -133,6 +133,7 @@
 }
 
 /* Horizontal “crop” helpers (hide the flat ends) */
+/* Crop helpers still apply to non-overlay usage */
 .edge--crop-10 { --edge-scale-x: 1.10; }
 .edge--crop-15 { --edge-scale-x: 1.15; }
 .edge--crop-20 { --edge-scale-x: 1.20; }
@@ -142,16 +143,15 @@
 .hero__wave-overlay,
 .wave-divider--overlay {
   position: absolute;
-  bottom: 0;
+  bottom: -2px; /* tuck under to hide any seam */
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  height: var(--edge-height, clamp(60px, 10vw, 120px));
+  height: var(--edge-height, clamp(110px, 14vw, 220px));
   z-index: 2;
   pointer-events: none;
   overflow: hidden;
   line-height: 0;
-  background: var(--edge-fill, var(--sand));
 }
 
 .hero__wave-overlay svg {
@@ -160,15 +160,19 @@
   display: block;
 }
 
-.wave-divider--overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  -webkit-mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x, 1.15)) 100% no-repeat;
-          mask: var(--edge-mask) bottom center / calc(100% * var(--edge-scale-x, 1.15)) 100% no-repeat;
-}
 
 .hero__wave-overlay svg path {
   fill: var(--sand);
+}
+
+@media (min-width: 820px) {
+  .wave-divider--overlay {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 540px) {
+  .wave-divider--overlay {
+    height: clamp(130px, 22vw, 240px);
+  }
 }
