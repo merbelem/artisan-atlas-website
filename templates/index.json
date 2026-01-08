@@ -70,8 +70,8 @@
         "button_NCfztp": {
           "type": "button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/all",
+            "label": "Who Are We?",
+            "link": "#template--26032548315469__section_kKbYjr",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
             "width": "fit-content",
@@ -261,7 +261,7 @@
         "image_YPz3NV",
         "group_LhhrtT"
       ],
-      "name": "t:names.image_with_text",
+      "name": "About Us",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
