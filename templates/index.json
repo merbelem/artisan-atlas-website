@@ -323,7 +323,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Our mission is to bridge the gap between discerning customers who value quality and authenticity, and the artisans who pour their hearts into every creation.</p>",
+            "text": "<p>Join us on our mission to bridge the gap between discerning customers who value quality and authenticity, and the artisans who pour their hearts into every creation.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
