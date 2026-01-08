@@ -4294,3 +4294,11 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+
+/* Limit height of images inside Image-with-Text / About sections */
+.section .image-block img,
+.section .media-with-content__media img {
+  max-height: 520px;
+  width: auto;
+  object-fit: cover;
+}
