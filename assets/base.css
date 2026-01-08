@@ -1,16 +1,10 @@
-/* === Custom heading font family override (Spitzkant) =========================
-   Use Spitzkant for all heading families via theme variables
-   We keep Theme Editor typography controls (sizes/weights/spacing), but force
-   heading font-family to Spitzkant across the theme.
-   If theme updates ever rename these variables, re-apply this block.
-============================================================================= */
 :root{
-  --font-h1--family: 'Spitzkant', serif;
-  --font-h2--family: 'Spitzkant', serif;
-  --font-h3--family: 'Spitzkant', serif;
-  --font-h4--family: 'Spitzkant', serif;
-  --font-h5--family: 'Spitzkant', serif;
-  --font-h6--family: 'Spitzkant', serif;
+  --font-h1--family: var(--custom-heading-font-family);
+  --font-h2--family: var(--custom-heading-font-family);
+  --font-h3--family: var(--custom-heading-font-family);
+  --font-h4--family: var(--custom-heading-font-family);
+  --font-h5--family: var(--custom-heading-font-family);
+  --font-h6--family: var(--custom-heading-font-family);
 
   /* Ensure Regular weight; Atelier headings read from these vars */
   --font-h1--weight: 400;
@@ -19,14 +13,13 @@
   --font-h4--weight: 400;
   --font-h5--weight: 400;
   --font-h6--weight: 400;
+
+  --button-font-family-primary: var(--custom-accent-font-family);
+  --button-font-family-secondary: var(--custom-accent-font-family);
 }
 
-h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6,
-  .section-title,
-  .banner__heading,
-  .rich-text__heading {
-    font-family: 'Spitzkant', serif;
+body {
+  font-family: var(--custom-body-font-family);
 }
 
 /* Heading rendering tweaks: avoid extra-thin smoothing on display text */
@@ -35,32 +28,6 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: auto;
   text-rendering: optimizeLegibility;
 }
-
-/* === Body/UI font: Nunito Sans ========================================== */
-/* Safety net to ensure UI bits also inherit Nunito even if a component overrides it */
-body,
-p, li, ol, ul, small,
-.rte, .product__description, .card__content,
-.price, .price-item, .badge, .tags,
-input, select, textarea, button,
-.breadcrumbs, .pagination, .footer, .menu-drawer {
-  font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 400;
-}
-
-/* === Header navigation: Nunito Sans, lowercase ========================== */
-/* Desktop inline menu + mobile drawer */
-#shopify-section-header .list-menu__item a,
-#shopify-section-header .header__inline-menu a,
-.menu-drawer__navigation a {
-  font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  text-transform: lowercase;   /* matches your mock */
-  font-weight: 600;            /* a touch bolder for nav legibility */
-  letter-spacing: 0.04em;      /* optional: subtle tracking like mock */
-}
-
-/* If your theme forces uppercase anywhere, un-comment the line below */
-#shopify-section-header .list-menu__item a { text-transform: lowercase !important; }
 
 
 * {
@@ -1339,7 +1306,7 @@ button.shopify-payment-button__button--unbranded {
   appearance: none;
   background-color: var(--button-background-color);
   border: none;
-  font-family: var(--font-paragraph--family);
+  font-family: var(--button-font-family-primary);
   font-style: var(--font-paragraph--style);
   font-size: var(--font-paragraph--size);
   line-height: var(--font-paragraph--line-height);
@@ -1355,7 +1322,6 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button {
-  font-family: var(--button-font-family-primary);
   font-weight: var(--button-font-weight-primary);
   text-transform: var(--button-text-case-primary);
   border-radius: var(--style-border-radius-buttons-primary);
@@ -1373,7 +1339,6 @@ button.shopify-payment-button__button--unbranded {
 }
 
 button.shopify-payment-button__button--unbranded {
-  font-family: var(--button-font-family-primary);
   font-weight: var(--button-font-weight-primary);
   text-transform: var(--button-text-case-primary);
 }
@@ -1448,7 +1413,7 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
-  font-family: var(--font-paragraph--family);
+  font-family: var(--button-font-family-primary);
   font-style: var(--font-paragraph--style);
   font-size: var(--font-paragraph--size);
 }

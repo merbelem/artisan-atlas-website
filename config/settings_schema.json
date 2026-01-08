@@ -328,6 +328,42 @@
         "content": "t:content.fonts"
       },
       {
+        "type": "checkbox",
+        "id": "enable_custom_fonts",
+        "label": "Enable custom fonts",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "custom_heading_font",
+        "label": "Heading font (custom)",
+        "options": [
+          { "value": "spitzkant", "label": "Spitzkant" },
+          { "value": "inherit", "label": "Use theme heading font" }
+        ],
+        "default": "spitzkant"
+      },
+      {
+        "type": "select",
+        "id": "custom_body_font",
+        "label": "Body font (custom)",
+        "options": [
+          { "value": "inherit", "label": "Use theme body font" },
+          { "value": "spitzkant", "label": "Spitzkant" }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "custom_accent_font",
+        "label": "Accent font (custom)",
+        "options": [
+          { "value": "inherit", "label": "Use theme accent font" },
+          { "value": "spitzkant", "label": "Spitzkant" }
+        ],
+        "default": "inherit"
+      },
+      {
         "type": "font_picker",
         "id": "type_body_font",
         "default": "work_sans_n4",
