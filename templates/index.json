@@ -213,7 +213,7 @@
             "text_mMWfjE": {
               "type": "text",
               "settings": {
-                "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+                "text": "<p>More than just a marketplace: we are a curated storytelling platform dedicated to connecting the world with exceptional artisans. Every product we offer is handmade and is a testament to the artistry, tradition, and cultural heritage of the communities we work with. </p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -238,7 +238,7 @@
             "button_D9LTyw": {
               "type": "button",
               "settings": {
-                "label": "Shop now",
+                "label": "Contact Us",
                 "link": "#contact-us",
                 "open_in_new_tab": false,
                 "style_class": "button",
@@ -319,6 +319,32 @@
           },
           "blocks": {}
         },
+        "text_MVkXAF": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Our mission is to bridge the gap between discerning customers who value quality and authenticity, and the artisans who pour their hearts into every creation.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "contact_form_Nhqcir": {
           "type": "contact-form",
           "settings": {
@@ -353,6 +379,7 @@
       },
       "block_order": [
         "text_NEDjUb",
+        "text_MVkXAF",
         "contact_form_Nhqcir"
       ],
       "name": "t:names.contact_form",
