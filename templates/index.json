@@ -263,6 +263,7 @@
       ],
       "name": "About Us",
       "settings": {
+        "anchor_id": "#about-us",
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -356,6 +357,7 @@
       ],
       "name": "t:names.contact_form",
       "settings": {
+        "anchor_id": "",
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
