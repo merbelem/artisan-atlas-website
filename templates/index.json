@@ -127,8 +127,9 @@
         "image_YPz3NV": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/employee_apron_in_shape.png",
             "link": "",
-            "image_ratio": "square",
+            "image_ratio": "adapt",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
