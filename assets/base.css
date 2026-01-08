@@ -5,12 +5,12 @@
    If theme updates ever rename these variables, re-apply this block.
 ============================================================================= */
 :root{
-  --font-h1--family: 'Spitzkant', serif;
-  --font-h2--family: 'Spitzkant', serif;
-  --font-h3--family: 'Spitzkant', serif;
-  --font-h4--family: 'Spitzkant', serif;
-  --font-h5--family: 'Spitzkant', serif;
-  --font-h6--family: 'Spitzkant', serif;
+  --font-h1--family: var(--custom-heading-font-family);
+  --font-h2--family: var(--custom-heading-font-family);
+  --font-h3--family: var(--custom-heading-font-family);
+  --font-h4--family: var(--custom-heading-font-family);
+  --font-h5--family: var(--custom-heading-font-family);
+  --font-h6--family: var(--custom-heading-font-family);
 
   /* Ensure Regular weight; Atelier headings read from these vars */
   --font-h1--weight: 400;
