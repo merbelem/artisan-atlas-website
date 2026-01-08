@@ -57,10 +57,14 @@
             {%- else -%}
               --custom-accent-font-family: var(--font-body-family);
           {%- endcase -%}
+          --button-font-family-primary: var(--custom-accent-font-family);
+          --button-font-family-secondary: var(--custom-accent-font-family);
         {% else %}
           --custom-heading-font-family: var(--font-heading-family);
           --custom-body-font-family: var(--font-body-family);
           --custom-accent-font-family: var(--font-body-family);
+          --button-font-family-primary: var(--font-body-family);
+          --button-font-family-secondary: var(--font-body-family);
         {% endif %}
       }
     </style>
