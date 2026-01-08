@@ -254,6 +254,19 @@
         endif
       %}
       {{ media }}
+      {% comment %}
+       TEMPORARILY REMOVE WAVE BORDER
+      {%- if section.settings.show_wave_edge -%}
+            {% render 'wave-divider',
+              fill: section.settings.wave_color,
+              mask: section.settings.wave_mask,
+              height_class: section.settings.wave_height_class,
+              crop_class: section.settings.wave_crop_class,
+              overlay: true,      <-- Keeps it at the bottom of the image
+              full_bleed: false   <-- Important: let the container control the width
+            %}
+          {%- endif -%}
+      {% endcomment %}
     </div>
     <div
       class="
@@ -269,16 +282,6 @@
     >
       {% content_for 'blocks' %}
     </div>
-    {%- if section.settings.show_wave_edge -%}
-      {% render 'wave-divider',
-        fill: section.settings.wave_color,
-        mask: section.settings.wave_mask,
-        height_class: section.settings.wave_height_class,
-        crop_class: section.settings.wave_crop_class,
-        overlay: true,
-        full_bleed: false
-      %}
-    {%- endif -%}
   </div>
 </div>
 

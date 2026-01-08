@@ -44,7 +44,7 @@
 .edge-top { transform: scaleY(-1); }
 
 /* Map edge names to your wave SVGs */
-.edge--wave-low           { --edge-mask: url('{{ "edge-wave-low-continuous.svg"            | asset_url }}'); }
+.edge--wave-low           { --edge-mask: url('{{ "edge-wave-low.svg"            | asset_url }}'); }
 .edge--wave-high          { --edge-mask: url('{{ "edge-wave-high.svg"           | asset_url }}'); }
 .edge--wave-rect-rounded  { --edge-mask: url('{{ "edge-wave-rect-rounded.svg"   | asset_url }}'); }
 .edge--wave-rect-straight { --edge-mask: url('{{ "edge-wave-rect-straight.svg"  | asset_url }}'); }
@@ -56,7 +56,7 @@
 .edge-h-160 { --edge-height:160px; }
 .edge-h-200 { --edge-height:200px; }
 /* matches mockups across breakpoints with one class */
-.edge--h-fluid { --edge-height: clamp(90px, 12vw, 180px); }
+.edge--h-fluid { --edge-height: clamp(190px, 24vw, 360px); }
 
 /* Color presets (matching brand palette) */
 .edge--color-sand  { --edge-color: var(--sand); }
@@ -110,11 +110,11 @@
 }
 
 /* Presets you already use */
-.edge--wave-low  { --edge-mask: url('{{ "edge-wave-low-continuous.svg"  | asset_url }}'); }
+.edge--wave-low  { --edge-mask: url('{{ "edge-wave-low.svg"  | asset_url }}'); }
 .edge--fill-cream{ --edge-fill: var(--sand); }
 
 /* Height presets */
-.edge--h-fluid { --edge-height: clamp(110px, 12vw, 190px); }
+.edge--h-fluid { --edge-height: clamp(190px, 24vw, 360px); }
 .edge--h-220   { --edge-height: 220px; }
 .edge--h-240   { --edge-height: 240px; }
 
@@ -143,15 +143,18 @@
 .hero__wave-overlay,
 .wave-divider--overlay {
   position: absolute;
-  bottom: -2px; /* tuck under to hide any seam */
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-  height: var(--edge-height, clamp(110px, 14vw, 220px));
+  bottom: 0;       /* Anchors it to the bottom of the wrapper */
+  left: 0;         /* Starts at the left edge of the wrapper */
+  width: 100%;     /* Matches the wrapper width exactly (fixes the "floating") */
+  height: var(--edge-height, clamp(60px, 10vw, 120px));
   z-index: 2;
   pointer-events: none;
   overflow: hidden;
   line-height: 0;
+}
+
+.hero__media-wrapper {
+  position: relative;
 }
 
 .hero__wave-overlay svg {
@@ -165,14 +168,8 @@
   fill: var(--sand);
 }
 
-@media (min-width: 820px) {
-  .wave-divider--overlay {
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 540px) {
   .wave-divider--overlay {
-    height: clamp(130px, 22vw, 240px);
+    height: clamp(200px, 28vw, 360px);
   }
 }
