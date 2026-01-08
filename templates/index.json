@@ -9,6 +9,118 @@
  */
 {
   "sections": {
+    "hero_kxa63B": {
+      "type": "hero",
+      "blocks": {
+        "spacer_hKU434": {
+          "type": "spacer",
+          "settings": {
+            "size": "pixel",
+            "percent_size": 100,
+            "pixel_size": 24,
+            "custom_mobile_size": false,
+            "size_mobile": "percent",
+            "percent_size_mobile": 100,
+            "pixel_size_mobile": 120
+          },
+          "blocks": {}
+        },
+        "marquee_p4nhma": {
+          "type": "_marquee",
+          "settings": {
+            "movement_direction": "normal",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "transparent_background": true,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "gap_between_elements": 24
+          },
+          "blocks": {
+            "text_AaUjeY": {
+              "type": "text",
+              "settings": {
+                "text": "<p>coming soon coming soon coming soon coming soon coming soon coming soon coming soon</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_AaUjeY"
+          ]
+        },
+        "button_NCfztp": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Now",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "spacer_hKU434",
+        "marquee_p4nhma",
+        "button_NCfztp"
+      ],
+      "name": "t:names.hero_marquee",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/clay_maker_resized.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "space-between",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 40
+      }
+    },
     "hero_iyt6zg": {
       "type": "hero",
       "blocks": {
@@ -44,7 +156,7 @@
       ],
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/employee_apron.jpg",
+        "image_1": "shopify://shop_images/clay_maker_resized.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -59,6 +171,11 @@
         "section_width": "page-width",
         "section_height": "full-screen",
         "section_height_custom": 50,
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
         "overlay_color": "#00000099",
@@ -408,6 +525,11 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 60,
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
         "overlay_color": "#00000075",
@@ -421,6 +543,7 @@
     }
   },
   "order": [
+    "hero_kxa63B",
     "hero_iyt6zg",
     "section_kKbYjr",
     "section_7XbgwJ",
