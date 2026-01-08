@@ -4298,7 +4298,7 @@ text-component {
 /* Limit height of images inside Image-with-Text / About sections */
 .section .image-block img,
 .section .media-with-content__media img {
-  max-height: 60%;
+  max-height: 20%;
   width: auto;
   object-fit: cover;
 }
