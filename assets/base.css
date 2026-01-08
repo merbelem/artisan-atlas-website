@@ -4298,7 +4298,14 @@ text-component {
 /* Responsive height cap for tall images in About / Image-with-text sections */
 .section .image-block img,
 .section .media-with-content__media img {
-  max-height: min(75vh, 820px);
+  max-height: min(85vh, 820px);
   width: auto;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .section .image-block img,
+  .section .media-with-content__media img {
+    max-height: 60vh;
+  }
+}
+
