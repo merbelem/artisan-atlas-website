@@ -188,7 +188,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Our signature product.</h2>",
+                "text": "<h2>Who are We?</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -239,7 +239,7 @@
               "type": "button",
               "settings": {
                 "label": "Shop now",
-                "link": "shopify://collections/all",
+                "link": "#contact-us",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -263,7 +263,7 @@
       ],
       "name": "About Us",
       "settings": {
-        "anchor_id": "#about-us",
+        "anchor_id": "about-us",
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -357,7 +357,7 @@
       ],
       "name": "t:names.contact_form",
       "settings": {
-        "anchor_id": "",
+        "anchor_id": "contact-us",
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
