@@ -292,6 +292,98 @@
         "padding-block-end": 40
       }
     },
+    "hero_MVUtj6": {
+      "type": "hero",
+      "blocks": {
+        "text_69C6UJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Rooted in tradition. Created for today.</h2>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_hzq6cM": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"#contact-us\" title=\"#contact-us\">Get Connected</a></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "right",
+            "type_preset": "h6",
+            "font": "var(--font-secondary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_69C6UJ",
+        "text_hzq6cM"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/home-decor-natural-1-middle.jpg",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 60,
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000075",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 40
+      }
+    },
     "section_7XbgwJ": {
       "type": "section",
       "blocks": {
@@ -412,104 +504,12 @@
         "padding-block-start": 32,
         "padding-block-end": 32
       }
-    },
-    "hero_MVUtj6": {
-      "type": "hero",
-      "blocks": {
-        "text_69C6UJ": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Rooted in tradition. Created for today.</h2>",
-            "width": "fit-content",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "h3",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_hzq6cM": {
-          "type": "text",
-          "settings": {
-            "text": "<p><a href=\"#contact-us\" title=\"#contact-us\">Get Connected</a></p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "right",
-            "type_preset": "h6",
-            "font": "var(--font-secondary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_69C6UJ",
-        "text_hzq6cM"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/home-decor-natural-1-middle.jpg",
-        "media_type_2": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 60,
-        "show_wave_edge": true,
-        "wave_color": "#f7f4ec",
-        "wave_mask": "edge-wave-low-continuous.svg",
-        "wave_height_class": "edge--h-fluid",
-        "wave_crop_class": "edge--crop-15",
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#00000075",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 40
-      }
     }
   },
   "order": [
     "hero_kxa63B",
     "section_kKbYjr",
-    "section_7XbgwJ",
-    "hero_MVUtj6"
+    "hero_MVUtj6",
+    "section_7XbgwJ"
   ]
 }
