@@ -9,42 +9,88 @@
  */
 {
   "sections": {
-    "hero_iyt6zg": {
+    "hero_kxa63B": {
       "type": "hero",
       "blocks": {
-        "text_tzGazA": {
-          "type": "text",
-          "name": "t:names.text",
+        "spacer_hKU434": {
+          "type": "spacer",
           "settings": {
-            "text": "",
+            "size": "pixel",
+            "percent_size": 100,
+            "pixel_size": 24,
+            "custom_mobile_size": false,
+            "size_mobile": "percent",
+            "percent_size_mobile": 100,
+            "pixel_size_mobile": 120
+          },
+          "blocks": {}
+        },
+        "marquee_p4nhma": {
+          "type": "_marquee",
+          "settings": {
+            "movement_direction": "normal",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "transparent_background": true,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "gap_between_elements": 24
+          },
+          "blocks": {
+            "text_AaUjeY": {
+              "type": "text",
+              "settings": {
+                "text": "<p>coming soon coming soon coming soon coming soon coming soon coming soon coming soon</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_AaUjeY"
+          ]
+        },
+        "button_NCfztp": {
+          "type": "button",
+          "settings": {
+            "label": "Who Are We?",
+            "link": "#template--26032548315469__section_kKbYjr",
+            "open_in_new_tab": false,
+            "style_class": "button-secondary",
             "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "",
-            "line_height": "tight",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "text_tzGazA"
+        "spacer_hKU434",
+        "marquee_p4nhma",
+        "button_NCfztp"
       ],
+      "name": "t:names.hero_marquee",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/employee_apron.jpg",
+        "image_1": "shopify://shop_images/clay_maker_resized.png",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -54,20 +100,25 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
+        "vertical_alignment_flex_direction_column": "space-between",
+        "gap": 32,
         "section_width": "page-width",
         "section_height": "full-screen",
         "section_height_custom": 50,
-        "color_scheme": "scheme-6",
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
+        "color_scheme": "scheme-5",
         "toggle_overlay": true,
-        "overlay_color": "#00000099",
+        "overlay_color": "#00000026",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 40
       }
     },
     "section_kKbYjr": {
@@ -210,7 +261,7 @@
         "image_YPz3NV",
         "group_LhhrtT"
       ],
-      "name": "t:names.image_with_text",
+      "name": "About Us",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -408,6 +459,11 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 60,
+        "show_wave_edge": true,
+        "wave_color": "#f7f4ec",
+        "wave_mask": "edge-wave-low-continuous.svg",
+        "wave_height_class": "edge--h-fluid",
+        "wave_crop_class": "edge--crop-15",
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
         "overlay_color": "#00000075",
@@ -421,7 +477,7 @@
     }
   },
   "order": [
-    "hero_iyt6zg",
+    "hero_kxa63B",
     "section_kKbYjr",
     "section_7XbgwJ",
     "hero_MVUtj6"
