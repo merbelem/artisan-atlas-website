@@ -34,6 +34,36 @@
     {% endif %}
 
     {{ content_for_header }}
+    <style>
+      :root {
+        {% if settings.enable_custom_fonts %}
+          {%- case settings.custom_heading_font -%}
+            {%- when 'spitzkant' -%}
+              --custom-heading-font-family: "Spitzkant", serif;
+            {%- else -%}
+              --custom-heading-font-family: var(--font-heading-family);
+          {%- endcase -%}
+
+          {%- case settings.custom_body_font -%}
+            {%- when 'spitzkant' -%}
+              --custom-body-font-family: "Spitzkant", serif;
+            {%- else -%}
+              --custom-body-font-family: var(--font-body-family);
+          {%- endcase -%}
+
+          {%- case settings.custom_accent_font -%}
+            {%- when 'spitzkant' -%}
+              --custom-accent-font-family: "Spitzkant", serif;
+            {%- else -%}
+              --custom-accent-font-family: var(--font-body-family);
+          {%- endcase -%}
+        {% else %}
+          --custom-heading-font-family: var(--font-heading-family);
+          --custom-body-font-family: var(--font-body-family);
+          --custom-accent-font-family: var(--font-body-family);
+        {% endif %}
+      }
+    </style>
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">

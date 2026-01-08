@@ -21,12 +21,17 @@
   --font-h6--weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6,
-  .section-title,
-  .banner__heading,
-  .rich-text__heading {
-    font-family: 'Spitzkant', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--custom-heading-font-family);
+}
+
+body {
+  font-family: var(--custom-body-font-family);
+}
+
+/* Use accent font wherever your theme defines "accent" usage */
+.accent, .button, .nav__item { /* example selectors */
+  font-family: var(--custom-accent-font-family);
 }
 
 /* Heading rendering tweaks: avoid extra-thin smoothing on display text */
@@ -35,32 +40,6 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: auto;
   text-rendering: optimizeLegibility;
 }
-
-/* === Body/UI font: Nunito Sans ========================================== */
-/* Safety net to ensure UI bits also inherit Nunito even if a component overrides it */
-body,
-p, li, ol, ul, small,
-.rte, .product__description, .card__content,
-.price, .price-item, .badge, .tags,
-input, select, textarea, button,
-.breadcrumbs, .pagination, .footer, .menu-drawer {
-  font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 400;
-}
-
-/* === Header navigation: Nunito Sans, lowercase ========================== */
-/* Desktop inline menu + mobile drawer */
-#shopify-section-header .list-menu__item a,
-#shopify-section-header .header__inline-menu a,
-.menu-drawer__navigation a {
-  font-family: 'Nunito Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  text-transform: lowercase;   /* matches your mock */
-  font-weight: 600;            /* a touch bolder for nav legibility */
-  letter-spacing: 0.04em;      /* optional: subtle tracking like mock */
-}
-
-/* If your theme forces uppercase anywhere, un-comment the line below */
-#shopify-section-header .list-menu__item a { text-transform: lowercase !important; }
 
 
 * {
