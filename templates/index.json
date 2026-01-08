@@ -189,7 +189,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Who are We?</h2>",
+                "text": "<h2>who are we?</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
