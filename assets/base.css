@@ -4295,10 +4295,10 @@ text-component {
   }
 }
 
-/* Limit height of images inside Image-with-Text / About sections */
+/* Responsive height cap for tall images in About / Image-with-text sections */
 .section .image-block img,
 .section .media-with-content__media img {
-  max-height: 20%;
+  max-height: min(75vh, 820px);
   width: auto;
   object-fit: cover;
 }
