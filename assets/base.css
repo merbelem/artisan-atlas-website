@@ -4295,17 +4295,18 @@ text-component {
   }
 }
 
-/* Responsive height cap for tall images in About / Image-with-text sections */
-.section .image-block img,
-.section .media-with-content__media img {
-  max-height: min(85vh, 1000px);
-  width: auto;
+/* About Us: make the image match hero-like section height */
+#about-us .image-block,
+#about-us .media-with-content__media {
+  height: min(75vh, 900px);
+}
+
+#about-us .image-block img,
+#about-us .media-with-content__media img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  display: block;
 }
-@media (max-width: 768px) {
-  .section .image-block img,
-  .section .media-with-content__media img {
-    max-height: 60vh;
-  }
-}
+
 
