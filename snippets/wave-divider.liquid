@@ -1,0 +1,36 @@
+{% comment %}
+  Reusable wave divider. Uses edge-separator helpers from assets/shapes.css.liquid.
+  Params:
+    - fill: color for the wave fill (defaults to brand sand/cream)
+    - mask: svg asset filename to mask with (defaults to edge-wave-low-continuous.svg)
+    - height_class: CSS helper for height (edge--h-fluid, edge--h-220, etc.)
+    - crop_class: CSS helper to crop flat ends (edge--crop-15, edge--crop-20, etc.)
+    - extra_class: any extra classes to append
+    - overlay: boolean; if true, position absolute at bottom of parent (for hero)
+    - full_bleed: boolean; if true (default), stretch to viewport width
+{% endcomment %}
+{% liquid
+  assign mask = mask | default: 'edge-wave-low-continuous.svg'
+  assign fill = fill | default: 'var(--sand)'
+  assign height_class = height_class | default: 'edge--h-fluid'
+  assign crop_class = crop_class | default: 'edge--crop-15'
+  assign extra_class = extra_class | default: ''
+  assign overlay = overlay | default: false
+  assign full_bleed = full_bleed | default: true
+%}
+
+{% liquid
+  assign base_classes = 'edge-separator'
+  if full_bleed and overlay == false
+    assign base_classes = base_classes | append: ' full-bleed'
+  endif
+  if overlay
+    assign base_classes = base_classes | append: ' wave-divider--overlay'
+  endif
+%}
+
+<div
+  class="{{ base_classes }} {{ height_class }} {{ crop_class }} {{ extra_class }}"
+  style="--edge-fill: {{ fill }}; --edge-mask: url('{{ mask | asset_url }}');"
+  aria-hidden="true"
+></div>

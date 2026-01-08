@@ -254,6 +254,19 @@
         endif
       %}
       {{ media }}
+      {% comment %}
+       TEMPORARILY REMOVE WAVE BORDER
+      {%- if section.settings.show_wave_edge -%}
+            {% render 'wave-divider',
+              fill: section.settings.wave_color,
+              mask: section.settings.wave_mask,
+              height_class: section.settings.wave_height_class,
+              crop_class: section.settings.wave_crop_class,
+              overlay: true,      <-- Keeps it at the bottom of the image
+              full_bleed: false   <-- Important: let the container control the width
+            %}
+          {%- endif -%}
+      {% endcomment %}
     </div>
     <div
       class="
@@ -305,6 +318,11 @@
     @media screen and (min-width: 750px) {
       align-items: var(--vertical-alignment);
     }
+  }
+
+  /* Allow wave overlays to extend full-bleed */
+  .hero:has(.wave-divider--overlay) .hero__container {
+    overflow: visible;
   }
 
   .hero__content-wrapper.page-width {
@@ -755,6 +773,57 @@
     {
       "type": "header",
       "content": "t:content.appearance"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wave_edge",
+      "label": "Show wave edge",
+      "default": true,
+      "info": "Displays a wave border at the bottom of the hero image"
+    },
+    {
+      "type": "color",
+      "id": "wave_color",
+      "label": "Wave color",
+      "default": "#f7f4ec",
+      "visible_if": "{{ section.settings.show_wave_edge }}"
+    },
+    {
+      "type": "select",
+      "id": "wave_mask",
+      "label": "Wave shape",
+      "options": [
+        { "value": "edge-wave-low-continuous.svg", "label": "Low wave (continuous)" },
+        { "value": "edge-wave-high.svg", "label": "High wave" },
+        { "value": "edge-wave-rect-rounded.svg", "label": "Rounded rectangle" },
+        { "value": "edge-wave-rect-straight.svg", "label": "Straight rectangle" }
+      ],
+      "default": "edge-wave-low-continuous.svg",
+      "visible_if": "{{ section.settings.show_wave_edge }}"
+    },
+    {
+      "type": "select",
+      "id": "wave_height_class",
+      "label": "Wave height",
+      "options": [
+        { "value": "edge--h-fluid", "label": "Fluid" },
+        { "value": "edge--h-220", "label": "Tall" },
+        { "value": "edge--h-240", "label": "Extra tall" }
+      ],
+      "default": "edge--h-fluid",
+      "visible_if": "{{ section.settings.show_wave_edge }}"
+    },
+    {
+      "type": "select",
+      "id": "wave_crop_class",
+      "label": "Wave crop width",
+      "options": [
+        { "value": "edge--crop-15", "label": "Normal" },
+        { "value": "edge--crop-20", "label": "Wide" },
+        { "value": "edge--crop-25", "label": "Widest" }
+      ],
+      "default": "edge--crop-15",
+      "visible_if": "{{ section.settings.show_wave_edge }}"
     },
     {
       "type": "color_scheme",
