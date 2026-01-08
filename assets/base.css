@@ -4303,10 +4303,14 @@ text-component {
 
 #about-us .image-block img,
 #about-us .media-with-content__media img {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
-  display: block;
+  object-position: 50% 25%; /* move focus UP so head/upper body stays visible */
+}
+@media (max-width: 768px) {
+  #about-us .image-block,
+  #about-us .media-with-content__media {
+    height: 60vh;
+  }
 }
 
 
