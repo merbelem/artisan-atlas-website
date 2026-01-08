@@ -443,7 +443,7 @@
         "text_hzq6cM": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/collections/all\" title=\"All products\">Shop now</a></p>",
+            "text": "<p><a href=\"#contact-us\" title=\"#contact-us\">Get Connected</a></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "right",
