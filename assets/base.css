@@ -4313,4 +4313,25 @@ text-component {
   }
 }
 
+/* --- Contact form / inputs: cleaner hover + focus (no double ring) --- */
+
+/* hover background (global) */
+:root {
+  --color-input-hover-background: #D3C9BA; /* subtle darker than #D9D0C2 */
+}
+
+/* make focus just a thicker border (no extra outline/halo) */
+input:focus,
+textarea:focus,
+select:focus,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--color-border, currentColor); /* falls back safely */
+  border-width: calc(var(--style-border-width-inputs, 1px) + 1px);
+}
+
+
 
