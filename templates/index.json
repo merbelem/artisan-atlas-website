@@ -239,7 +239,7 @@
             "button_D9LTyw": {
               "type": "button",
               "settings": {
-                "label": "Meet the Artisans",
+                "label": "About the Artisans",
                 "link": "#contact-us",
                 "open_in_new_tab": false,
                 "style_class": "button",
