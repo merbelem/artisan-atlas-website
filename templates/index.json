@@ -627,7 +627,7 @@
                 "text_H7zEEe": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Shaped by skilled hands, patience, and pride in craft.</p>",
+                    "text": "<p>Shaped by skilled hands, patience, and pride in craft</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -777,7 +777,7 @@
                 "text_aWmy8A": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Championing artisans and the communities they support</p>",
+                    "text": "<p>Championing artisans and the communities they sustain</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
