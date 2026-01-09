@@ -961,7 +961,7 @@
             "button_cPEWKX"
           ]
         },
-        "image_h8pJgc": {
+        "image_fgxpK7": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/mayan_weaver_in_shape_resized.png",
@@ -986,7 +986,7 @@
       },
       "block_order": [
         "group_i39pUV",
-        "image_h8pJgc"
+        "image_fgxpK7"
       ],
       "name": "Artisans",
       "settings": {
