@@ -217,8 +217,8 @@
             "button_cw66wr": {
               "type": "button",
               "settings": {
-                "label": "Contact Us",
-                "link": "#contact-us",
+                "label": "About the Artisans",
+                "link": "#artisans",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
