@@ -4353,4 +4353,44 @@ select:focus-visible {
   opacity: 1;
 }
 
+textarea::placeholder,
+input::placeholder {
+  color: var(--color-input-text);
+}
+
+/* --- Input fields: clean hover + single, thicker focus border (no white ring) --- */
+.field__input {
+  /* draw the border ourselves as an inset shadow */
+  box-shadow: inset 0 0 0 var(--style-border-width-inputs, 1px) var(--color-input-border);
+  border: none;
+  outline: none;
+  color: var(--color-input-text);
+  background-color: var(--color-input-background);
+}
+
+.field__input:hover {
+  background-color: var(--color-input-hover-background);
+}
+
+/* Focus = thicker border, same color */
+.field__input:focus,
+.field__input:focus-visible {
+  outline: none !important;
+  box-shadow: inset 0 0 0 calc(var(--style-border-width-inputs, 1px) + 2px) var(--color-input-border);
+  background-color: var(--color-input-hover-background);
+}
+
+/* Placeholder: lighter than input text */
+.field__input::placeholder {
+  color: rgb(var(--color-input-text-rgb) / 0.60);
+  opacity: 1;
+}
+
+/* If the theme is still adding an outline via the global rule, kill it for inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none !important;
+}
+
 
