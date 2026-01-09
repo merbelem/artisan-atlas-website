@@ -239,7 +239,7 @@
             "button_D9LTyw": {
               "type": "button",
               "settings": {
-                "label": "Contact Us",
+                "label": "Meet the Artisans",
                 "link": "#contact-us",
                 "open_in_new_tab": false,
                 "style_class": "button",
@@ -319,36 +319,10 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "text_hzq6cM": {
-          "type": "text",
-          "settings": {
-            "text": "<p><a href=\"#contact-us\" title=\"#contact-us\">Get Connected</a></p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "right",
-            "type_preset": "h6",
-            "font": "var(--font-secondary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "text_69C6UJ",
-        "text_hzq6cM"
+        "text_69C6UJ"
       ],
       "name": "t:names.hero",
       "settings": {
