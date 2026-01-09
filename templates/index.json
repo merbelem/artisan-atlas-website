@@ -920,7 +920,7 @@
               "settings": {
                 "text": "<p>More than just makers: our artisans carry traditions passed down through generations. Their work reflects a deep connection to material, place, and process. We work directly with each maker to ensure their craft is respected, their stories are told, and their livelihoods are supported.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
