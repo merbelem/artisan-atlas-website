@@ -4315,5 +4315,42 @@ select:focus-visible {
   border-width: calc(var(--style-border-width-inputs, 1px) + 1px);
 }
 
+/* --- Inputs: consistent border + subtle placeholder + clean focus ring --- */
+
+/* 1) Base border ring (replaces “mystery”/white focus ring) */
+.field__input {
+  /* Use the theme’s border radius already set */
+  box-shadow: inset 0 0 0 var(--style-border-width-inputs, 1px) var(--color-input-border);
+  outline: none; /* prevent double focus styling */
+}
+
+/* 2) Hover: keep your scheme’s hover bg */
+.field__input:hover {
+  background-color: var(--color-input-hover-background);
+}
+
+/* 3) Focus: thicker border ring, same color (no extra halo) */
+.field__input:focus,
+.field__input:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 calc(var(--style-border-width-inputs, 1px) + 1px) var(--color-input-border);
+  background-color: var(--color-input-hover-background);
+}
+
+/* 4) Text color (in case anything overrides it) */
+.field__input {
+  color: var(--color-input-text);
+}
+
+/* 5) Placeholder: slightly lighter than input text */
+.field__input::placeholder {
+  color: rgb(var(--color-input-text-rgb) / 0.65);
+  opacity: 1; /* prevents Safari from auto-dimming unpredictably */
+}
+
+/* 6) Kill the theme's “fade placeholder on typing” if you don’t like it */
+.field__input:not(:placeholder-shown)::placeholder {
+  opacity: 1;
+}
 
 
