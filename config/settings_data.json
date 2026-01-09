@@ -326,7 +326,7 @@
           "secondary_button_background": "#f2f2ed",
           "secondary_button_text": "#4f413a",
           "secondary_button_border": "#f2f2ed",
-          "secondary_button_hover_background": "#dedede",
+          "secondary_button_hover_background": "#f7f4ece7",
           "secondary_button_hover_text": "#4f413a",
           "secondary_button_hover_border": "#f2f2ed",
           "input_background": "#00000000",
