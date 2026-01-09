@@ -477,7 +477,7 @@
                 "text_XAMtzn": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Everything we do starts with why</p>",
+                    "text": "<p>Every piece is chosen for its purpose, beauty, and longevity</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -627,7 +627,7 @@
                 "text_H7zEEe": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We believe in building better</p>",
+                    "text": "<p>Crafted by artisans using carefully selected materials and time-honoured techniques</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -777,7 +777,7 @@
                 "text_aWmy8A": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Real people making great products</p>",
+                    "text": "<p>We work directly with makers to support meaningful, sustainable livelihoods</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -850,28 +850,6 @@
     "section_PXBRXW": {
       "type": "section",
       "blocks": {
-        "image_h8pJgc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/employee_apron_in_shape.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "group_i39pUV": {
           "type": "group",
           "settings": {
@@ -982,11 +960,33 @@
             "text_R9Ari7",
             "button_cPEWKX"
           ]
+        },
+        "image_h8pJgc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/employee_apron_in_shape.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "image_h8pJgc",
-        "group_i39pUV"
+        "group_i39pUV",
+        "image_h8pJgc"
       ],
       "name": "Artisans",
       "settings": {
