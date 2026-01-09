@@ -1349,11 +1349,6 @@ input {
   border-color: var(--color-input-border);
 }
 
-textarea::placeholder,
-input::placeholder {
-  color: var(--color-input-text);
-}
-
 textarea:not(:placeholder-shown)::placeholder,
 input:not(:placeholder-shown)::placeholder {
   opacity: 0;
