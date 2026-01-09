@@ -941,7 +941,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>who are we?</h2>",
+                "text": "<h2>the artisans</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1014,7 +1014,7 @@
         "image_h8pJgc",
         "group_i39pUV"
       ],
-      "name": "About Us",
+      "name": "Artisans",
       "settings": {
         "anchor_id": "artisans",
         "content_direction": "row",
