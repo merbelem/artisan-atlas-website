@@ -333,7 +333,7 @@
           "input_text_color": "#4f413a",
           "input_border_color": "#785c53",
           "input_hover_background": "#d9d0c271",
-          "variant_background_color": "#ffffff",
+          "variant_background_color": "#00000000",
           "variant_text_color": "#000000",
           "variant_border_color": "#e6e6e6",
           "variant_hover_background_color": "#ffffff",
@@ -341,7 +341,7 @@
           "variant_hover_border_color": "#000000",
           "selected_variant_background_color": "#000000",
           "selected_variant_text_color": "#ffffff",
-          "selected_variant_border_color": "#000000",
+          "selected_variant_border_color": "#4f413a",
           "selected_variant_hover_background_color": "#1a1a1a",
           "selected_variant_hover_text_color": "#ffffff",
           "selected_variant_hover_border_color": "#1a1a1a"
