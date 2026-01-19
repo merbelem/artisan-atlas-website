@@ -4360,7 +4360,6 @@ text-component {
   display: flex;
   align-items: center;
   justify-content: center !important;   /* override --horizontal-alignment:flex-start */
-  gap: clamp(28px, 5vw, 90px);
 }
 
 /* Text column */
