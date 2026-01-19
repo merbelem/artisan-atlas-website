@@ -992,7 +992,7 @@
         "image_fgxpK7"
       ],
       "custom_css": [
-        "img {width: 100%; height: 100%; max-height: clamp(520px, 70vh, 820px); object-fit: cover; object-position: center; display: block;}"
+        "img {width: 100%; height: 100%; max-height: clamp(520px, 70vh, 820px); object-fit: contain; object-position: center; display: block;}"
       ],
       "name": "Artisans",
       "settings": {
