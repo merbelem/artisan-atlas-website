@@ -4336,26 +4336,73 @@ text-component {
 /* =========================
    About + Artisans (Group sections)
    ========================= */
+
+/* Layout: evenly distribute text + image */
 #about-us .group__content,
-#artisans .group__content{
-  max-width:1200px;margin:0 auto;padding-inline:clamp(24px,4vw,72px);
-  display:flex;align-items:center;justify-content:space-between;
-  gap:clamp(24px,5vw,96px);
+#artisans .group__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 4vw, 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /* key: space between text + image */
+
+  gap: clamp(24px, 5vw, 96px);
 }
 
-#about-us .group__media,#about-us .group__image,
-#artisans .group__media,#artisans .group__image{
-  flex:0 1 clamp(280px,34vw,480px);
-  max-width:clamp(280px,34vw,480px);
-  max-height:clamp(360px,60vh,620px);
+/* Text column */
+#about-us .group__text,
+#artisans .group__text {
+  flex: 1 1 520px;
+  max-width: 640px;
 }
 
-#about-us .group__media img,#about-us .group__image img,
-#artisans .group__media img,#artisans .group__image img{
-  width:100%;height:100%;
-  object-fit:cover;object-position:center;display:block;
+/* Image column: constrain size so it can’t go gigantic */
+#about-us .group__media,
+#about-us .group__image,
+#artisans .group__media,
+#artisans .group__image {
+  flex: 0 1 clamp(280px, 34vw, 520px);
+  max-width: clamp(280px, 34vw, 520px);
+
+  /* This is the important part: force a predictable box size */
+  aspect-ratio: 1 / 1;           /* keeps your masked/circle shapes looking consistent */
+  max-height: 520px;
+  overflow: hidden;
 }
 
-@media (max-width: 900px){
-  #about-us .group__content,#artisans .group__content{flex-direction:column;text-align:center}
+/* Let the image fill the constrained box neatly */
+#about-us .group__media img,
+#about-us .group__image img,
+#artisans .group__media img,
+#artisans .group__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Mobile: stack and center */
+@media (max-width: 900px) {
+  #about-us .group__content,
+  #artisans .group__content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #about-us .group__text,
+  #artisans .group__text {
+    max-width: 680px;
+  }
+
+  #about-us .group__media,
+  #about-us .group__image,
+  #artisans .group__media,
+  #artisans .group__image {
+    width: min(520px, 92vw);
+    max-width: min(520px, 92vw);
+  }
 }
