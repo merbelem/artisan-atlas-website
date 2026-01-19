@@ -4333,6 +4333,10 @@ text-component {
   opacity: 1;
 }
 
+/* =========================
+   About + Artisans hero rows
+   ========================= */
+
 /* === Only affect these two sections === */
 #about-us .group__content,
 #artisans .group__content{
