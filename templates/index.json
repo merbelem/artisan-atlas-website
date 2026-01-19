@@ -268,8 +268,8 @@
         "anchor_id": "about-us",
         "content_direction": "row",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "flex-start",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
@@ -851,6 +851,28 @@
     "section_PXBRXW": {
       "type": "section",
       "blocks": {
+        "image_fgxpK7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/mayan_weaver_in_shape_resized.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "group_i39pUV": {
           "type": "group",
           "settings": {
@@ -961,33 +983,11 @@
             "text_R9Ari7",
             "button_cPEWKX"
           ]
-        },
-        "image_fgxpK7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/mayan_weaver_in_shape_resized.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "group_i39pUV",
-        "image_fgxpK7"
+        "image_fgxpK7",
+        "group_i39pUV"
       ],
       "custom_css": [],
       "name": "Artisans",
