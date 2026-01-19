@@ -4332,3 +4332,11 @@ text-component {
   color: rgb(var(--color-input-text-rgb) / 0.55);
   opacity: 1;
 }
+
+/* Artisans image – prevent over-scaling */
+.artisans-section img,
+.section--artisans img {
+  max-height: 70vh;
+  width: auto;
+  object-fit: contain;
+}
