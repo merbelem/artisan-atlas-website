@@ -4338,10 +4338,15 @@ text-component {
    (scoped so it won't break other sections)
    ========================================= */
 
-/* Make these sections tall like the hero */
-#about-us,
-#artisans{
+/* Keep Shopify's grid layout intact (DO NOT set display:flex on .section) */
+#about-us.section,
+#artisans.section{
   min-height: var(--section-height-large);
+}
+
+/* Vertically center the content inside the section without breaking the grid */
+#about-us .section-content-wrapper,
+#artisans .section-content-wrapper{
   display: flex;
   align-items: center;
 }
@@ -4354,24 +4359,23 @@ text-component {
 
   display: flex;
   align-items: center;
-  justify-content: center;              /* centers the *pair* */
+  justify-content: center !important;   /* override --horizontal-alignment:flex-start */
   gap: clamp(28px, 5vw, 90px);
 }
 
-/* Text column (your group-block) */
+/* Text column */
 #about-us .group-block,
 #artisans .group-block{
   flex: 1 1 520px;
   max-width: 560px;
 }
 
-/* Image column (your image-block) */
+/* Image column */
 #about-us .image-block,
 #artisans .image-block{
   flex: 0 0 clamp(260px, 32vw, 440px);
   max-width: clamp(260px, 32vw, 440px);
 
-  /* stop "height-fill" making the box huge */
   height: auto !important;
   max-height: clamp(320px, 55vh, 520px);
 }
@@ -4383,7 +4387,7 @@ text-component {
   height: 100% !important;
   max-height: inherit;
 
-  object-fit: contain !important;       /* <-- no crop */
+  object-fit: contain !important;
   object-position: center;
   display: block;
 }
