@@ -4368,7 +4368,7 @@ text-component {
 
   /* This is the important part: force a predictable box size */
   aspect-ratio: 1 / 1;           /* keeps your masked/circle shapes looking consistent */
-  max-height: 520px;
+  max-height: 480px;
   overflow: hidden;
 }
 
