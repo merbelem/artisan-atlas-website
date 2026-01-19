@@ -995,7 +995,7 @@
         ".page-width,.section__content,.section__inner,.group,.group__content,.group__inner {margin-inline: auto; max-width: 1200px;}",
         ".section__content,.section__inner,.group,.group__content,.group__inner {justify-content: center; gap: clamp(24px, 4vw, 72px); padding-inline: clamp(24px, 4vw, 72px);}",
         ".image,.media,.group__image,.group__media {flex: 0 0 clamp(320px, 38vw, 560px);}",
-        "/* 4) Keep the text column readable + not too wide */.text,.group__text,.group__blocks {flex: 1 1 520px; max-width: 640px;}"
+        " /* 4) Keep the text column readable + not too wide */.text,.group__text,.group__blocks {flex: 1 1 520px; max-width: 640px;}"
       ],
       "name": "Artisans",
       "settings": {
