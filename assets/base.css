@@ -4333,10 +4333,44 @@ text-component {
   opacity: 1;
 }
 
-/* Artisans image – prevent over-scaling */
-.artisans-section img,
-.section--artisans img {
-  max-height: 70vh;
-  width: auto;
+/* --- Side-by-side “Group” sections: constrain + center + consistent spacing --- */
+#about-us .group__content,
+#artisans .group__content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: clamp(24px, 4vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 6vw, 120px);
+}
+
+/* Make the media column a sane size (prevents “giant image pushed to edge”) */
+#about-us .group__media,
+#about-us .group__image,
+#artisans .group__media,
+#artisans .group__image{
+  flex: 0 0 clamp(320px, 38vw, 560px);
+  max-width: clamp(320px, 38vw, 560px);
+}
+
+/* Make the text column readable and not too wide */
+#about-us .group__text,
+#about-us .group__blocks,
+#artisans .group__text,
+#artisans .group__blocks{
+  flex: 1 1 520px;
+  max-width: 640px;
+}
+
+/* Fit the image nicely inside its masked shape (no oversized spill) */
+#about-us .group__media img,
+#about-us .group__image img,
+#artisans .group__media img,
+#artisans .group__image img{
+  width: 100%;
+  height: auto;
+  max-height: clamp(520px, 70vh, 820px);
   object-fit: contain;
+  display: block;
 }
