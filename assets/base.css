@@ -4334,49 +4334,63 @@ text-component {
 }
 
 /* =========================
-   About + Artisans hero rows
+   About + Artisans hero rows (SCOPED)
    ========================= */
 
-/* === Only affect these two sections === */
-#about-us .group__content,
-#artisans .group__content{
-  max-width: 1100px;
-  margin: 0 auto;
+/* Make these sections the same “tall” feel as the hero */
+#about-us,
+#artisans{
+  min-height: var(--section-height-large);
   display: flex;
   align-items: center;
-  justify-content: center; /* keeps the pair centered as a unit */
-  gap: clamp(32px, 6vw, 96px);
-  padding-inline: clamp(24px, 4vw, 72px);
 }
 
-/* Column sizing */
+/* Layout: keep the text+image pair centered as a unit */
+#about-us .group__content,
+#artisans .group__content{
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(24px, 4vw, 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* spreads text + image nicely */
+  gap: clamp(28px, 5vw, 80px);
+}
+
+/* Text column */
 #about-us .group__text,
 #artisans .group__text{
   flex: 1 1 520px;
   max-width: 560px;
 }
 
+/* Image column */
 #about-us .group__media,
 #artisans .group__media{
-  flex: 0 1 clamp(300px, 34vw, 460px);
-  max-width: clamp(300px, 34vw, 460px);
+  flex: 0 0 clamp(260px, 30vw, 420px);
+  max-width: clamp(260px, 30vw, 420px);
 }
 
-/* IMPORTANT: stop "height-fill" from forcing a tall box */
+/* Stop height-fill forcing a massive box */
 #about-us .image-block--height-fill,
-#artisans .image-block--height-fill{
+#artisans .image-block--height-fill,
+#about-us .image-block,
+#artisans .image-block{
   height: auto !important;
+  max-height: clamp(320px, 45vh, 460px);
 }
 
-/* Image: fit nicely, no cropping */
-#about-us .group__media img,
-#artisans .group__media img,
+/* Ensure the image *fits* (not cropped) inside your shape */
 #about-us .image-block__image,
-#artisans .image-block__image{
+#artisans .image-block__image,
+#about-us .group__media img,
+#artisans .group__media img{
   width: 100%;
-  height: auto !important;
-  max-height: clamp(360px, 55vh, 520px);
-  object-fit: contain !important;
+  height: 100% !important;
+  max-height: inherit;
+
+  object-fit: contain !important;  /* <-- no cropping */
   object-position: center;
   display: block;
 }
