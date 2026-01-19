@@ -4333,11 +4333,12 @@ text-component {
   opacity: 1;
 }
 
-/* =========================
-   About + Artisans hero rows (SCOPED)
-   ========================= */
+/* =========================================
+   ABOUT-US + ARTISANS: same height + centered spacing
+   (scoped so it won't break other sections)
+   ========================================= */
 
-/* Make these sections the same “tall” feel as the hero */
+/* Make these sections tall like the hero */
 #about-us,
 #artisans{
   min-height: var(--section-height-large);
@@ -4345,52 +4346,64 @@ text-component {
   align-items: center;
 }
 
-/* Layout: keep the text+image pair centered as a unit */
-#about-us .group__content,
-#artisans .group__content{
-  width: min(1100px, 100%);
+/* This is the actual row that contains text block + image block */
+#about-us [data-testid="section-content"],
+#artisans [data-testid="section-content"]{
+  width: min(1200px, 100%);
   margin-inline: auto;
-  padding-inline: clamp(24px, 4vw, 72px);
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* spreads text + image nicely */
-  gap: clamp(28px, 5vw, 80px);
+  justify-content: center;              /* centers the *pair* */
+  gap: clamp(28px, 5vw, 90px);
 }
 
-/* Text column */
-#about-us .group__text,
-#artisans .group__text{
+/* Text column (your group-block) */
+#about-us .group-block,
+#artisans .group-block{
   flex: 1 1 520px;
   max-width: 560px;
 }
 
-/* Image column */
-#about-us .group__media,
-#artisans .group__media{
-  flex: 0 0 clamp(260px, 30vw, 420px);
-  max-width: clamp(260px, 30vw, 420px);
-}
-
-/* Stop height-fill forcing a massive box */
-#about-us .image-block--height-fill,
-#artisans .image-block--height-fill,
+/* Image column (your image-block) */
 #about-us .image-block,
 #artisans .image-block{
+  flex: 0 0 clamp(260px, 32vw, 440px);
+  max-width: clamp(260px, 32vw, 440px);
+
+  /* stop "height-fill" making the box huge */
   height: auto !important;
-  max-height: clamp(320px, 45vh, 460px);
+  max-height: clamp(320px, 55vh, 520px);
 }
 
-/* Ensure the image *fits* (not cropped) inside your shape */
+/* Make the image fit inside its container WITHOUT cropping */
 #about-us .image-block__image,
-#artisans .image-block__image,
-#about-us .group__media img,
-#artisans .group__media img{
+#artisans .image-block__image{
   width: 100%;
   height: 100% !important;
   max-height: inherit;
 
-  object-fit: contain !important;  /* <-- no cropping */
+  object-fit: contain !important;       /* <-- no crop */
   object-position: center;
   display: block;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 749px){
+  #about-us [data-testid="section-content"],
+  #artisans [data-testid="section-content"]{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #about-us .group-block,
+  #artisans .group-block{
+    max-width: 38rem;
+  }
+
+  #about-us .image-block,
+  #artisans .image-block{
+    max-width: min(420px, 90vw);
+  }
 }
