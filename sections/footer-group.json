@@ -97,6 +97,7 @@
                 "menu_yiQQfm": {
                   "type": "menu",
                   "name": "t:names.menu",
+                  "disabled": true,
                   "settings": {
                     "menu": "footer",
                     "heading": "Shop",
@@ -118,6 +119,7 @@
                 "menu_MYcwzY": {
                   "type": "menu",
                   "name": "t:names.menu",
+                  "disabled": true,
                   "settings": {
                     "menu": "",
                     "heading": "Learn",
@@ -139,6 +141,7 @@
                 "menu_7KHG7D": {
                   "type": "menu",
                   "name": "t:names.menu",
+                  "disabled": true,
                   "settings": {
                     "menu": "",
                     "heading": "Connect",
@@ -167,6 +170,7 @@
             "email_signup_RrJwUL": {
               "type": "email-signup",
               "name": "t:names.email_signup",
+              "disabled": true,
               "settings": {
                 "width": "custom",
                 "custom_width": 34,
