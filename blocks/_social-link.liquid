@@ -1,16 +1,14 @@
-
-
 {% liquid
   assign block_settings = block.settings
 
   if block_settings.link != blank
 
-    # Special-case mail links
+    # Special-case mail links (so it can render an icon + be considered "valid")
     if block_settings.link contains 'mailto:'
       assign platform = 'mail'
       assign has_profile = true
     else
-      # Extract domain from URL
+      # Extract domain from URL (your existing logic)
       assign platform = block_settings.link | split: '//' | last | remove: 'www.' | split: '.' | first
 
       # Check if URL has a profile path (more than just the domain)
