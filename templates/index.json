@@ -25,50 +25,9 @@
           },
           "blocks": {}
         },
-        "marquee_p4nhma": {
-          "type": "_marquee",
-          "settings": {
-            "movement_direction": "normal",
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "transparent_background": true,
-            "padding-block-start": 24,
-            "padding-block-end": 24,
-            "gap_between_elements": 24
-          },
-          "blocks": {
-            "text_AaUjeY": {
-              "type": "text",
-              "settings": {
-                "text": "<p>coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon coming soon</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_AaUjeY"
-          ]
-        },
         "button_NCfztp": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "label": "Who Are We?",
             "link": "#about-us",
@@ -80,14 +39,39 @@
             "custom_width_mobile": 100
           },
           "blocks": {}
+        },
+        "text_HtUjt4": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Where modern design meets timeless craft.</h2>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "spacer_hKU434",
-        "marquee_p4nhma",
-        "button_NCfztp"
+        "button_NCfztp",
+        "text_HtUjt4"
       ],
-      "name": "t:names.hero_marquee",
+      "name": "Hero",
       "settings": {
         "media_type_1": "image",
         "image_1": "shopify://shop_images/clay_maker_resized.png",
@@ -99,7 +83,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "space-between",
         "gap": 32,
         "section_width": "page-width",
@@ -299,7 +283,7 @@
         "text_69C6UJ": {
           "type": "text",
           "settings": {
-            "text": "<h2>Crafted in tradition. Designed for today.</h2>",
+            "text": "<h2>Rooted in tradition, imagined for today. </h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
