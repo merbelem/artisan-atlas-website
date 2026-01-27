@@ -43,7 +43,7 @@
         "text_HtUjt4": {
           "type": "text",
           "settings": {
-            "text": "<h2>Where modern design meets timeless craft.</h2>",
+            "text": "<h2>Where modern design<br/> meets timeless craft.</h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -83,7 +83,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "flex-end",
         "vertical_alignment_flex_direction_column": "space-between",
         "gap": 32,
         "section_width": "page-width",
