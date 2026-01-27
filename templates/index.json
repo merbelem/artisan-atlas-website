@@ -283,7 +283,7 @@
         "text_69C6UJ": {
           "type": "text",
           "settings": {
-            "text": "<h2>Rooted in tradition, imagined for today. </h2>",
+            "text": "<h2><a href=\"#about-us\" title=\"#about-us\">Rooted in tradition, imagined for today. </a></h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
