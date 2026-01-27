@@ -283,7 +283,7 @@
         "text_69C6UJ": {
           "type": "text",
           "settings": {
-            "text": "<h2>Rooted in tradition, imagined for today. </h2>",
+            "text": "<h2>Rooted in tradition,<br/>imagined for today. </h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -318,7 +318,7 @@
         "open_in_new_tab": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
+        "horizontal_alignment": "flex-end",
         "vertical_alignment": "flex-end",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
