@@ -5,7 +5,7 @@
 
     # Special-case mail links (so it can render an icon + be considered "valid")
     if block_settings.link contains 'mailto:'
-      assign platform = 'mail'
+      assign platform = 'mailto'
       assign has_profile = true
     else
       # Extract domain from URL (your existing logic)
