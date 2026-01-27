@@ -213,7 +213,7 @@
               "type": "_footer-copyright",
               "static": true,
               "settings": {
-                "show_powered_by": true,
+                "show_powered_by": false,
                 "font_size": "0.75rem",
                 "case": "none"
               },
@@ -233,14 +233,6 @@
               "static": true,
               "settings": {},
               "blocks": {
-                "social_link_bFKy9V": {
-                  "type": "_social-link",
-                  "name": "t:names.social_link",
-                  "settings": {
-                    "link": ""
-                  },
-                  "blocks": {}
-                },
                 "social_link_nJ8rCy": {
                   "type": "_social-link",
                   "name": "Instagram",
@@ -248,11 +240,19 @@
                     "link": "https://www.instagram.com/the.artisanatlas/"
                   },
                   "blocks": {}
+                },
+                "social_link_KdaBr8": {
+                  "type": "_social-link",
+                  "name": "Email",
+                  "settings": {
+                    "link": "mailto:connect@theartisanatlas.com"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "social_link_bFKy9V",
-                "social_link_nJ8rCy"
+                "social_link_nJ8rCy",
+                "social_link_KdaBr8"
               ]
             }
           },
