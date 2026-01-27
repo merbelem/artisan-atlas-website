@@ -54,7 +54,7 @@
         aria-hidden="true"
         focusable="false"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
+        viewBox="{% if platform == 'mailto' %}0 0 24 24{% else %}0 0 20 20{% endif %}"
       >
         {%- render 'icon', icon: platform -%}
       </svg>
