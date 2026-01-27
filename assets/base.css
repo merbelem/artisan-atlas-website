@@ -4410,3 +4410,43 @@ text-component {
     max-width: min(420px, 90vw);
   }
 }
+
+/* Wave spacer section (above Contact) */
+#shopify-section-template--26032548315469__section_zUJpZX {
+  position: relative;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+/* Ensure the section has height */
+#shopify-section-template--26032548315469__section_zUJpZX .section {
+  padding: 0;
+  min-height: 320px; /* adjust if needed */
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Wave container */
+#shopify-section-template--26032548315469__section_zUJpZX .aa-wave-divider {
+  width: 100%;
+  line-height: 0;
+  margin-bottom: -2px;
+}
+
+/* Flip the SVG vertically */
+#shopify-section-template--26032548315469__section_zUJpZX .aa-wave-divider img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleY(-1); /* 🔥 THIS flips it */
+}
+
+/* Make sure wave sits above Contact section */
+#shopify-section-template--26032548315469__section_zUJpZX {
+  z-index: 2;
+}
+
+#contact-us {
+  position: relative;
+  z-index: 1;
+}

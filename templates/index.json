@@ -515,34 +515,13 @@
         "padding-block-end": 40
       }
     },
-    "section_zUjPzX": {
-      "type": "section",
-      "name": "t:names.custom_section",
+    "custom_liquid_8Xeb48": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
       "settings": {
-        "anchor_id": "",
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
+        "custom_liquid": "<div class=\"aa-wave-divider\" aria-hidden=\"true\">\n  <img\n    src=\"{{ 'edge-wave-rect-straight.svg' | asset_url }}\"\n    alt=\"\"\n    loading=\"lazy\"\n  >\n</div>",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
+        "section_width": "page-width",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -674,7 +653,7 @@
     "section_8Eah7E",
     "hero_MVUtj6",
     "section_PXBRXW",
-    "section_zUjPzX",
+    "custom_liquid_8Xeb48",
     "section_7XbgwJ"
   ]
 }
