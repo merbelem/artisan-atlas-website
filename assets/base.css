@@ -4411,28 +4411,41 @@ text-component {
   }
 }
 
-/* ===================================
-   Wave divider (reusable)
-   =================================== */
+/* =========================
+   Artisan Atlas — Wave divider (reusable)
+   Usage:
+   <div class="aa-wave aa-wave--flip-y" style="--aa-wave-mask:url(...); --aa-wave-color: var(--sand);"></div>
+   ========================= */
 
 .aa-wave {
-  position: relative;
-  z-index: 2;   /* keeps it above the section background */
-  color: var(--sand); /* brand sand */
-  line-height: 0; /* remove whitespace gaps */
-}
+  /* Customize per instance via inline style */
+  --aa-wave-mask: none;
+  --aa-wave-color: var(--sand, #F2F2ED); /* fallback if var isn't available */
 
-.aa-wave img {
-  display: block;
   width: 100%;
-  height: auto;
+  height: clamp(110px, 18vw, 260px);
+  background-color: var(--aa-wave-color);
+
+  /* Mask the background with the SVG */
+  -webkit-mask-image: var(--aa-wave-mask);
+  mask-image: var(--aa-wave-mask);
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  display: block;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
 }
 
-.aa-wave--flip-vertical img {
+.aa-wave--flip-y {
   transform: scaleY(-1);
-}
-
-.aa-wave--flip-horizontal img {
-  transform: scaleX(-1);
 }
 
