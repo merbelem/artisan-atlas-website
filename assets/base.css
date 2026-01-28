@@ -4449,3 +4449,15 @@ text-component {
   transform: scaleY(-1);
 }
 
+/* Make waves span full width in Atelier's section grid */
+.section .aa-wave {
+  grid-column: 1 / -1;     /* override .section > * { grid-column: 2 } */
+  justify-self: stretch;
+}
+
+/* Optional: if you ever drop it into a "page" width container, force true full-bleed */
+.aa-wave.aa-wave--fullbleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
