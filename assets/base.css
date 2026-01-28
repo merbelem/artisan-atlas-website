@@ -4440,11 +4440,12 @@ text-component {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 
-  -webkit-mask-position: top center;
-  mask-position: top center;
+  -webkit-mask-position: center;
+  mask-position: center;
 
-  -webkit-mask-size: 100% auto;
-  mask-size: 100% auto;
+  /* Force it to fill the element (this is what makes it full-bleed again) */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
 .aa-wave--flip-y::before {
