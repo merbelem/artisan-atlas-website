@@ -4412,57 +4412,46 @@ text-component {
 }
 
 /* =========================
-   Artisan Atlas — Wave divider (reusable)
-   Usage:
-   <div class="aa-wave aa-wave--flip-y" style="--aa-wave-mask:url(...); --aa-wave-color: var(--sand);"></div>
+   AA Wave Divider (reusable)
    ========================= */
 
 .aa-wave {
-  /* Customize per instance via inline style */
-  --aa-wave-mask: none;
-  --aa-wave-color: var(--sand, #F2F2ED); /* fallback if var isn't available */
+  /* tweak height once and reuse everywhere */
+  --aa-wave-height: clamp(140px, 22vw, 420px);
 
-  width: 100%;
-  height: clamp(110px, 18vw, 260px);
-  background-color: var(--aa-wave-color);
-
-  /* Mask the background with the SVG */
-  -webkit-mask-image: var(--aa-wave-mask);
-  mask-image: var(--aa-wave-mask);
-
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-
-  -webkit-mask-position: center;
-  mask-position: center;
-
-  display: block;
-  pointer-events: none;
   position: relative;
-  z-index: 1;
+  display: block;
+  width: 100%;
+  height: var(--aa-wave-height);
+  line-height: 0;
+  pointer-events: none;
+  isolation: isolate;
 }
 
-.aa-wave--flip-y {
+/* The painted shape uses the mask */
+.aa-wave::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--aa-wave-color, var(--sand, #F2F2ED));
+
+  -webkit-mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
+  mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
+}
+
+/* Flip vertically when needed */
+.aa-wave--flip-y::before {
   transform: scaleY(-1);
 }
 
-/* Make waves span full width in Atelier's section grid */
-.section .aa-wave {
-  grid-column: 1 / -1;     /* override .section > * { grid-column: 2 } */
-  justify-self: stretch;
-}
-
-/* Optional: if you ever drop it into a "page" width container, force true full-bleed */
-.aa-wave.aa-wave--fullbleed {
+/* Full-bleed helper (works even inside page-width grids) */
+.aa-wave--fullbleed {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 
-.aa-wave {
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+/* If you need layering against the next section */
+.aa-wave--above {
+  z-index: 2;
 }
