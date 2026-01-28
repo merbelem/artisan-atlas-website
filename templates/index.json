@@ -519,7 +519,7 @@
       "type": "custom-liquid",
       "name": "Wave Divider",
       "settings": {
-        "custom_liquid": "<div\n  class=\"aa-wave aa-wave--fullbleed aa-wave--flip-y aa-wave--above\"\n  aria-hidden=\"true\"\n  style=\"\n    --aa-wave-mask: url({{ 'edge-wave-rect-straight.svg' | asset_url }});\n    --aa-wave-color: var(--sand, #D7D0C4);\n  \">\n</div>",
+        "custom_liquid": "<div class=\"aa-wave aa-wave--flip-vertical flip-x\" aria-hidden=\"true\">\n  <img src=\"{{ 'edge-wave-rect-straight.svg' | asset_url }}\" alt=\"\">\n</div>",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "section_width": "full-width",
         "padding-block-start": 0,
