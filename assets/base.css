@@ -4416,8 +4416,7 @@ text-component {
    ========================= */
 
 .aa-wave {
-  /* tweak height once and reuse everywhere */
-  --aa-wave-height: clamp(140px, 22vw, 420px);
+  --aa-wave-height: clamp(120px, 18vw, 320px);
 
   position: relative;
   display: block;
@@ -4428,30 +4427,38 @@ text-component {
   isolation: isolate;
 }
 
-/* The painted shape uses the mask */
 .aa-wave::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--aa-wave-color, var(--sand, #F2F2ED));
+  background: var(--aa-wave-color, var(--sand, #D7D0C4));
 
-  -webkit-mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
-  mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
+  /* Key change: keep SVG aspect ratio while filling width */
+  -webkit-mask-image: var(--aa-wave-mask);
+  mask-image: var(--aa-wave-mask);
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: top center;
+  mask-position: top center;
+
+  -webkit-mask-size: 100% auto;
+  mask-size: 100% auto;
 }
 
-/* Flip vertically when needed */
 .aa-wave--flip-y::before {
   transform: scaleY(-1);
 }
 
-/* Full-bleed helper (works even inside page-width grids) */
 .aa-wave--fullbleed {
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 
-/* If you need layering against the next section */
+/* z-index only works if positioned */
 .aa-wave--above {
+  position: relative;
   z-index: 2;
 }
