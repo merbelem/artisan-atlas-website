@@ -215,7 +215,7 @@
           "input_background": "rgba(0,0,0,0)",
           "input_text_color": "#4f413a",
           "input_border_color": "#4f413a",
-          "input_hover_background": "#f7f4ec",
+          "input_hover_background": "#d9d0c215",
           "variant_background_color": "#ffffff",
           "variant_text_color": "#000000",
           "variant_border_color": "#e6e6e6",
