@@ -519,7 +519,7 @@
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div class=\"aa-wave-divider\" aria-hidden=\"true\">\n  <img\n    src=\"{{ 'edge-wave-rect-straight.svg' | asset_url }}\"\n    alt=\"\"\n    loading=\"lazy\"\n  >\n</div>",
+        "custom_liquid": "<div class=\"aa-wave-divider\" aria-hidden=\"true\">\n  <img class=\"flip-y\" src=\"{{ 'edge-wave-rect-straight.svg' | asset_url }}\" alt=\"\" loading=\"lazy\">\n</div>",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "section_width": "full-width",
         "padding-block-start": 0,
