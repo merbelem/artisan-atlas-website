@@ -4427,3 +4427,12 @@ text-component {
   width: 100%;
   height: auto;
 }
+
+.aa-wave--flip-vertical img {
+  transform: scaleY(-1);
+}
+
+.aa-wave--flip-horizontal img {
+  transform: scaleX(-1);
+}
+
