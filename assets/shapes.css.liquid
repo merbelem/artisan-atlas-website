@@ -173,3 +173,60 @@
     height: clamp(200px, 28vw, 360px);
   }
 }
+
+/* =========================
+   AA Section Background Shape
+   ========================= */
+
+.section.aa-has-bg-shape {
+  position: relative;
+  overflow: hidden; /* important: prevents the shape from creating weird extra scroll/space */
+}
+
+.section.aa-has-bg-shape .aa-bg-shape {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* The colored shape itself */
+.section.aa-has-bg-shape .aa-bg-shape__fill {
+  position: absolute;
+
+  /* full-bleed even when section content is page-width */
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+
+  background: var(--aa-shape-color, #F2F2ED);
+  opacity: var(--aa-shape-opacity, 1);
+
+  -webkit-mask-image: var(--aa-shape-mask);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: var(--aa-shape-mask);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100% 100%;
+}
+
+/* Ensure section content sits above the background */
+.section.aa-has-bg-shape > :not(.aa-bg-shape) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Flips (optional per-section via class) */
+.section.aa-has-bg-shape.aa-bg-shape--flip-y .aa-bg-shape__fill {
+  transform: translateX(-50%) scaleY(-1);
+}
+.section.aa-has-bg-shape.aa-bg-shape--flip-x .aa-bg-shape__fill {
+  transform: translateX(-50%) scaleX(-1);
+}
+.section.aa-has-bg-shape.aa-bg-shape--flip-x.aa-bg-shape--flip-y .aa-bg-shape__fill {
+  transform: translateX(-50%) scale(-1, -1);
+}

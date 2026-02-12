@@ -1,0 +1,9 @@
+{%- assign s = section.settings -%}
+{%- if s.aa_bg_shape_enabled -%}
+  --aa-shape-mask: url({{ s.aa_bg_shape_asset | default: 'edge-wave-rect-straight.svg' | asset_url }});
+  --aa-shape-color: {{ s.aa_bg_shape_color | default: 'var(--sand, #F2F2ED)' }};
+  --aa-shape-opacity: {{ s.aa_bg_shape_opacity | default: 1 }};
+  --aa-shape-position: {{ s.aa_bg_shape_position | default: 'center' }};
+  --aa-shape-size: {{ s.aa_bg_shape_size | default: 'cover' }};
+  --aa-shape-transform: {{ s.aa_bg_shape_transform | default: 'none' }};
+{%- endif -%}

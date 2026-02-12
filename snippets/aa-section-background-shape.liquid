@@ -1,0 +1,29 @@
+{%- comment -%}
+  Renders a decorative background shape inside a section wrapper.
+  Expects CSS vars on the parent section:
+    --aa-shape-mask: url(...)
+    --aa-shape-color: <color>
+    --aa-shape-opacity: <0..1>
+  Optional classes on the parent section:
+    aa-bg-shape--flip-y
+    aa-bg-shape--flip-x
+{%- endcomment -%}
+
+{%- liquid
+  assign opacity_value = opacity | default: 0.35
+-%}
+
+<div
+  class="aa-section-bg-shape{% if flip_y %} aa-section-bg-shape--flip-y{% endif %}"
+  style="--aa-bg-shape-opacity: {{ opacity_value }};"
+  aria-hidden="true"
+>
+  <img
+    src="{{ asset | asset_url }}"
+    alt=""
+    loading="lazy"
+    width="1600"
+    height="800"
+  >
+
+</div>

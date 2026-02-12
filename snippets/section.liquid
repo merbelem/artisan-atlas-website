@@ -6,7 +6,34 @@
 {%- enddoc -%}
 
 {% assign anchor = section.settings.anchor_id | strip %}
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
+{%- liquid
+  assign aa_anchor = anchor | downcase
+
+  # default: no background shape
+  assign aa_bg_shape_asset = blank
+  assign aa_bg_shape_flip_y = false
+  assign aa_bg_shape_opacity = 0.35
+
+  # map anchor ids -> which svg + flip
+  case aa_anchor
+    when 'contact-us'
+      assign aa_bg_shape_asset = 'edge-wave-rect-straight.svg'
+      assign aa_bg_shape_flip_y = true
+    when 'about-us'
+      assign aa_bg_shape_asset = 'edge-wave-rect-straight.svg'
+      assign aa_bg_shape_flip_y = false
+    when 'artisans'
+      assign aa_bg_shape_asset = 'edge-wave-rect-straight.svg'
+      assign aa_bg_shape_flip_y = false
+  endcase
+-%}
+
+
+<div class="section section--{{ section.settings.section_width }} 
+  color-{{ section.settings.color_scheme }}
+  {% if aa_bg_shape_asset != blank %}aa-has-bg-shape aa-bg-shape--{{ aa_anchor }}{% endif %}"
+></div>
 <div
   class="section section--{{ section.settings.section_width }} 
   color-{{ section.settings.color_scheme }}"
@@ -31,14 +58,23 @@
   "
 >
   <div class="custom-section-background">
-    {% render 'background-media',
-      background_media: section.settings.background_media,
-      background_video: section.settings.video,
-      background_video_position: section.settings.video_position,
-      background_image: section.settings.background_image,
-      background_image_position: section.settings.background_image_position
+  {% render 'background-media',
+    background_media: section.settings.background_media,
+    background_video: section.settings.video,
+    background_video_position: section.settings.video_position,
+    background_image: section.settings.background_image,
+    background_image_position: section.settings.background_image_position
+  %}
+
+  {% if aa_bg_shape_asset != blank %}
+    {% render 'aa-section-background-shape',
+      asset: aa_bg_shape_asset,
+      flip_y: aa_bg_shape_flip_y,
+      opacity: aa_bg_shape_opacity
     %}
-  </div>
+  {% endif %}
+</div>
+
 
   <div
     class="border-style custom-section-content"
@@ -96,4 +132,37 @@
   .custom-section-content {
     z-index: var(--layer-flat);
   }
+
+  /* --- AA reusable background shape (behind section content) --- */
+.custom-section-background {
+  position: relative;
+}
+
+.aa-section-bg-shape {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* keep existing content above the shape */
+.custom-section-content {
+  position: relative;
+  z-index: var(--layer-flat);
+}
+
+.aa-section-bg-shape img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: var(--aa-bg-shape-opacity, 0.35);
+}
+
+/* optional flip */
+.aa-section-bg-shape--flip-y img {
+  transform: scaleY(-1);
+}
+
 {% endstylesheet %}
