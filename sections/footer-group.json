@@ -248,11 +248,21 @@
                     "link": "mailto:connect@theartisanatlas.com"
                   },
                   "blocks": {}
+                },
+                "social_link_TePPbF": {
+                  "type": "_social-link",
+                  "name": "WhatsApp",
+                  "disabled": true,
+                  "settings": {
+                    "link": "https://wa.me/447983693404"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "social_link_nJ8rCy",
-                "social_link_KdaBr8"
+                "social_link_KdaBr8",
+                "social_link_TePPbF"
               ]
             }
           },
