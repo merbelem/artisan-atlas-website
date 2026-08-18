@@ -89,11 +89,6 @@
         "section_width": "page-width",
         "section_height": "full-screen",
         "section_height_custom": 50,
-        "show_wave_edge": true,
-        "wave_color": "#f7f4ec",
-        "wave_mask": "edge-wave-low-continuous.svg",
-        "wave_height_class": "edge--h-fluid",
-        "wave_crop_class": "edge--crop-15",
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
         "overlay_color": "#00000026",
@@ -354,11 +349,6 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 60,
-        "show_wave_edge": false,
-        "wave_color": "#f7f4ec",
-        "wave_mask": "edge-wave-low-continuous.svg",
-        "wave_height_class": "edge--h-fluid",
-        "wave_crop_class": "edge--crop-15",
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
         "overlay_color": "#00000075",
@@ -526,7 +516,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "color_scheme": "scheme-5",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -540,17 +530,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 40,
         "padding-block-end": 40
-      }
-    },
-    "custom_liquid_8Xeb48": {
-      "type": "custom-liquid",
-      "name": "Wave Divider",
-      "settings": {
-        "custom_liquid": "<div class=\"aa-wave aa-wave--flip-vertical flip-x\" aria-hidden=\"true\">\n  <img src=\"{{ 'edge-wave-rect-straight.svg' | asset_url }}\" alt=\"\">\n</div>",
-        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "section_width": "full-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
       }
     },
     "section_7XbgwJ": {
@@ -658,7 +637,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -680,7 +659,6 @@
     "section_8Eah7E",
     "hero_MVUtj6",
     "section_PXBRXW",
-    "custom_liquid_8Xeb48",
     "section_7XbgwJ"
   ]
 }
