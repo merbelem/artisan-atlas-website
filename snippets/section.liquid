@@ -8,8 +8,8 @@
 {% assign anchor = section.settings.anchor_id | strip %}
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
-  class="section section--{{ section.settings.section_width }} 
-  color-{{ section.settings.color_scheme }}"
+  class="section section--{{ section.settings.section_width }}
+  color-{{ section.settings.color_scheme }}{% if anchor == 'contact-us' %} aa-contact-wave{% endif %}"
   {% if anchor != blank %}id="{{ anchor | escape }}"{% endif %}
 
   {% if request.visual_preview_mode %}
