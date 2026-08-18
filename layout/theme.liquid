@@ -68,6 +68,28 @@
         {% endif %}
       }
     </style>
+    <style>
+      /* Fade the header without moving it vertically. Fade in relatively quickly, but fade out slowly. */
+      #header-group > .header-section {
+        transition-property: opacity;
+        transition-duration: 350ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: opacity;
+      }
+
+      #header-group.aa-header-hidden > .header-section {
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 1200ms;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #header-group > .header-section {
+          transition: none;
+        }
+      }
+    </style>
+
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
@@ -75,6 +97,58 @@
     <div id="header-group">
       {% sections 'header-group' %}
     </div>
+
+    <script>
+      (() => {
+        const header = document.getElementById('header-group');
+
+        if (!header) return;
+
+        const topThreshold = 2;
+        const idleDelay = 600;
+        let hideTimer;
+
+        const showHeader = () => {
+          window.clearTimeout(hideTimer);
+          header.classList.remove('aa-header-hidden');
+        };
+
+        const hideAfterIdle = () => {
+          window.clearTimeout(hideTimer);
+
+          if (
+            window.scrollY <= topThreshold ||
+            header.contains(document.activeElement)
+          ) {
+            showHeader();
+            return;
+          }
+
+          hideTimer = window.setTimeout(() => {
+            if (
+              window.scrollY > topThreshold &&
+              !header.contains(document.activeElement)
+            ) {
+              header.classList.add('aa-header-hidden');
+            }
+          }, idleDelay);
+        };
+
+        const handleScroll = () => {
+          showHeader();
+          hideAfterIdle();
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        header.addEventListener('focusin', showHeader);
+        header.addEventListener('focusout', hideAfterIdle);
+
+        if (window.scrollY > topThreshold) {
+          hideAfterIdle();
+        }
+      })();
+    </script>
+
 
     <script
       src="{{ 'critical.js' | asset_url }}"
