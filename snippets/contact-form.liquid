@@ -89,6 +89,58 @@
       >
     </div>
 
+    {%- if settings.show_trade_fields -%}
+      <label
+        class="visually-hidden"
+        for="ContactForm-role"
+      >
+        {{- 'blocks.contact_form.role_label' | t -}}
+      </label>
+      <select
+        id="ContactForm-role"
+        class="contact-form__input"
+        name="contact[I am a]"
+      >
+        <option value="" disabled selected>{{ 'blocks.contact_form.role_label' | t }}</option>
+        <option value="Boutique or retailer">{{ 'blocks.contact_form.role_retailer' | t }}</option>
+        <option value="Hotel, restaurant or spa">{{ 'blocks.contact_form.role_hospitality' | t }}</option>
+        <option value="Interior designer or architect">{{ 'blocks.contact_form.role_designer' | t }}</option>
+        <option value="Other">{{ 'blocks.contact_form.role_other' | t }}</option>
+      </select>
+
+      <div class="contact-form__form-row">
+        <label
+          class="visually-hidden"
+          for="ContactForm-venue"
+        >
+          {{- 'blocks.contact_form.venue' | t -}}
+        </label>
+        <input
+          type="text"
+          id="ContactForm-venue"
+          class="contact-form__input"
+          autocomplete="organization"
+          name="contact[Business or venue]"
+          placeholder="{{ 'blocks.contact_form.venue' | t }}"
+        >
+
+        <label
+          class="visually-hidden"
+          for="ContactForm-city"
+        >
+          {{- 'blocks.contact_form.city' | t -}}
+        </label>
+        <input
+          type="text"
+          id="ContactForm-city"
+          class="contact-form__input"
+          autocomplete="address-level2"
+          name="contact[City]"
+          placeholder="{{ 'blocks.contact_form.city' | t }}"
+        >
+      </div>
+    {%- endif -%}
+
     <label
       class="visually-hidden"
       for="ContactForm-phone"

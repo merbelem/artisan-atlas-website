@@ -112,6 +112,13 @@
       "email": "Email",
       "phone": "Phone",
       "comment": "Comment",
+      "role_label": "I am a...",
+      "role_retailer": "Boutique or retailer",
+      "role_hospitality": "Hotel, restaurant or spa",
+      "role_designer": "Interior designer or architect",
+      "role_other": "Other",
+      "venue": "Business or venue",
+      "city": "City",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
       "error_heading": "Please adjust the following:"
     },

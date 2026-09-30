@@ -100,7 +100,7 @@
                   "disabled": true,
                   "settings": {
                     "menu": "footer",
-                    "heading": "Shop",
+                    "heading": "Studio",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
@@ -175,7 +175,7 @@
                 "width": "custom",
                 "custom_width": 34,
                 "inherit_color_scheme": true,
-                "heading": "Sign up for our newsletter",
+                "heading": "Occasional updates from the studio",
                 "heading_preset": "h4",
                 "color_scheme": "",
                 "border_style": "underline",
