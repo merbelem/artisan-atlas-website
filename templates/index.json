@@ -12,19 +12,6 @@
     "hero_kxa63B": {
       "type": "hero",
       "blocks": {
-        "spacer_hKU434": {
-          "type": "spacer",
-          "settings": {
-            "size": "pixel",
-            "percent_size": 100,
-            "pixel_size": 0,
-            "custom_mobile_size": false,
-            "size_mobile": "percent",
-            "percent_size_mobile": 100,
-            "pixel_size_mobile": 120
-          },
-          "blocks": {}
-        },
         "button_NCfztp": {
           "type": "button",
           "disabled": true,
@@ -40,10 +27,49 @@
           },
           "blocks": {}
         },
+        "text_LHEhzT": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<h2>Artisan Atlas works directly with small artisan groups whose craft draws on local materials and supports their communities.&nbsp;</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "spacer_hKU434": {
+          "type": "spacer",
+          "settings": {
+            "size": "pixel",
+            "percent_size": 100,
+            "pixel_size": 0,
+            "custom_mobile_size": false,
+            "size_mobile": "percent",
+            "percent_size_mobile": 100,
+            "pixel_size_mobile": 120
+          },
+          "blocks": {}
+        },
         "text_HtUjt4": {
           "type": "text",
           "settings": {
-            "text": "<h2><a href=\"#about-us\" title=\"#about-us\">Where modern design<br/> meets timeless craft.</a></h2>",
+            "text": "<p><a href=\"#about-us\" title=\"#about-us\">Handmade pieces from artisan communities, developed with the people who make them.</a></p>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -67,8 +93,9 @@
         }
       },
       "block_order": [
-        "spacer_hKU434",
         "button_NCfztp",
+        "text_LHEhzT",
+        "spacer_hKU434",
         "text_HtUjt4"
       ],
       "name": "Hero",
@@ -172,9 +199,9 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h6>Designing interiors through global craftsmanship</h6>",
+                "text": "<h6><strong>We are a design studio working directly with artisan groups</strong></h6>",
                 "width": "100%",
-                "max_width": "narrow",
+                "max_width": "normal",
                 "alignment": "right",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -197,7 +224,7 @@
             "text_ewJpTB": {
               "type": "text",
               "settings": {
-                "text": "<p>Working directly with artisans worldwide, handmade pieces are integrated into thoughtfully designed spaces. The result is a balance of tradition, material, and contemporary design.</p>",
+                "text": "<p>We look for craft that grows out of local materials and place, and that is a real source of income for the community around it. We start from the techniques each group already uses, and develop pieces together. Quantities, timelines and pricing are agreed with the makers.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "right",
@@ -428,7 +455,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>the artisans</h2>",
+                "text": "<h2>where we work</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -453,7 +480,7 @@
             "text_R9Ari7": {
               "type": "text",
               "settings": {
-                "text": "<p>More than just makers: our artisans carry traditions passed down through generations. Their work reflects a deep connection to material, place, and process. We work directly with each artisan to ensure their craft is respected, their stories are told, and their work is valued as it deserves to be.</p>",
+                "text": "<p>Now: Oaxaca, Mexico. Two collections, in clay and in wool, are in development.</p><p>We add artisan groups slowly and only where we can build a long-term partnership.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
