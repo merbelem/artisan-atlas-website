@@ -89,3 +89,17 @@ body {
   transform: translateX(-50%);
 }
 
+/* ---- Reusable layout utilities (opt in via a block's "Custom class" field) ---- */
+
+/* Circular media — pairs well with the image block's square ratio. */
+.aa-image-circle img,
+.aa-image-circle .placeholder-image {
+  clip-path: var(--shape--circle);
+  aspect-ratio: 1;
+}
+
+/* Pill-shaped button — combine with the existing "button"/"button-secondary" style_class. */
+.button--pill {
+  border-radius: var(--style-border-radius-pills, 999px);
+}
+

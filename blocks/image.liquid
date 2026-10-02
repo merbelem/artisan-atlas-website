@@ -19,7 +19,7 @@
 %}
 
 {% capture class %}
-  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style
+  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style {{ block_settings.custom_class }}
 {% endcapture %}
 
 {% capture style %}
@@ -123,6 +123,12 @@
       "type": "url",
       "id": "link",
       "label": "t:settings.link"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class",
+      "info": "Space-separated CSS classes, e.g. aa-image-circle"
     },
     {
       "type": "header",
