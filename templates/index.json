@@ -236,6 +236,8 @@
         "group_titleIntro": {
           "type": "group",
           "settings": {
+            "link": "",
+            "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -259,6 +261,11 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -269,26 +276,52 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h1>Title</h1>",
-                "type_preset": "h1",
+                "text": "<h1>who are we</h1>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
+                "type_preset": "h1",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0
-              }
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "text_titleIntro": {
               "type": "text",
               "settings": {
                 "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-                "type_preset": "rte",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
                 "padding-block-start": 0,
-                "padding-block-end": 0
-              }
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "button_titleIntro": {
               "type": "button",
@@ -301,15 +334,20 @@
                 "custom_width": 100,
                 "width_mobile": "fit-content",
                 "custom_width_mobile": 100
-              }
+              },
+              "blocks": {}
             }
           },
-          "block_order": ["heading_titleIntro", "text_titleIntro", "button_titleIntro"]
+          "block_order": [
+            "heading_titleIntro",
+            "text_titleIntro",
+            "button_titleIntro"
+          ]
         },
         "image_titleIntro": {
           "type": "image",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/employee_apron_in_shape.png",
             "link": "",
             "custom_class": "aa-image-circle",
             "image_ratio": "square",
@@ -326,10 +364,14 @@
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
-          }
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["group_titleIntro", "image_titleIntro"],
+      "block_order": [
+        "group_titleIntro",
+        "image_titleIntro"
+      ],
       "custom_css": [],
       "name": "Title intro",
       "settings": {
@@ -508,6 +550,7 @@
           "settings": {
             "image": "shopify://shop_images/employee_apron_in_shape.png",
             "link": "",
+            "custom_class": "",
             "image_ratio": "adapt",
             "width": "fill",
             "custom_width": 100,
@@ -534,6 +577,7 @@
       "name": "Who are We?",
       "settings": {
         "anchor_id": "about-us",
+        "wave_divider_top": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "center",
@@ -630,6 +674,7 @@
           "settings": {
             "image": "shopify://shop_images/mayan_weaver_in_shape_resized.png",
             "link": "",
+            "custom_class": "",
             "image_ratio": "adapt",
             "width": "fill",
             "custom_width": 100,
@@ -767,6 +812,7 @@
       "name": "Artisans",
       "settings": {
         "anchor_id": "artisans",
+        "wave_divider_top": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -1098,6 +1144,7 @@
       "name": "Work with us",
       "settings": {
         "anchor_id": "work-with-us",
+        "wave_divider_top": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -1220,6 +1267,7 @@
       "name": "t:names.contact_form",
       "settings": {
         "anchor_id": "contact-us",
+        "wave_divider_top": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
