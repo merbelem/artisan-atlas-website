@@ -100,23 +100,20 @@
    setting. Masks a band of the hero's own color-scheme background over the
    bottom of the media (image/video), so the wave reads as a frame around
    the media rather than a hard rectangular crop. */
-.hero__container--wave-bottom::before {
+.hero__container--wave-bottom::before,
+.hero__container--wave-bottom::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: clamp(90px, 10vw, 180px);
-  z-index: calc(var(--layer-base) + 1);
+  aspect-ratio: 4096 / 559;
+  transform-origin: bottom;
+  transform: translateY(3%) scaleY(0.8);
+  z-index: calc(var(--layer-flat) + 1);
   background: var(--color-background);
   pointer-events: none;
 
-  -webkit-mask: url('{{ "edge-wave-low-sand.svg" | asset_url }}') center / 100% 100% no-repeat;
-  mask: url('{{ "edge-wave-low-sand.svg" | asset_url }}') center / 100% 100% no-repeat;
-}
-
-@media screen and (max-width: 749px) {
-  .hero__container--wave-bottom::before {
-    height: clamp(50px, 18vw, 100px);
-  }
+  -webkit-mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}') center / 100% 100% no-repeat;
+  mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}') center / 100% 100% no-repeat;
 }
