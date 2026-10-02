@@ -77,7 +77,7 @@
   left: 0;
   height: var(--aa-wave-height);
   z-index: var(--layer-base);
-  background: var(--color-background);
+  background: rgb(var(--color-background-rgb));
   pointer-events: none;
 
   -webkit-mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}') center / 100% 100% no-repeat;
@@ -111,7 +111,7 @@
   transform-origin: bottom;
   transform: translateY(3%) scaleY(0.8);
   z-index: calc(var(--layer-flat) + 1);
-  background: var(--color-background);
+  background: rgb(var(--color-background-rgb));
   pointer-events: none;
 
   -webkit-mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}') center / 100% 100% no-repeat;
