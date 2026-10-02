@@ -95,3 +95,28 @@
     --aa-wave-content-offset: clamp(32px, 10vw, 48px);
   }
 }
+
+/* Hero wavy bottom edge — toggle via the Hero section's "Wavy bottom edge"
+   setting. Masks a band of the hero's own color-scheme background over the
+   bottom of the media (image/video), so the wave reads as a frame around
+   the media rather than a hard rectangular crop. */
+.hero__container--wave-bottom::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(90px, 10vw, 180px);
+  z-index: calc(var(--layer-base) + 1);
+  background: var(--color-background);
+  pointer-events: none;
+
+  -webkit-mask: url('{{ "edge-wave-low-sand.svg" | asset_url }}') center / 100% 100% no-repeat;
+  mask: url('{{ "edge-wave-low-sand.svg" | asset_url }}') center / 100% 100% no-repeat;
+}
+
+@media screen and (max-width: 749px) {
+  .hero__container--wave-bottom::before {
+    height: clamp(50px, 18vw, 100px);
+  }
+}

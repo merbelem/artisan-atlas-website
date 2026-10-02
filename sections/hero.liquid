@@ -232,7 +232,7 @@
   {% endcomment %}
 
   <div
-    class="hero__container spacing-style section section--full-width"
+    class="hero__container spacing-style section section--full-width{% if section.settings.wave_divider_bottom %} hero__container--wave-bottom{% endif %}"
     style="      {% render 'spacing-style', settings: section.settings %}"
   >
     {%- if section.settings.link != blank -%}
@@ -291,6 +291,10 @@
     --hero-min-height: 600px;
 
     min-height: 600px;
+  }
+
+  .hero__container--wave-bottom {
+    position: relative;
   }
 
   .hero__container {
@@ -761,6 +765,13 @@
       "id": "color_scheme",
       "label": "t:settings.color_scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "wave_divider_bottom",
+      "label": "Wavy bottom edge",
+      "default": false,
+      "info": "Masks a wave-shaped band of this section's color over the bottom of the media."
     },
     {
       "type": "checkbox",
