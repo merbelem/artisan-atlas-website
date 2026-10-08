@@ -25,14 +25,15 @@
     id="{{ anchor }}"
   {% endif %}
 >
+  {%- if settings.motif != blank and settings.motif != 'none' -%}
+    {%- comment -%} Spans the full section width so motifs reach the screen edge. {%- endcomment -%}
+    {% render 'aa-motif', shape: settings.motif, position: settings.motif_position, class: 'force-full-width' %}
+  {%- endif -%}
   <div class="custom-section-content">
     <div
       class="section-content-wrapper spacing-style aa-section__inner"
       style="{% render 'spacing-style', settings: settings %}"
     >
-      {%- if settings.motif != blank and settings.motif != 'none' -%}
-        {% render 'aa-motif', shape: settings.motif, position: settings.motif_position %}
-      {%- endif -%}
       {{ children }}
     </div>
   </div>

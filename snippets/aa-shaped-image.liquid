@@ -36,9 +36,7 @@
         | image_tag: widths: '320, 480, 640, 960, 1280, 1600', sizes: sizes, loading: loading, class: 'aa-shaped-image__img'
       }}
     {%- else -%}
-      <div class="placeholder-image aa-shaped-image__placeholder">
-        {{ 'lifestyle-1' | placeholder_svg_tag }}
-      </div>
+      <div class="aa-shaped-image__placeholder" aria-hidden="true"></div>
     {%- endif -%}
   </div>
   {%- if link != blank -%}</a>{%- endif -%}

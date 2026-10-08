@@ -33,14 +33,14 @@
 {%- endfor %}
 
 /* ---- Image masks ---- */
-.aa-mask :is(img, video, .placeholder-image) {
+.aa-mask :is(img, video, .placeholder-image, .aa-shaped-image__placeholder) {
   -webkit-mask: var(--aa-mask) center / 100% 100% no-repeat;
   mask: var(--aa-mask) center / 100% 100% no-repeat;
   border-radius: 0;
 }
 
 /* Fixed shapes take their own proportions; bands keep the media's ratio. */
-.aa-mask:not([class*='aa-mask--band']) :is(img, video, .placeholder-image) {
+.aa-mask:not([class*='aa-mask--band']) :is(img, video, .placeholder-image, .aa-shaped-image__placeholder) {
   aspect-ratio: var(--aa-shape-ratio);
   width: 100%;
   height: auto;
