@@ -1,3 +1,16 @@
+/* ===========================
+   Artisan Atlas – Shapes
+   Image masks, decorative motifs and wave edges (brand guidelines p.9).
+   =========================== */
+
+/* Circular media — pairs well with the image block's square ratio.
+   Interim: replaced by .aa-mask--circle once the shape system lands. */
+.aa-image-circle img,
+.aa-image-circle .placeholder-image {
+  clip-path: var(--shape--circle);
+  aspect-ratio: 1;
+}
+
 /* Contact section wave
    The curve begins inside Contact: cream shows through above it, while the
    beige fill continues from the bottom of the SVG through the whole section. */

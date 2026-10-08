@@ -3,7 +3,7 @@
   --font-h2--family: var(--custom-heading-font-family);
   --font-h3--family: var(--custom-heading-font-family);
   --font-h4--family: var(--custom-heading-font-family);
-  --font-h5--family: var(--custom-heading-font-family);
+  /* h5 keeps its theme setting (body font, uppercase) — used as the eyebrow style */
   --font-h6--family: var(--custom-heading-font-family);
 
   /* Ensure Regular weight; Atelier headings read from these vars */

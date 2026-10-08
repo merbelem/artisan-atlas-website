@@ -1,0 +1,77 @@
+/* ===========================
+   Artisan Atlas – Brand tokens
+   Tokens and tiny utilities only. Section layout lives in each section's
+   {% stylesheet %}; shared editorial patterns live in aa-editorial.css;
+   shape masks and wave edges live in aa-shapes.css.liquid.
+   Prefix variables with --aa- so they never collide with theme defaults.
+
+   Colour schemes (config/settings_data.json) map to the palette like so:
+     scheme-1                                     Sand      – default page
+     scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5  Linen     – alternating / contact
+     scheme-3                                     Espresso  – one documentary band per page
+     scheme-4                                     Clay      – rare emphasis
+     scheme-5                                     Hero      – Sand fill (wave edge), Sand text over media
+     scheme-6                                     Over media – transparent, Sand text
+   Components should read colour from the scheme (--color-*), not these hexes.
+   =========================== */
+
+:root {
+  /* ---- Fonts (names only; sources live in fonts-custom.liquid) ---- */
+  --aa-font-display: "Spitzkant", ui-serif, Georgia, "Times New Roman", serif;
+  --aa-font-body: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Palette (brand guidelines p.6: 40 / 20 / 20 / 12 / 8) ---- */
+  --sand: #F2F2ED;
+  --linen: #D9D0C2;
+  --espresso: #4F413A;
+  --clay: #785C53;
+  --ashwood: #8D756D; /* 4.1:1 on Sand – large text and icons only */
+
+  /* ---- Spacing ---- */
+  --aa-space-2xs: .25rem;
+  --aa-space-xs:  .5rem;
+  --aa-space-sm:  .75rem;
+  --aa-space-md:  1rem;
+  --aa-space-lg:  1.5rem;
+  --aa-space-xl:  2rem;
+  --aa-space-2xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --aa-space-3xl: clamp(4rem, 3rem + 5vw, 7.5rem);
+
+  /* ---- Fluid type scale (Utopia-like) ---- */
+  --aa-step--2: clamp(.74rem, .71rem + .15vw, .80rem);
+  --aa-step--1: clamp(.88rem, .83rem + .28vw, 1.00rem);
+  --aa-step-0:  clamp(1.00rem, .95rem + .45vw, 1.25rem);
+  --aa-step-1:  clamp(1.25rem, 1.16rem + .67vw, 1.56rem);
+  --aa-step-2:  clamp(1.56rem, 1.40rem + .96vw, 1.95rem);
+  --aa-step-3:  clamp(1.95rem, 1.69rem + 1.33vw, 2.44rem);
+  --aa-step-4:  clamp(2.44rem, 2.03rem + 1.81vw, 3.05rem);
+  --aa-step-5:  clamp(3.05rem, 2.43rem + 2.42vw, 3.82rem);
+
+  /* ---- Measures ---- */
+  --aa-measure: 62ch;        /* body copy */
+  --aa-measure-narrow: 44ch; /* intros beside media */
+
+  /* ---- Motion ---- */
+  --aa-ease: cubic-bezier(.2, .6, .2, 1);
+  --aa-duration-slow: 900ms;
+}
+
+/* --- Typography hygiene -------------------------------------------------- */
+html { font-synthesis: weight style; }  /* allow fake bold/italic in body */
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .font-display { font-synthesis: none; } /* Spitzkant has one real face */
+
+/* ---- Utilities (opt in via a block's "Custom class" field) ---- */
+.text-display { font-family: var(--aa-font-display); }
+.text-body    { font-family: var(--aa-font-body); }
+
+/* Lets an element (e.g. a wave) run edge-to-edge out of a boxed layout. */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Pill-shaped button — combine with the existing "button"/"button-secondary" style_class. */
+.button--pill {
+  border-radius: var(--style-border-radius-pills, 999px);
+}

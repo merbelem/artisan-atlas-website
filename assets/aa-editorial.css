@@ -1,0 +1,119 @@
+/* ===========================
+   Artisan Atlas – Editorial primitives
+   Small patterns shared by more than one aa- section. Colour always comes
+   from the surrounding colour scheme (--color-*), never from a hex.
+   =========================== */
+
+/* Eyebrow: small label above a heading ("The studio", "From Oaxaca"). */
+.aa-eyebrow {
+  display: block;
+  margin: 0 0 var(--aa-space-md);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--2);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground-rgb) / .75);
+}
+
+/* Caption under shaped or documentary images: who and where. */
+.aa-caption {
+  margin-top: var(--aa-space-sm);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--1);
+  line-height: 1.5;
+  color: rgb(var(--color-foreground-rgb) / .85);
+}
+
+.aa-caption__place {
+  display: block;
+  font-size: var(--aa-step--2);
+  letter-spacing: .06em;
+  color: rgb(var(--color-foreground-rgb) / .7);
+}
+
+/* Spitzkant numerals for services and process steps (01, 02 …). */
+.aa-numeral {
+  display: block;
+  font-family: var(--aa-font-display);
+  font-size: var(--aa-step-3);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+/* Large display statement / pull quote. */
+.aa-statement {
+  margin: 0;
+  font-family: var(--aa-font-display);
+  font-size: var(--aa-step-4);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+.aa-statement__attribution {
+  display: block;
+  margin-top: var(--aa-space-lg);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--1);
+  letter-spacing: .04em;
+}
+
+/* Comfortable reading width for body copy. */
+.aa-prose {
+  max-width: var(--aa-measure);
+  text-wrap: pretty;
+}
+
+.aa-prose > * + * {
+  margin-top: 1em;
+}
+
+.aa-prose--narrow {
+  max-width: var(--aa-measure-narrow);
+}
+
+/* Fine rule between list items (services, values, process). */
+.aa-rule {
+  border: 0;
+  border-top: 1px solid rgb(var(--color-foreground-rgb) / .2);
+  margin: 0;
+}
+
+/* Quiet text link with an underline that sits away from the baseline. */
+.aa-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
+  transition: color .2s var(--aa-ease);
+}
+
+.aa-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Section reveal: a slow, slight rise. Opt in with .aa-reveal; skipped for
+   reduced motion and in the theme editor, where content must stay visible. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .aa-reveal {
+      animation: aa-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes aa-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
