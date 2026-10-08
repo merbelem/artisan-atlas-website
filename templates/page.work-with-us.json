@@ -1,0 +1,380 @@
+{
+  "sections": {
+    "intro": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "Work with us",
+        "heading": "Pieces made with artisan communities, for your spaces",
+        "heading_size": "h1",
+        "body": "<p>We develop pieces with artisan groups for shops, hotels, restaurants and the people who design their spaces.</p><p>Every collection starts with a conversation: about your space, and about what the makers do best.</p>",
+        "button_label": "Start a conversation",
+        "button_link": "#contact-us",
+        "button_style": "button",
+        "image": "shopify://shop_images/employee_apron_in_shape.png",
+        "shape": "none",
+        "image_side": "right",
+        "media_width": "medium",
+        "caption": "",
+        "place": "",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 120,
+        "padding-block-end": 96
+      }
+    },
+    "audience": {
+      "type": "aa-list",
+      "blocks": {
+        "audience_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Boutiques and concept stores",
+            "text": "<p>Pieces in small runs, with the story behind them.</p>"
+          }
+        },
+        "audience_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Hotels, restaurants and spas",
+            "text": "<p>Rooms and tables furnished with handmade work.</p>"
+          }
+        },
+        "audience_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Interior designers and architects",
+            "text": "<p>Sourcing for residential and commercial projects.</p>"
+          }
+        },
+        "audience_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Galleries and curated spaces",
+            "text": "<p>Objects shown as the craft they are.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "audience_1",
+        "audience_2",
+        "audience_3",
+        "audience_4"
+      ],
+      "settings": {
+        "eyebrow": "Who we work with",
+        "heading": "For spaces that want their rooms to hold a story",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 4,
+        "numbered": false,
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 48,
+        "padding-block-end": 96
+      }
+    },
+    "services": {
+      "type": "aa-list",
+      "blocks": {
+        "service_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Wholesale",
+            "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready. Each piece arrives with the story of where and how it was made.</p>",
+            "kicker": "For boutiques and concept stores"
+          }
+        },
+        "service_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Hospitality curation",
+            "text": "<p>Tableware, textiles and objects chosen for your rooms and tables, produced to the makers' capacity. We plan quantities and timing with you and the workshop from the start.</p>",
+            "kicker": "For hotels, restaurants and spas"
+          }
+        },
+        "service_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Bespoke collaborations",
+            "text": "<p>Custom collections developed with one or more artisan groups, from first sample to finished piece. Forms, colours and sizes are designed within each workshop's technique.</p>",
+            "kicker": "For brands and studios"
+          }
+        },
+        "service_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Project sourcing",
+            "text": "<p>Sizes, colours and quantities for residential and commercial projects, made within each workshop's technique. We tell you honestly what is possible, and how long it will take.</p>",
+            "kicker": "For interior designers and architects"
+          }
+        }
+      },
+      "block_order": [
+        "service_1",
+        "service_2",
+        "service_3",
+        "service_4"
+      ],
+      "settings": {
+        "eyebrow": "What we do",
+        "heading": "Four ways to work with us",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 2,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "wave_top": "soft",
+        "anchor_id": "what-we-do",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "where_we_work": {
+      "type": "aa-shaped-gallery",
+      "blocks": {
+        "place_1": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "image": "shopify://shop_images/hand_holding_muitle.png",
+            "shape": "stack",
+            "caption": "Red clay, shaped by hand",
+            "place": "San Marcos Tlapazola"
+          }
+        },
+        "place_2": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "arch",
+            "caption": "Burnished with river stones",
+            "place": "San Marcos Tlapazola"
+          }
+        },
+        "place_3": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "vase-wide",
+            "caption": "Wool on the pedal loom",
+            "place": "Teotitlán del Valle"
+          }
+        },
+        "place_4": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "circle",
+            "caption": "Dyed with plants and cochineal",
+            "place": "Teotitlán del Valle"
+          }
+        }
+      },
+      "block_order": [
+        "place_1",
+        "place_2",
+        "place_3",
+        "place_4"
+      ],
+      "settings": {
+        "eyebrow": "Where we work",
+        "heading": "From Oaxaca",
+        "intro": "<p>Two collections, in clay and in wool, are in development. We add artisan groups slowly and only where we can build a long-term partnership.</p>",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "center",
+        "motif": "floral-8",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "where-we-work",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "working_together": {
+      "type": "aa-list",
+      "blocks": {
+        "step_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Conversation",
+            "text": "<p>Tell us about your space or your shop, what you need and when.</p>"
+          }
+        },
+        "step_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Selection",
+            "text": "<p>We match your brief with a workshop whose technique and material fit.</p>"
+          }
+        },
+        "step_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Samples",
+            "text": "<p>Prototypes are made and refined with the makers before anything is produced.</p>"
+          }
+        },
+        "step_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Production",
+            "text": "<p>Pieces are made in small batches, at the pace hand work needs.</p>"
+          }
+        },
+        "step_5": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Delivery",
+            "text": "<p>Each piece arrives with the story of where and how it was made.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5"
+      ],
+      "settings": {
+        "eyebrow": "Working together",
+        "heading": "From conversation to delivery",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "steps",
+        "columns": 2,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "working-together",
+        "padding-block-start": 96,
+        "padding-block-end": 120
+      }
+    },
+    "practicalities": {
+      "type": "aa-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Is there a minimum order?",
+            "answer": "<p>Minimums depend on the piece and the workshop. We'll suggest a quantity that works for you and for the makers.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "How long does production take?",
+            "answer": "<p>Handmade pieces take time. We agree a realistic timeline with the makers before you commit, and keep you updated as the work progresses.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Can pieces be made to our specifications?",
+            "answer": "<p>Often, yes: sizes, colours and quantities can be adapted within each workshop's technique. We'll tell you honestly what's possible.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Where do you deliver?",
+            "answer": "<p>Tell us where your space is and we'll quote delivery with the order.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "Questions",
+        "heading": "Practicalities",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 48,
+        "padding-block-end": 120
+      }
+    },
+    "contact": {
+      "type": "aa-contact",
+      "blocks": {
+        "form": {
+          "type": "contact-form",
+          "settings": {
+            "show_trade_fields": true,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1"
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "form"
+      ],
+      "settings": {
+        "eyebrow": "Contact",
+        "heading": "Start a conversation",
+        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We will reply personally.</p>",
+        "email": "connect@theartisanatlas.com",
+        "instagram_url": "https://www.instagram.com/the.artisanatlas/",
+        "instagram_label": "@the.artisanatlas",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "wave_top": "straight",
+        "anchor_id": "contact-us",
+        "padding-block-start": 96,
+        "padding-block-end": 128
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "audience",
+    "services",
+    "where_we_work",
+    "working_together",
+    "practicalities",
+    "contact"
+  ]
+}
