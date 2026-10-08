@@ -77,11 +77,12 @@
 .aa-motif--behind       { top: 50%;  left: 50%; translate: -50% -50%; }
 
 /* The motif's parent becomes its stage: content paints above it, and any
-   part of the motif that spills past the edge is clipped, not scrolled. */
+   part of the motif that spills past its edges is clipped, so it never
+   bleeds into the neighbouring section or causes sideways scrolling. */
 :has(> .aa-motif) {
   position: relative;
   isolation: isolate;
-  overflow-x: clip;
+  overflow: clip;
 }
 
 /* ---- 3a. Wavy top edge for sections ----

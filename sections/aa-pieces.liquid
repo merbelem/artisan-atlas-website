@@ -66,6 +66,15 @@
     transition: transform .6s var(--aa-ease);
   }
 
+  .aa-piece-card__placeholder {
+    display: block;
+    height: 70%;
+    aspect-ratio: var(--aa-shape-ratio);
+    background: rgb(var(--color-foreground-rgb) / .12);
+    -webkit-mask: var(--aa-mask) center / contain no-repeat;
+    mask: var(--aa-mask) center / contain no-repeat;
+  }
+
   .aa-piece-card__link:hover .aa-piece-card__img {
     transform: translateY(-6px);
   }
