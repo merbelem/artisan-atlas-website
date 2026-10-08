@@ -105,7 +105,6 @@
       "name": "Hero",
       "settings": {
         "media_type_1": "video",
-        "video_1": "shopify://files/videos/Oaxaca_nature.mp4",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
