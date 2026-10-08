@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "intro": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "The studio",
+        "heading": "A studio for craft and interiors",
+        "heading_size": "h1",
+        "body": "<p>Artisan Atlas is a design studio working directly with artisan groups. We develop contemporary pieces with them, rooted in the techniques and materials each group already uses.</p><p>We make them for shops, hotels, restaurants and the people who design their spaces. Founded in the UK in 2024, we are beginning in Oaxaca, Mexico.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "image": "shopify://shop_images/hand_holding_muitle.png",
+        "shape": "arch",
+        "image_side": "right",
+        "media_width": "medium",
+        "caption": "",
+        "place": "",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 120,
+        "padding-block-end": 96
+      }
+    },
+    "pillars": {
+      "type": "aa-list",
+      "blocks": {
+        "pillar_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Craft",
+            "text": "<p>Celebrating handmade processes and natural materials, and the skill it takes to work them by hand.</p>"
+          }
+        },
+        "pillar_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Culture",
+            "text": "<p>Connecting traditions and their stories, told with the communities who keep them alive.</p>"
+          }
+        },
+        "pillar_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Care",
+            "text": "<p>Thoughtful, ethical and enduring choices: in what we make, how it is made, and who it supports.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ],
+      "settings": {
+        "eyebrow": "What we stand for",
+        "heading": "Craft, culture and care",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 3,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-right",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "wave_top": "soft",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "statement": {
+      "type": "aa-statement",
+      "settings": {
+        "eyebrow": "",
+        "statement": "We work at the pace of the workshop, not the season.",
+        "attribution": "",
+        "link_label": "",
+        "link_url": "",
+        "alignment": "center",
+        "size": "medium",
+        "motif": "floral-thin-8",
+        "motif_position": "behind",
+        "color_scheme": "scheme-3",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 128,
+        "padding-block-end": 128
+      }
+    },
+    "founder": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "Founder",
+        "heading": "Maria-Belem Woodford",
+        "heading_size": "h2",
+        "body": "<p>A former software engineer turned creative entrepreneur, Maria-Belem founded Artisan Atlas to connect craftsmanship with contemporary living, and to help keep cultural heritage alive through design.</p><p>She works directly with each workshop, in Spanish, English and German.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "image": "",
+        "shape": "circle",
+        "image_side": "left",
+        "media_width": "medium",
+        "caption": "",
+        "place": "",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "values": {
+      "type": "aa-list",
+      "blocks": {
+        "value_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Prices agreed openly",
+            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>"
+          }
+        },
+        "value_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "At the workshop's pace",
+            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>"
+          }
+        },
+        "value_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Techniques stay with their makers",
+            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>"
+          }
+        },
+        "value_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Local, natural materials",
+            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "value_1",
+        "value_2",
+        "value_3",
+        "value_4"
+      ],
+      "settings": {
+        "eyebrow": "How we work",
+        "heading": "Made with the people who make it",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 4,
+        "numbered": false,
+        "motif": "floral-4",
+        "motif_position": "top-right",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "how-we-work",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "invite": {
+      "type": "aa-statement",
+      "settings": {
+        "eyebrow": "",
+        "statement": "Every collection starts with a conversation.",
+        "attribution": "",
+        "link_label": "Work with us",
+        "link_url": "/pages/work-with-us",
+        "alignment": "center",
+        "size": "medium",
+        "motif": "none",
+        "motif_position": "behind",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 128
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "pillars",
+    "statement",
+    "founder",
+    "values",
+    "invite"
+  ]
+}

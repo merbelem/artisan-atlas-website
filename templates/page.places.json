@@ -1,0 +1,234 @@
+{
+  "sections": {
+    "intro": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "Places",
+        "heading": "Oaxaca, Mexico",
+        "heading_size": "h1",
+        "body": "<p>In the valleys and hills of Oaxaca, craft is part of daily life: towns that have shaped clay for generations, and weaving communities that keep Zapotec textile traditions alive.</p><p>This is where Artisan Atlas begins, with two workshops: one in red clay, one in wool.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "image": "",
+        "shape": "arch",
+        "image_side": "right",
+        "media_width": "medium",
+        "caption": "",
+        "place": "",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 120,
+        "padding-block-end": 96
+      }
+    },
+    "clay": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "San Marcos Tlapazola · Red clay",
+        "heading": "Clay from the hills above the village",
+        "heading_size": "h2",
+        "body": "<p>A women's pottery collective shapes every piece entirely by hand. The red clay is dug by hand from the hills above the village, mixed with river sand for strength, and kneaded to draw out the air.</p><p>There is no glaze and no paint. Pieces are burnished with river stones and finished with thin layers of red clay, dried in the shade, then fired in the open air, where the smoke leaves marks no two pieces share.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "image": "",
+        "shape": "stack",
+        "image_side": "left",
+        "media_width": "medium",
+        "caption": "Red clay, shaped by hand",
+        "place": "San Marcos Tlapazola",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "red-clay",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "clay_process": {
+      "type": "aa-list",
+      "blocks": {
+        "step_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Dig",
+            "text": "<p>Clay is dug by hand from the hills above the village.</p>"
+          }
+        },
+        "step_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Prepare",
+            "text": "<p>It is soaked, mixed with river sand, and kneaded by hand to remove the air.</p>"
+          }
+        },
+        "step_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Shape",
+            "text": "<p>Each piece is shaped by hand, with corn cobs, leather and wooden tools.</p>"
+          }
+        },
+        "step_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Burnish",
+            "text": "<p>Thin layers of red clay are polished with river stones, in place of a glaze.</p>"
+          }
+        },
+        "step_5": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Fire",
+            "text": "<p>Pieces are fired in the open air; the smoke leaves its own marks.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5"
+      ],
+      "settings": {
+        "eyebrow": "From hill to table",
+        "heading": "How a piece of red clay is made",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "steps",
+        "columns": 3,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-right",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 48,
+        "padding-block-end": 96
+      }
+    },
+    "wool": {
+      "type": "aa-text-media",
+      "settings": {
+        "eyebrow": "Teotitlán del Valle · Wool",
+        "heading": "Woven on the pedal loom",
+        "heading_size": "h2",
+        "body": "<p>A family weaving workshop works on the pedal loom: feet set the warp, hands pass the shuttle. Patterns are kept in memory or lightly sketched, so even with the same design, no two pieces are identical.</p><p>Every colour is naturally dyed: reds and pinks from cochineal, blues from indigo, yellows and oranges from pericón and marigold, browns from walnut.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "image": "",
+        "shape": "vase-wide",
+        "image_side": "right",
+        "media_width": "medium",
+        "caption": "Wool on the pedal loom",
+        "place": "Teotitlán del Valle",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "wave_top": "soft",
+        "anchor_id": "wool",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "statement": {
+      "type": "aa-statement",
+      "settings": {
+        "eyebrow": "",
+        "statement": "No two pieces are identical. The variation is the mark of the hand.",
+        "attribution": "",
+        "link_label": "",
+        "link_url": "",
+        "alignment": "center",
+        "size": "medium",
+        "motif": "floral-thin-8",
+        "motif_position": "behind",
+        "color_scheme": "scheme-3",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 128,
+        "padding-block-end": 128
+      }
+    },
+    "in_development": {
+      "type": "aa-list",
+      "blocks": {
+        "piece_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Colección Tierra",
+            "text": "<p>Red clay tableware: large and medium plates, soup and pasta bowls, and a cup. Shaped by hand without molds, and fired in the open air.</p><p>Prototypes are being made now.</p>",
+            "kicker": "Red clay · San Marcos Tlapazola"
+          }
+        },
+        "piece_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Wool rugs",
+            "text": "<p>Organically shaped rugs, hand-woven wool on a cotton warp and naturally dyed, designed together with the workshop.</p><p>In design.</p>",
+            "kicker": "Wool · Teotitlán del Valle"
+          }
+        }
+      },
+      "block_order": [
+        "piece_1",
+        "piece_2"
+      ],
+      "settings": {
+        "eyebrow": "In development",
+        "heading": "What we are making together",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 2,
+        "numbered": false,
+        "motif": "floral-4",
+        "motif_position": "top-right",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "next": {
+      "type": "aa-statement",
+      "settings": {
+        "eyebrow": "",
+        "statement": "More places to come. We add artisan groups slowly, and only where we can build a long-term partnership.",
+        "attribution": "",
+        "link_label": "Work with us",
+        "link_url": "/pages/work-with-us",
+        "alignment": "center",
+        "size": "medium",
+        "motif": "none",
+        "motif_position": "behind",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 48,
+        "padding-block-end": 128
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "clay",
+    "clay_process",
+    "wool",
+    "statement",
+    "in_development",
+    "next"
+  ]
+}

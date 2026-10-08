@@ -1,95 +1,18 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact": {
+      "type": "aa-contact",
       "blocks": {
-        "title": {
-          "type": "text",
-          "name": "t:names.title",
-          "settings": {
-            "text": "<h2>{{ closest.page.title }}</h2>",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "",
-            "color": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "background": false,
-            "background_color": "#00000026",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "content": {
-          "type": "text",
-          "name": "t:names.content",
-          "settings": {
-            "text": "{{ closest.page.content }}",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "",
-            "color": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "background": false,
-            "background_color": "#00000026",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "title",
-        "content"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 0
-      }
-    },
-    "form": {
-      "type": "section",
-      "blocks": {
-        "contact_form_UwiCkQ": {
+        "form": {
           "type": "contact-form",
           "settings": {
+            "show_trade_fields": true,
             "width": "custom",
-            "custom_width": 50,
+            "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
             "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "color_scheme": "scheme-1"
           },
           "blocks": {
             "submit-button": {
@@ -110,39 +33,76 @@
         }
       },
       "block_order": [
-        "contact_form_UwiCkQ"
+        "form"
       ],
-      "name": "t:names.contact_form",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
+        "eyebrow": "Contact",
+        "heading": "Start a conversation",
+        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We read every message and reply personally.</p>",
+        "email": "connect@theartisanatlas.com",
+        "instagram_url": "https://www.instagram.com/the.artisanatlas/",
+        "instagram_label": "@the.artisanatlas",
         "color_scheme": "scheme-1",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 32,
-        "padding-block-end": 32
+        "wave_top": "none",
+        "anchor_id": "contact-us",
+        "padding-block-start": 120,
+        "padding-block-end": 128
+      }
+    },
+    "practicalities": {
+      "type": "aa-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Is there a minimum order?",
+            "answer": "<p>Minimums depend on the piece and the workshop. We'll suggest a quantity that works for you and for the makers.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "How long does production take?",
+            "answer": "<p>Handmade pieces take time. We agree a realistic timeline with the makers before you commit, and keep you updated as the work progresses.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Can pieces be made to our specifications?",
+            "answer": "<p>Often, yes: sizes, colours and quantities can be adapted within each workshop's technique. We'll tell you honestly what's possible.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "_aa-faq-item",
+          "settings": {
+            "question": "Where do you deliver?",
+            "answer": "<p>Tell us where your space is and we'll quote delivery with the order.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "Questions",
+        "heading": "Practicalities",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "wave_top": "soft",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 120
       }
     }
   },
   "order": [
-    "main",
-    "form"
+    "contact",
+    "practicalities"
   ]
 }
