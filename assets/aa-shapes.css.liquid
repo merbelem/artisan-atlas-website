@@ -1,88 +1,120 @@
 /* ===========================
    Artisan Atlas – Shapes
-   Image masks, decorative motifs and wave edges (brand guidelines p.9).
+   Brand shapes (guidelines p.9) used three ways, all from the same SVGs:
+     1. Image masks   .aa-mask .aa-mask--<shape> on a wrapper; its img,
+                      video or placeholder takes the shape and its ratio.
+     2. Motifs        .aa-motif .aa-mask--<shape>; a flat watermark filled
+                      with the colour scheme's foreground.
+     3. Wave edges    .aa-wave-top (sections) and the hero's wavy bottom.
+   The SVG fill colour doesn't matter: masks only read the alpha channel.
    =========================== */
 
-/* Circular media — pairs well with the image block's square ratio.
-   Interim: replaced by .aa-mask--circle once the shape system lands. */
-.aa-image-circle img,
-.aa-image-circle .placeholder-image {
-  clip-path: var(--shape--circle);
+/* ---- 1. Shape registry: mask image + natural ratio per shape ---- */
+{%- liquid
+  # name:width/height — keep in sync with the "Shape" selects in blocks/image.liquid and blocks/aa-motif.liquid
+  assign aa_shapes = 'arch:902/1200,circle:1,circle-in-square:1200/1193,stack:873/1200,arch-bowl:904/1193,bowl-circle:1200/1194,short-arch-bowl:903/1197,vase-tall:476/1197,vase-wide:772/1198,vase-pedestal:912/1206,floral-8:1200/1180,floral-4:1000/1064,floral-thin-8:1200/1106,reef:1200/967' | split: ','
+-%}
+{%- for entry in aa_shapes -%}
+  {%- assign parts = entry | split: ':' -%}
+  {%- assign file = 'shape-' | append: parts[0] | append: '.svg' %}
+.aa-mask--{{ parts[0] }} {
+  --aa-mask: url('{{ file | asset_url }}');
+  --aa-shape-ratio: {{ parts[1] }};
+}
+{%- endfor %}
+
+/* Bands: wide shapes that stretch to the media's own ratio. */
+{%- assign aa_bands = 'band-wave,band-low,band-rounded' | split: ',' -%}
+{%- for band in aa_bands -%}
+  {%- assign file = 'shape-' | append: band | append: '.svg' %}
+.aa-mask--{{ band }} {
+  --aa-mask: url('{{ file | asset_url }}');
+}
+{%- endfor %}
+
+/* ---- Image masks ---- */
+.aa-mask :is(img, video, .placeholder-image) {
+  -webkit-mask: var(--aa-mask) center / 100% 100% no-repeat;
+  mask: var(--aa-mask) center / 100% 100% no-repeat;
+  border-radius: 0;
+}
+
+/* Fixed shapes take their own proportions; bands keep the media's ratio. */
+.aa-mask:not([class*='aa-mask--band']) :is(img, video, .placeholder-image) {
+  aspect-ratio: var(--aa-shape-ratio);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Legacy alias for content saved before the shape system. */
+.aa-image-circle {
+  --aa-mask: url('{{ "shape-circle.svg" | asset_url }}');
+}
+
+.aa-image-circle :is(img, .placeholder-image) {
+  -webkit-mask: var(--aa-mask) center / 100% 100% no-repeat;
+  mask: var(--aa-mask) center / 100% 100% no-repeat;
   aspect-ratio: 1;
 }
 
-/* Contact section wave
-   The curve begins inside Contact: cream shows through above it, while the
-   beige fill continues from the bottom of the SVG through the whole section. */
-
-.section-wrapper:has(> #artisans) > .section-background {
-  background: var(--sand);
-}
-
-.section-wrapper:has(> .aa-contact-wave) {
-  --aa-contact-wave-height: clamp(400px, 38vw, 520px);
-  --aa-contact-wave-overlap: 0px;
-  --aa-contact-wave-depth: var(--aa-contact-wave-height);
-  --aa-contact-content-offset: clamp(48px, 5vw, 72px);
-
-  background: var(--sand);
-}
-
-.section-wrapper:has(> .aa-contact-wave) > .section-background {
-  top: calc(var(--aa-contact-wave-depth) - 1px);
-  bottom: 0;
-  z-index: var(--layer-base);
-  background: var(--linen);
-}
-
-.aa-contact-wave {
-  z-index: calc(var(--layer-base) + 1);
-}
-
-.aa-contact-wave::before {
-  content: '';
+/* ---- 2. Motifs ---- */
+.aa-motif {
   position: absolute;
-  top: calc(var(--aa-contact-wave-overlap) * -1);
-  right: 0;
-  left: 0;
-  height: var(--aa-contact-wave-height);
-  z-index: var(--layer-base);
-  background: var(--linen);
+  z-index: -1;
+  width: var(--aa-motif-size, clamp(220px, 32vw, 460px));
+  aspect-ratio: var(--aa-shape-ratio, 1);
+  background: rgb(var(--color-foreground-rgb) / var(--aa-motif-opacity, .06));
+  -webkit-mask: var(--aa-mask) center / contain no-repeat;
+  mask: var(--aa-mask) center / contain no-repeat;
   pointer-events: none;
-
-  -webkit-mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}') center / 100% 100% no-repeat;
-  mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}') center / 100% 100% no-repeat;
-  transform: scaleY(-1);
 }
 
-.aa-contact-wave .section-content-wrapper {
-  padding-block-start: calc(var(--padding-block-start) + var(--aa-contact-content-offset));
+.aa-motif--top-left     { top: 0;    left: 0;  translate: -25% -15%; }
+.aa-motif--top-right    { top: 0;    right: 0; translate: 25% -15%; }
+.aa-motif--bottom-left  { bottom: 0; left: 0;  translate: -25% 15%; }
+.aa-motif--bottom-right { bottom: 0; right: 0; translate: 25% 15%; }
+.aa-motif--behind       { top: 50%;  left: 50%; translate: -50% -50%; }
+
+/* The motif's parent becomes its stage: content paints above it, and any
+   part of the motif that spills past the edge is clipped, not scrolled. */
+:has(> .aa-motif) {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
 }
 
-@media screen and (max-width: 749px) {
-  .section-wrapper:has(> .aa-contact-wave) {
-    --aa-contact-wave-height: clamp(220px, 58vw, 300px);
-    --aa-contact-content-offset: clamp(32px, 10vw, 48px);
-  }
-}
-
-/* Reusable wavy top-edge divider — toggle on any `sections/section.liquid`
-   instance via its "Wavy top edge" setting. Unlike the Contact-specific wave
-   above, this one picks up the section's own color scheme (--color-background)
-   instead of hardcoding sand/linen, so it works with whatever scheme a
-   section is assigned. */
-.section-wrapper:has(> .aa-wave-divider-top) {
+/* ---- 3a. Wavy top edge for sections ----
+   The section's own colour-scheme background curves up into the section
+   above, which shows through as --aa-wave-bg-above (Sand by default — the
+   page colour). Toggle via the "Wavy top edge" setting on Section and aa-
+   sections; .aa-wave-top--soft picks the gentler curve. */
+.section-wrapper:has(> .aa-wave-top) {
   --aa-wave-height: clamp(400px, 38vw, 520px);
   --aa-wave-content-offset: clamp(48px, 5vw, 72px);
 
   background: var(--aa-wave-bg-above, var(--sand));
 }
 
-.aa-wave-divider-top {
+.section-wrapper:has(> .aa-wave-top) > .section-background {
+  top: calc(var(--aa-wave-height) - 1px);
+  bottom: 0;
+  z-index: var(--layer-base);
+}
+
+.aa-wave-top {
+  --aa-wave-mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}');
+  --aa-wave-flip: scaleY(-1);
+
   z-index: calc(var(--layer-base) + 1);
 }
 
-.aa-wave-divider-top::before {
+.aa-wave-top--soft {
+  --aa-wave-mask: url('{{ "edge-wave-soft.svg" | asset_url }}');
+  --aa-wave-flip: none;
+}
+
+.aa-wave-top::before {
   content: '';
   position: absolute;
   top: 0;
@@ -90,29 +122,30 @@
   left: 0;
   height: var(--aa-wave-height);
   z-index: var(--layer-base);
+  /* RGB-only property: schemes may carry alpha, and the fill must be opaque. */
   background: rgb(var(--color-background-rgb));
   pointer-events: none;
 
-  -webkit-mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}') center / 100% 100% no-repeat;
-  mask: url('{{ "edge-wave-rect-straight.svg" | asset_url }}') center / 100% 100% no-repeat;
-  transform: scaleY(-1);
+  -webkit-mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
+  mask: var(--aa-wave-mask) center / 100% 100% no-repeat;
+  transform: var(--aa-wave-flip);
 }
 
-.aa-wave-divider-top .section-content-wrapper {
+.aa-wave-top .section-content-wrapper {
   padding-block-start: calc(var(--padding-block-start) + var(--aa-wave-content-offset));
 }
 
 @media screen and (max-width: 749px) {
-  .section-wrapper:has(> .aa-wave-divider-top) {
+  .section-wrapper:has(> .aa-wave-top) {
     --aa-wave-height: clamp(220px, 58vw, 300px);
     --aa-wave-content-offset: clamp(32px, 10vw, 48px);
   }
 }
 
-/* Hero wavy bottom edge — toggle via the Hero section's "Wavy bottom edge"
-   setting. Masks a band of the hero's own color-scheme background over the
-   bottom of the media (image/video), so the wave reads as a frame around
-   the media rather than a hard rectangular crop. */
+/* ---- 3b. Hero wavy bottom edge ----
+   Toggle via the Hero section's "Wavy bottom edge" setting. Masks a band of
+   the hero's own colour-scheme background over the bottom of the media, so
+   the wave reads as a frame around the media rather than a hard crop. */
 .hero__container--wave-bottom::before,
 .hero__container--wave-bottom::after {
   content: '';

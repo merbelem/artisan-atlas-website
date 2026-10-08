@@ -1,0 +1,75 @@
+{% render 'aa-motif',
+  shape: block.settings.shape,
+  position: block.settings.position,
+  size: block.settings.size,
+  opacity: block.settings.opacity,
+  attributes: block.shopify_attributes
+%}
+
+{% schema %}
+{
+  "name": "Motif",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "A quiet brand-shape watermark behind this section's content. Use one per section at most."
+    },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "Shape",
+      "options": [
+        { "value": "floral-8", "label": "Flower" },
+        { "value": "floral-thin-8", "label": "Fine flower" },
+        { "value": "floral-4", "label": "Leaf fan" },
+        { "value": "reef", "label": "Reef" },
+        { "value": "circle", "label": "Circle" },
+        { "value": "arch", "label": "Arch" },
+        { "value": "stack", "label": "Stacked waves" },
+        { "value": "vase-wide", "label": "Wide vase" }
+      ],
+      "default": "floral-8"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        { "value": "top-left", "label": "Top left" },
+        { "value": "top-right", "label": "Top right" },
+        { "value": "bottom-left", "label": "Bottom left" },
+        { "value": "bottom-right", "label": "Bottom right" },
+        { "value": "behind", "label": "Centred behind" }
+      ],
+      "default": "top-left"
+    },
+    {
+      "type": "range",
+      "id": "size",
+      "label": "Size",
+      "min": 160,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "default": 420
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "label": "Strength",
+      "min": 2,
+      "max": 30,
+      "step": 1,
+      "unit": "%",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Motif",
+      "category": "Artisan Atlas"
+    }
+  ]
+}
+{% endschema %}

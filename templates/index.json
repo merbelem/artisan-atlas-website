@@ -350,7 +350,7 @@
           "settings": {
             "image": "shopify://shop_images/employee_apron_in_shape.png",
             "link": "",
-            "custom_class": "aa-image-circle",
+            "custom_class": "",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 38,
@@ -364,7 +364,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "shape": "circle"
           },
           "blocks": {}
         }
@@ -377,7 +378,6 @@
       "name": "Title intro",
       "settings": {
         "anchor_id": "",
-        "wave_divider_top": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "center",
@@ -402,7 +402,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 64,
-        "padding-block-end": 64
+        "padding-block-end": 64,
+        "wave_top": "none"
       }
     },
     "section_8Eah7E": {
@@ -578,7 +579,6 @@
       "name": "Who are We?",
       "settings": {
         "anchor_id": "about-us",
-        "wave_divider_top": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "center",
@@ -603,7 +603,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "wave_top": "none"
       }
     },
     "hero_MVUtj6": {
@@ -813,7 +814,6 @@
       "name": "Artisans",
       "settings": {
         "anchor_id": "artisans",
-        "wave_divider_top": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -838,7 +838,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "wave_top": "none"
       }
     },
     "section_wwuBand": {
@@ -1145,7 +1146,6 @@
       "name": "Work with us",
       "settings": {
         "anchor_id": "work-with-us",
-        "wave_divider_top": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -1170,7 +1170,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "wave_top": "none"
       }
     },
     "section_7XbgwJ": {
@@ -1268,7 +1269,6 @@
       "name": "t:names.contact_form",
       "settings": {
         "anchor_id": "contact-us",
-        "wave_divider_top": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -1293,7 +1293,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 40,
+        "wave_top": "straight"
       }
     }
   },

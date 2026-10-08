@@ -1,0 +1,23 @@
+{%- doc -%}
+  Renders a decorative brand-shape watermark, filled with the colour scheme's
+  foreground at low opacity. Its parent becomes the positioning context.
+
+  @param {string} shape - Shape name from aa-shapes.css.liquid, e.g. 'floral-8'
+  @param {string} [position] - 'top-left', 'top-right', 'bottom-left', 'bottom-right' or 'behind' (default)
+  @param {number} [size] - Width in px on desktop; scales down on small screens
+  @param {number} [opacity] - 1–30, percentage of the foreground colour (default 6)
+  @param {string} [attributes] - Extra attributes, e.g. block.shopify_attributes
+
+  @example
+  {% render 'aa-motif', shape: 'floral-8', position: 'top-left', size: 420 %}
+{%- enddoc -%}
+{%- liquid
+  assign position = position | default: 'behind'
+  assign opacity = opacity | default: 6 | divided_by: 100.0
+-%}
+<span
+  class="aa-motif aa-mask--{{ shape }} aa-motif--{{ position }}"
+  style="--aa-motif-opacity: {{ opacity }};{% if size %} --aa-motif-size: clamp({{ size | times: 0.5 | round }}px, {{ size | divided_by: 14.4 | round: 1 }}vw, {{ size }}px);{% endif %}"
+  aria-hidden="true"
+  {{ attributes }}
+></span>
