@@ -56,9 +56,9 @@
               "settings": {
                 "text": "<h2>Handmade pieces from artisan communities, developed with the people who make them.</h2>",
                 "width": "fit-content",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h2",
+                "type_preset": "h3",
                 "font": "var(--font-heading--family)",
                 "font_size": "",
                 "line_height": "normal",
@@ -257,7 +257,8 @@
         "anchor_id": "",
         "padding-block-start": 96,
         "padding-block-end": 96
-      }
+      },
+      "disabled": true
     },
     "aa_services": {
       "type": "aa-list",
@@ -314,7 +315,7 @@
         "motif": "none",
         "motif_position": "top-left",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "wave_top": "none",
+        "wave_top": "soft",
         "anchor_id": "work-with-us",
         "padding-block-start": 96,
         "padding-block-end": 96

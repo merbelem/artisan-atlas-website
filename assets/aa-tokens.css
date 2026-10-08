@@ -88,3 +88,14 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4, .font-display { font-synthesis: none; } /* S
 .button--pill {
   border-radius: var(--style-border-radius-pills, 999px);
 }
+
+/* Buttons: the theme sizes them from the loose paragraph line-height, which
+   makes Spitzkant labels sit in tall, chunky boxes. Keep them compact. */
+:root:root {
+  --button-padding-block: 12px;
+  --button-padding-inline: 24px;
+}
+
+:is(.button, .button-secondary):not(.button-unstyled) {
+  line-height: 1.2;
+}
