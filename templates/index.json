@@ -12,45 +12,6 @@
     "hero_kxa63B": {
       "type": "hero",
       "blocks": {
-        "text_LHEhzT": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Artisan Atlas works directly with small artisan groups whose craft draws on local materials and supports their communities. We are beginning in Oaxaca, Mexico.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h6",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "spacer_hKU434": {
-          "type": "spacer",
-          "settings": {
-            "size": "pixel",
-            "percent_size": 100,
-            "pixel_size": 0,
-            "custom_mobile_size": false,
-            "size_mobile": "percent",
-            "percent_size_mobile": 100,
-            "pixel_size_mobile": 120
-          },
-          "blocks": {}
-        },
         "group_heroCta": {
           "type": "group",
           "settings": {
@@ -97,8 +58,8 @@
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-primary--family)",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
                 "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -171,8 +132,8 @@
                 "button_where": {
                   "type": "button",
                   "settings": {
-                    "label": "Where we work",
-                    "link": "#artisans",
+                    "label": "How we work",
+                    "link": "#how-we-work",
                     "open_in_new_tab": false,
                     "style_class": "button-secondary",
                     "width": "fit-content",
@@ -187,17 +148,41 @@
                 "button_trade",
                 "button_where"
               ]
+            },
+            "text_heroEyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A studio for craft and interiors</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
+            "text_heroEyebrow",
             "text_HtUjt4",
             "group_heroBtns"
           ]
         }
       },
       "block_order": [
-        "text_LHEhzT",
-        "spacer_hKU434",
         "group_heroCta"
       ],
       "name": "Hero",
@@ -214,7 +199,7 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "space-between",
+        "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 32,
         "section_width": "page-width",
         "section_height": "full-screen",
@@ -231,1017 +216,323 @@
         "padding-block-end": 160
       }
     },
-    "section_titleIntro1": {
-      "type": "section",
-      "blocks": {
-        "group_titleIntro": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 20,
-            "width": "custom",
-            "custom_width": 44,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "heading_titleIntro": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h1>who are we</h1>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h1",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_titleIntro": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_titleIntro": {
-              "type": "button",
-              "settings": {
-                "label": "Label",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button button--pill",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_titleIntro",
-            "text_titleIntro",
-            "button_titleIntro"
-          ]
-        },
-        "image_titleIntro": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/employee_apron_in_shape.png",
-            "link": "",
-            "custom_class": "",
-            "image_ratio": "square",
-            "width": "custom",
-            "custom_width": 38,
-            "width_mobile": "custom",
-            "custom_width_mobile": 60,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "shape": "circle"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "group_titleIntro",
-        "image_titleIntro"
-      ],
-      "custom_css": [],
-      "name": "Title intro",
+    "aa_studio": {
+      "type": "aa-text-media",
       "settings": {
+        "eyebrow": "The studio",
+        "heading": "We are a design studio working directly with artisan groups",
+        "heading_size": "h2",
+        "body": "<p>We look for craft that grows out of local materials and place, and that is a real source of income for the community around it.</p><p>We start from the techniques each group already uses, and develop pieces together. Quantities, timelines and pricing are agreed with the makers.</p>",
+        "button_label": "How we work",
+        "button_link": "#how-we-work",
+        "button_style": "button-secondary",
+        "image": "shopify://shop_images/home-decor-natural-1-middle.jpg",
+        "shape": "arch",
+        "image_side": "right",
+        "media_width": "medium",
+        "caption": "",
+        "place": "",
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
         "anchor_id": "",
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 48,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 64,
-        "padding-block-end": 64,
-        "wave_top": "none"
+        "padding-block-start": 120,
+        "padding-block-end": 96
       }
     },
-    "section_8Eah7E": {
-      "type": "section",
+    "aa_pieces": {
+      "type": "aa-pieces",
+      "settings": {
+        "eyebrow": "Colección Tierra",
+        "heading": "Pieces in development",
+        "intro": "<p>Tableware in red clay, shaped by hand without molds and fired in the open air by a women's pottery collective in San Marcos Tlapazola.</p>",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "products_to_show": 6,
+        "default_status": "in_development",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "aa_services": {
+      "type": "aa-list",
       "blocks": {
-        "group_KKn7Bt": {
-          "type": "group",
+        "service_1": {
+          "type": "_aa-list-item",
           "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-end",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_PiFHA9": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>who are we?</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_bEt4kF": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<h6><strong>We are a design studio working directly with artisan groups</strong></h6>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "right",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_ewJpTB": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We look for craft that grows out of local materials and place, and that is a real source of income for the community around it. We start from the techniques each group already uses, and develop pieces together. Quantities, timelines and pricing are agreed with the makers.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "right",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_cw66wr": {
-              "type": "button",
-              "settings": {
-                "label": "Where we work",
-                "link": "#artisans",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_PiFHA9",
-            "text_bEt4kF",
-            "text_ewJpTB",
-            "button_cw66wr"
-          ]
+            "title": "Wholesale",
+            "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready.</p>",
+            "kicker": "For boutiques and concept stores"
+          }
         },
-        "image_VbpbVh": {
-          "type": "image",
+        "service_2": {
+          "type": "_aa-list-item",
           "settings": {
-            "image": "shopify://shop_images/employee_apron_in_shape.png",
-            "link": "",
-            "custom_class": "",
-            "image_ratio": "adapt",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "title": "Hospitality curation",
+            "text": "<p>Tableware, textiles and objects chosen for your rooms, produced to the makers' capacity.</p>",
+            "kicker": "For hotels, restaurants and spas"
+          }
+        },
+        "service_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Bespoke collaborations",
+            "text": "<p>Custom collections developed with one or more artisan groups, from first sample to finished piece.</p>",
+            "kicker": "For brands and studios"
+          }
+        },
+        "service_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Project sourcing",
+            "text": "<p>Sizes, colours and quantities for your projects, made within each workshop's technique.</p>",
+            "kicker": "For interior designers and architects"
+          }
         }
       },
       "block_order": [
-        "group_KKn7Bt",
-        "image_VbpbVh"
+        "service_1",
+        "service_2",
+        "service_3",
+        "service_4"
       ],
-      "custom_css": [],
-      "name": "Who are We?",
       "settings": {
-        "anchor_id": "about-us",
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "center",
-        "vertical_alignment": "flex-start",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
+        "eyebrow": "What we do",
+        "heading": "Four ways to work with us",
+        "intro": "",
+        "link_label": "Tell us about your project",
+        "link_url": "#contact-us",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 2,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-left",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "wave_top": "none"
-      }
-    },
-    "hero_MVUtj6": {
-      "type": "hero",
-      "blocks": {
-        "text_69C6UJ": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>We begin with the maker’s technique, and design from there.</h2>",
-            "width": "fit-content",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "h3",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_69C6UJ"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/home-decor-natural-1-middle.jpg",
-        "media_type_2": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "flex-end",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 60,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#00000075",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 40
-      }
-    },
-    "section_PXBRXW": {
-      "type": "section",
-      "blocks": {
-        "image_fgxpK7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/mayan_weaver_in_shape_resized.png",
-            "link": "",
-            "custom_class": "",
-            "image_ratio": "adapt",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_i39pUV": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 0,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_4xinjA": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>where we work</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_R9Ari7": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Now: Oaxaca, Mexico. Two collections, in clay and in wool, are in development.</p><p>We add artisan groups slowly and only where we can build a long-term partnership.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_cPEWKX": {
-              "type": "button",
-              "settings": {
-                "label": "Work with us",
-                "link": "#contact-us",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_4xinjA",
-            "text_R9Ari7",
-            "button_cPEWKX"
-          ]
-        }
-      },
-      "block_order": [
-        "image_fgxpK7",
-        "group_i39pUV"
-      ],
-      "custom_css": [],
-      "name": "Artisans",
-      "settings": {
-        "anchor_id": "artisans",
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "wave_top": "none"
-      }
-    },
-    "section_wwuBand": {
-      "type": "section",
-      "blocks": {
-        "text_wwuTitle": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>work with us</h2>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h3",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_wwuRow": {
-          "type": "group",
-          "settings": {
-            "link": "",
-            "open_in_new_tab": false,
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-end",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 32,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "placeholder": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "group_wwuBout": {
-              "type": "group",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 16,
-                "width": "custom",
-                "custom_width": 48,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_wwuBouth": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h4>Boutiques</h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_wwuBoutp": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "right",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "button_wwuBout": {
-                  "type": "button",
-                  "settings": {
-                    "label": "Tell us about your shop",
-                    "link": "#contact-us",
-                    "open_in_new_tab": false,
-                    "style_class": "button",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_wwuBouth",
-                "text_wwuBoutp",
-                "button_wwuBout"
-              ]
-            },
-            "group_wwuHosp": {
-              "type": "group",
-              "settings": {
-                "link": "",
-                "open_in_new_tab": false,
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 16,
-                "width": "custom",
-                "custom_width": 48,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "placeholder": "",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "text_wwuHosph": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h4>Hospitality and interiors</h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h4",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_wwuHospp": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Custom collections developed with one or more artisan groups, produced to the makers’ capacity.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "right",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "button_wwuHosp": {
-                  "type": "button",
-                  "settings": {
-                    "label": "Tell us about your project",
-                    "link": "#contact-us",
-                    "open_in_new_tab": false,
-                    "style_class": "button",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_wwuHosph",
-                "text_wwuHospp",
-                "button_wwuHosp"
-              ]
-            }
-          },
-          "block_order": [
-            "group_wwuBout",
-            "group_wwuHosp"
-          ]
-        }
-      },
-      "block_order": [
-        "text_wwuTitle",
-        "group_wwuRow"
-      ],
-      "name": "Work with us",
-      "settings": {
+        "wave_top": "none",
         "anchor_id": "work-with-us",
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "wave_top": "none"
+        "padding-block-start": 96,
+        "padding-block-end": 96
       }
     },
-    "section_7XbgwJ": {
-      "type": "section",
+    "aa_oaxaca": {
+      "type": "aa-shaped-gallery",
       "blocks": {
-        "text_NEDjUb": {
-          "type": "text",
+        "place_1": {
+          "type": "_aa-shaped-image",
           "settings": {
-            "text": "<h2>contact us</h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "image": "shopify://shop_images/hand_holding_muitle.png",
+            "shape": "stack",
+            "caption": "Red clay, shaped by hand",
+            "place": "San Marcos Tlapazola"
+          }
         },
-        "text_MVkXAF": {
-          "type": "text",
-          "name": "t:names.text",
+        "place_2": {
+          "type": "_aa-shaped-image",
           "settings": {
-            "text": "<p>Tell us about your shop or your space, and what you are looking for. We will reply personally.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "shape": "arch",
+            "caption": "Burnished with river stones",
+            "place": "San Marcos Tlapazola"
+          }
         },
-        "contact_form_Nhqcir": {
+        "place_3": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "vase-wide",
+            "caption": "Wool on the pedal loom",
+            "place": "Teotitlán del Valle"
+          }
+        },
+        "place_4": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "circle",
+            "caption": "Dyed with plants and cochineal",
+            "place": "Teotitlán del Valle"
+          }
+        }
+      },
+      "block_order": [
+        "place_1",
+        "place_2",
+        "place_3",
+        "place_4"
+      ],
+      "settings": {
+        "eyebrow": "Where we work",
+        "heading": "From Oaxaca",
+        "intro": "<p>Two collections, in clay and in wool, are in development. We add artisan groups slowly and only where we can build a long-term partnership.</p>",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "center",
+        "motif": "floral-8",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "artisans",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "aa_statement": {
+      "type": "aa-statement",
+      "settings": {
+        "eyebrow": "",
+        "statement": "We begin with the maker's technique, and design from there.",
+        "attribution": "",
+        "link_label": "",
+        "link_url": "",
+        "alignment": "center",
+        "size": "medium",
+        "motif": "floral-thin-8",
+        "motif_position": "behind",
+        "color_scheme": "scheme-3",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 128,
+        "padding-block-end": 128
+      }
+    },
+    "aa_values": {
+      "type": "aa-list",
+      "blocks": {
+        "value_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Prices agreed openly",
+            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>"
+          }
+        },
+        "value_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "At the workshop's pace",
+            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>"
+          }
+        },
+        "value_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Techniques stay with their makers",
+            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>"
+          }
+        },
+        "value_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Local, natural materials",
+            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "value_1",
+        "value_2",
+        "value_3",
+        "value_4"
+      ],
+      "settings": {
+        "eyebrow": "How we work",
+        "heading": "Made with the people who make it",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "columns",
+        "columns": 4,
+        "numbered": false,
+        "motif": "floral-4",
+        "motif_position": "top-right",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "how-we-work",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "aa_process": {
+      "type": "aa-list",
+      "blocks": {
+        "step_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Conversation",
+            "text": "<p>Tell us about your space or your shop, what you need and when.</p>"
+          }
+        },
+        "step_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Selection",
+            "text": "<p>We match your brief with a workshop whose technique and material fit.</p>"
+          }
+        },
+        "step_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Samples",
+            "text": "<p>Prototypes are made and refined with the makers before anything is produced.</p>"
+          }
+        },
+        "step_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Production",
+            "text": "<p>Pieces are made in small batches, at the pace hand work needs.</p>"
+          }
+        },
+        "step_5": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Delivery",
+            "text": "<p>Each piece arrives with the story of where and how it was made.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5"
+      ],
+      "settings": {
+        "eyebrow": "Working together",
+        "heading": "From conversation to delivery",
+        "intro": "",
+        "link_label": "",
+        "link_url": "",
+        "header_alignment": "start",
+        "layout": "steps",
+        "columns": 2,
+        "numbered": true,
+        "motif": "none",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "",
+        "padding-block-start": 48,
+        "padding-block-end": 120
+      }
+    },
+    "aa_contact": {
+      "type": "aa-contact",
+      "blocks": {
+        "form": {
           "type": "contact-form",
           "settings": {
+            "show_trade_fields": true,
             "width": "custom",
-            "custom_width": 50,
+            "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
-            "show_trade_fields": true,
             "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "color_scheme": "scheme-1"
           },
           "blocks": {
             "submit-button": {
@@ -1262,49 +553,32 @@
         }
       },
       "block_order": [
-        "text_NEDjUb",
-        "text_MVkXAF",
-        "contact_form_Nhqcir"
+        "form"
       ],
-      "name": "t:names.contact_form",
       "settings": {
-        "anchor_id": "contact-us",
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
+        "eyebrow": "Contact",
+        "heading": "Start a conversation",
+        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We will reply personally.</p>",
+        "email": "connect@theartisanatlas.com",
+        "instagram_url": "https://www.instagram.com/the.artisanatlas/",
+        "instagram_label": "@the.artisanatlas",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "wave_top": "straight"
+        "wave_top": "straight",
+        "anchor_id": "contact-us",
+        "padding-block-start": 96,
+        "padding-block-end": 128
       }
     }
   },
   "order": [
     "hero_kxa63B",
-    "section_titleIntro1",
-    "section_8Eah7E",
-    "hero_MVUtj6",
-    "section_PXBRXW",
-    "section_wwuBand",
-    "section_7XbgwJ"
+    "aa_studio",
+    "aa_pieces",
+    "aa_services",
+    "aa_oaxaca",
+    "aa_statement",
+    "aa_values",
+    "aa_process",
+    "aa_contact"
   ]
 }

@@ -41,30 +41,30 @@
             {%- when 'spitzkant' -%}
               --custom-heading-font-family: "Spitzkant", serif;
             {%- else -%}
-              --custom-heading-font-family: var(--font-heading-family);
+              --custom-heading-font-family: var(--font-heading--family);
           {%- endcase -%}
 
           {%- case settings.custom_body_font -%}
             {%- when 'spitzkant' -%}
               --custom-body-font-family: "Spitzkant", serif;
             {%- else -%}
-              --custom-body-font-family: var(--font-body-family);
+              --custom-body-font-family: var(--font-body--family);
           {%- endcase -%}
 
           {%- case settings.custom_accent_font -%}
             {%- when 'spitzkant' -%}
               --custom-accent-font-family: "Spitzkant", serif;
             {%- else -%}
-              --custom-accent-font-family: var(--font-body-family);
+              --custom-accent-font-family: var(--font-body--family);
           {%- endcase -%}
           --button-font-family-primary: var(--custom-accent-font-family);
           --button-font-family-secondary: var(--custom-accent-font-family);
         {% else %}
-          --custom-heading-font-family: var(--font-heading-family);
-          --custom-body-font-family: var(--font-body-family);
-          --custom-accent-font-family: var(--font-body-family);
-          --button-font-family-primary: var(--font-body-family);
-          --button-font-family-secondary: var(--font-body-family);
+          --custom-heading-font-family: var(--font-heading--family);
+          --custom-body-font-family: var(--font-body--family);
+          --custom-accent-font-family: var(--font-body--family);
+          --button-font-family-primary: var(--font-body--family);
+          --button-font-family-secondary: var(--font-body--family);
         {% endif %}
       }
     </style>

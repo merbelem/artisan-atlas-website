@@ -56,6 +56,19 @@
   --aa-duration-slow: 900ms;
 }
 
+/* ---- Theme font roles → brand fonts ----
+   Spitzkant isn't in Shopify's font library, so the theme's font settings
+   can't select it. Point the theme's own role variables at it instead, so
+   any block set to "Heading", "Subheading" or "Accent" renders in Spitzkant.
+   --font-primary--family is referenced by stock templates but never defined
+   by the theme. :root:root outranks the theme's inline :root variables. */
+:root:root {
+  --font-primary--family: var(--aa-font-display);
+  --font-heading--family: var(--aa-font-display);
+  --font-subheading--family: var(--aa-font-display);
+  --font-accent--family: var(--aa-font-display);
+}
+
 /* --- Typography hygiene -------------------------------------------------- */
 html { font-synthesis: weight style; }  /* allow fake bold/italic in body */
 h1, h2, h3, h4, .h1, .h2, .h3, .h4, .font-display { font-synthesis: none; } /* Spitzkant has one real face */
