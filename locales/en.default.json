@@ -322,5 +322,17 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable"
     }
+  },
+  "aa": {
+    "pieces": {
+      "status_in_development": "In development",
+      "status_in_design": "In design",
+      "status_available": "Available to trade",
+      "made_with": "Made with {{ maker }}",
+      "enquire": "Enquire about this piece"
+    },
+    "gallery": {
+      "scroll_label": "{{ title }}, scroll for more"
+    }
   }
 }

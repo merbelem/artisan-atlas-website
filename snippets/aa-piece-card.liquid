@@ -1,0 +1,60 @@
+{%- doc -%}
+  Editorial card for a piece: status label, floating cut-out image, maker line,
+  name and material. Never shows a price. Reads optional product metafields:
+  custom.status, custom.made_with and custom.material.
+
+  @param {product} [product] - The product; omit to render a placeholder card
+  @param {string} [default_status] - Translation key suffix used when custom.status is blank: 'in_development', 'in_design' or 'available'
+  @param {number} [index] - Placeholder number (1–6) when no product is given
+
+  @example
+  {% render 'aa-piece-card', product: product, default_status: 'in_development' %}
+{%- enddoc -%}
+
+{%- liquid
+  assign default_status = default_status | default: 'in_development'
+  assign status_key = 'aa.pieces.status_' | append: default_status
+  assign status = status_key | t
+  if product.metafields.custom.status != blank
+    assign status = product.metafields.custom.status.value
+  endif
+-%}
+
+<article class="aa-piece-card">
+  {%- if product -%}
+    <a class="aa-piece-card__link" href="{{ product.url }}">
+      <p class="aa-piece-card__status">{{ status }}</p>
+      <div class="aa-piece-card__media">
+        {%- if product.featured_media -%}
+          {{
+            product.featured_media
+            | image_url: width: 900
+            | image_tag: widths: '300, 450, 600, 900', sizes: '(min-width: 750px) 28vw, 70vw', loading: 'lazy', class: 'aa-piece-card__img'
+          }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'aa-piece-card__img' }}
+        {%- endif -%}
+      </div>
+      {%- if product.metafields.custom.made_with != blank -%}
+        <p class="aa-piece-card__maker">
+          {{ 'aa.pieces.made_with' | t: maker: product.metafields.custom.made_with.value }}
+        </p>
+      {%- endif -%}
+      <h3 class="aa-piece-card__title">{{ product.title }}</h3>
+      {%- if product.metafields.custom.material != blank -%}
+        <p class="aa-piece-card__material">{{ product.metafields.custom.material.value }}</p>
+      {%- endif -%}
+    </a>
+  {%- else -%}
+    {%- assign placeholder_index = index | default: 1 -%}
+    {%- assign placeholder = 'product-' | append: placeholder_index -%}
+    <div class="aa-piece-card__link">
+      <p class="aa-piece-card__status">{{ status }}</p>
+      <div class="aa-piece-card__media">
+        {{ placeholder | placeholder_svg_tag: 'aa-piece-card__img' }}
+      </div>
+      <h3 class="aa-piece-card__title">Piece name</h3>
+      <p class="aa-piece-card__material">Material</p>
+    </div>
+  {%- endif -%}
+</article>

@@ -1,0 +1,521 @@
+{%- assign s = section.settings -%}
+
+{% capture children %}
+  {% render 'aa-section-header', settings: s, alignment: s.header_alignment %}
+
+  <ol
+    class="aa-list aa-list--{{ s.layout }} list-unstyled{% if s.numbered %} aa-list--numbered{% endif %}"
+    style="--aa-list-columns: {{ s.columns }};"
+    role="list"
+  >
+    {% content_for 'blocks' %}
+  </ol>
+{% endcapture %}
+
+{% render 'aa-section', section: section, children: children, class: 'aa-list-section' %}
+
+{% stylesheet %}
+  .aa-list {
+    display: grid;
+    gap: var(--aa-space-2xl) clamp(1.5rem, 4vw, 4rem);
+    margin: var(--aa-space-2xl) 0 0;
+    padding: 0;
+    counter-reset: aa-list;
+  }
+
+  .aa-list__item {
+    counter-increment: aa-list;
+  }
+
+  .aa-list--numbered .aa-list__item::before {
+    content: counter(aa-list, decimal-leading-zero);
+    display: block;
+    margin-bottom: var(--aa-space-md);
+    font-family: var(--aa-font-display);
+    font-size: var(--aa-step-3);
+    line-height: 1;
+    color: var(--color-primary);
+  }
+
+  .aa-list__kicker {
+    margin: 0 0 var(--aa-space-xs);
+    font-size: var(--aa-step--2);
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgb(var(--color-foreground-rgb) / .75);
+  }
+
+  .aa-list__title {
+    margin: 0;
+    font-size: var(--aa-step-2);
+    text-wrap: balance;
+  }
+
+  .aa-list__text {
+    margin-top: var(--aa-space-sm);
+  }
+
+  .aa-list__link {
+    display: inline-block;
+    margin-top: var(--aa-space-md);
+  }
+
+  /* Columns: items in a grid, with a fine rule above each. */
+  .aa-list--columns .aa-list__item {
+    padding-top: var(--aa-space-lg);
+    border-top: 1px solid rgb(var(--color-foreground-rgb) / .2);
+  }
+
+  /* Steps: a sequence joined by a line on wide screens. */
+  .aa-list--steps .aa-list__item {
+    position: relative;
+  }
+
+  @media screen and (min-width: 750px) {
+    .aa-list--columns {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .aa-list--steps {
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(0, 1fr);
+    }
+
+    .aa-list--steps.aa-list--numbered .aa-list__item::after {
+      content: '';
+      position: absolute;
+      top: calc(var(--aa-step-3) / 2);
+      left: calc(2.5ch + var(--aa-space-md));
+      right: calc(clamp(1.5rem, 4vw, 4rem) * -1 + var(--aa-space-md));
+      border-top: 1px solid rgb(var(--color-foreground-rgb) / .25);
+    }
+
+    .aa-list--steps .aa-list__item:last-child::after {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .aa-list--columns {
+      grid-template-columns: repeat(var(--aa-list-columns), minmax(0, 1fr));
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "List",
+  "blocks": [
+    {
+      "type": "_aa-list-item"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "columns",
+          "label": "Columns"
+        },
+        {
+          "value": "steps",
+          "label": "Steps"
+        }
+      ],
+      "default": "columns",
+      "info": "Steps shows the items as a numbered sequence."
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 2,
+      "visible_if": "{{ section.settings.layout == 'columns' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "numbered",
+      "label": "Number the items",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Motif"
+    },
+    {
+      "type": "select",
+      "id": "motif",
+      "label": "Motif",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "floral-8",
+          "label": "Flower"
+        },
+        {
+          "value": "floral-thin-8",
+          "label": "Fine flower"
+        },
+        {
+          "value": "floral-4",
+          "label": "Leaf fan"
+        },
+        {
+          "value": "reef",
+          "label": "Reef"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        }
+      ],
+      "default": "none",
+      "info": "A faint brand shape behind the content."
+    },
+    {
+      "type": "select",
+      "id": "motif_position",
+      "label": "Motif position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        },
+        {
+          "value": "behind",
+          "label": "Centred behind"
+        }
+      ],
+      "default": "top-left",
+      "visible_if": "{{ section.settings.motif != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "wave_top",
+      "label": "Wavy top edge",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "straight",
+          "label": "Wave"
+        },
+        {
+          "value": "soft",
+          "label": "Soft wave"
+        }
+      ],
+      "default": "none",
+      "info": "Curves this section's background up into the Sand page colour above it."
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "For in-page links, e.g. work-with-us"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "What we do",
+      "category": "Artisan Atlas",
+      "settings": {
+        "eyebrow": "What we do",
+        "heading": "Four ways to work with us",
+        "numbered": true,
+        "columns": 2
+      },
+      "blocks": {
+        "item_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Wholesale",
+            "text": "<p>Small-batch collections, made in limited runs and delivered with the story of where and how each piece was made.</p>",
+            "kicker": "For boutiques and concept stores"
+          }
+        },
+        "item_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Hospitality curation",
+            "text": "<p>Tableware, textiles and objects chosen for your rooms and produced to suit the space.</p>",
+            "kicker": "For hotels, restaurants and spas"
+          }
+        },
+        "item_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Bespoke collaborations",
+            "text": "<p>Capsule collections developed together with an artisan workshop, from first sample to finished piece.</p>",
+            "kicker": "For brands and studios"
+          }
+        },
+        "item_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Project sourcing",
+            "text": "<p>Sizes, colours and quantities for your projects, made within each workshop's technique.</p>",
+            "kicker": "For interior designers and architects"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
+    },
+    {
+      "name": "Who we work with",
+      "category": "Artisan Atlas",
+      "settings": {
+        "eyebrow": "Who we work with",
+        "heading": "For spaces that want their rooms to hold a story",
+        "columns": 4
+      },
+      "blocks": {
+        "item_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Boutiques and concept stores",
+            "text": "<p>Pieces in small runs, with the story behind them.</p>"
+          }
+        },
+        "item_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Hotels, restaurants and spas",
+            "text": "<p>Rooms and tables furnished with handmade work.</p>"
+          }
+        },
+        "item_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Interior designers and architects",
+            "text": "<p>Sourcing for residential and commercial projects.</p>"
+          }
+        },
+        "item_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Galleries and curated spaces",
+            "text": "<p>Objects shown as the craft they are.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
+    },
+    {
+      "name": "How we work with makers",
+      "category": "Artisan Atlas",
+      "settings": {
+        "eyebrow": "How we work",
+        "heading": "Made with the people who make it",
+        "columns": 4,
+        "motif": "floral-4",
+        "motif_position": "top-right"
+      },
+      "blocks": {
+        "item_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Prices agreed openly",
+            "text": "<p>We agree prices with the makers before any work begins.</p>"
+          }
+        },
+        "item_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "At the workshop's pace",
+            "text": "<p>Timelines are set with the makers and leave room for hand work, weather and firing.</p>"
+          }
+        },
+        "item_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Techniques stay with their makers",
+            "text": "<p>We design within a tradition; we don't take it away from the people who hold it.</p>"
+          }
+        },
+        "item_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Local, natural materials",
+            "text": "<p>Clay dug from the hills above the village. Wool dyed with plants and cochineal.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ]
+    },
+    {
+      "name": "Process",
+      "category": "Artisan Atlas",
+      "settings": {
+        "eyebrow": "Working together",
+        "heading": "From conversation to delivery",
+        "layout": "steps",
+        "numbered": true
+      },
+      "blocks": {
+        "item_1": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Conversation",
+            "text": "<p>Tell us about your space or shop, what you need and when.</p>"
+          }
+        },
+        "item_2": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Selection",
+            "text": "<p>We match your brief with a workshop whose technique and material fit.</p>"
+          }
+        },
+        "item_3": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Samples",
+            "text": "<p>Prototypes are made and refined with the makers before anything is produced.</p>"
+          }
+        },
+        "item_4": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Production",
+            "text": "<p>Pieces are made in small batches, at the pace hand work needs.</p>"
+          }
+        },
+        "item_5": {
+          "type": "_aa-list-item",
+          "settings": {
+            "title": "Delivery",
+            "text": "<p>Each piece arrives with the story of where and how it was made.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ]
+    }
+  ],
+  "class": "section-wrapper"
+}
+{% endschema %}

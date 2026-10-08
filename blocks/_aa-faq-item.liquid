@@ -1,0 +1,29 @@
+<details class="aa-faq__item" {{ block.shopify_attributes }}>
+  <summary class="aa-faq__question">{{ block.settings.question }}</summary>
+  <div class="aa-faq__answer aa-prose rte">{{ block.settings.answer }}</div>
+</details>
+
+{% schema %}
+{
+  "name": "Question",
+  "settings": [
+    {
+      "type": "text",
+      "id": "question",
+      "label": "Question",
+      "default": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "answer",
+      "label": "Answer"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Question"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

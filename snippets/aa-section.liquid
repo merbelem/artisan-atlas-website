@@ -1,0 +1,39 @@
+{%- doc -%}
+  Shared wrapper for aa- sections. Mirrors the markup of snippets/section.liquid
+  so colour schemes, wave edges and spacing behave the same as on stock sections.
+
+  Expects these section settings: color_scheme, wave_top, anchor_id,
+  padding-block-start, padding-block-end. Optional: motif, motif_position.
+
+  @param {section} section - The section object
+  @param {string} children - The section's inner markup
+  @param {string} [class] - Extra classes for the .section element
+
+  @example
+  {% render 'aa-section', section: section, children: children, class: 'aa-faq' %}
+{%- enddoc -%}
+
+{%- liquid
+  assign settings = section.settings
+  assign anchor = settings.anchor_id | strip | handleize
+-%}
+
+<div class="section-background color-{{ settings.color_scheme }}"></div>
+<div
+  class="section section--page-width aa-section color-{{ settings.color_scheme }} {{ class }}{% render 'aa-wave-class', wave: settings.wave_top %}"
+  {% if anchor != blank %}
+    id="{{ anchor }}"
+  {% endif %}
+>
+  <div class="custom-section-content">
+    <div
+      class="section-content-wrapper spacing-style aa-section__inner"
+      style="{% render 'spacing-style', settings: settings %}"
+    >
+      {%- if settings.motif != blank and settings.motif != 'none' -%}
+        {% render 'aa-motif', shape: settings.motif, position: settings.motif_position %}
+      {%- endif -%}
+      {{ children }}
+    </div>
+  </div>
+</div>

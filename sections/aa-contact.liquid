@@ -1,0 +1,180 @@
+{%- assign s = section.settings -%}
+
+{% capture children %}
+  <div class="aa-contact">
+    <div class="aa-contact__text">
+      {% render 'aa-section-header', settings: s %}
+      {%- if s.email != blank or s.instagram_url != blank -%}
+        <ul class="aa-contact__details list-unstyled" role="list">
+          {%- if s.email != blank -%}
+            <li><a class="aa-link" href="mailto:{{ s.email }}">{{ s.email }}</a></li>
+          {%- endif -%}
+          {%- if s.instagram_url != blank -%}
+            <li><a class="aa-link" href="{{ s.instagram_url }}" target="_blank" rel="noopener">{{ s.instagram_label | default: 'Instagram' }}</a></li>
+          {%- endif -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="aa-contact__form">
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+{% endcapture %}
+
+{% render 'aa-section', section: section, children: children, class: 'aa-contact-section' %}
+
+{% stylesheet %}
+  .aa-contact {
+    display: grid;
+    gap: var(--aa-space-2xl) clamp(2rem, 6vw, 6rem);
+  }
+
+  .aa-contact__details {
+    margin: var(--aa-space-xl) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--aa-space-xs);
+  }
+
+  @media screen and (min-width: 990px) {
+    .aa-contact {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      align-items: start;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Contact",
+  "blocks": [
+    {
+      "type": "contact-form"
+    }
+  ],
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Start a conversation"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro"
+    },
+    {
+      "type": "header",
+      "content": "Details"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "connect@theartisanatlas.com"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram link"
+    },
+    {
+      "type": "text",
+      "id": "instagram_label",
+      "label": "Instagram label",
+      "default": "@the.artisanatlas"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5"
+    },
+    {
+      "type": "select",
+      "id": "wave_top",
+      "label": "Wavy top edge",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "straight",
+          "label": "Wave"
+        },
+        {
+          "value": "soft",
+          "label": "Soft wave"
+        }
+      ],
+      "default": "straight",
+      "info": "Curves this section's background up into the Sand page colour above it."
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "For in-page links, e.g. work-with-us"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact",
+      "category": "Artisan Atlas",
+      "settings": {
+        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We reply personally.</p>",
+        "anchor_id": "contact-us"
+      },
+      "blocks": {
+        "form": {
+          "type": "contact-form",
+          "settings": {
+            "show_trade_fields": true,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100
+          }
+        }
+      },
+      "block_order": [
+        "form"
+      ]
+    }
+  ],
+  "class": "section-wrapper"
+}
+{% endschema %}

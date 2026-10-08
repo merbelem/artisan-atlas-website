@@ -1,0 +1,53 @@
+<li class="aa-list__item" {{ block.shopify_attributes }}>
+  {%- if block.settings.kicker != blank -%}
+    <p class="aa-list__kicker">{{ block.settings.kicker }}</p>
+  {%- endif -%}
+  <h3 class="aa-list__title">{{ block.settings.title }}</h3>
+  {%- if block.settings.text != blank -%}
+    <div class="aa-list__text aa-prose rte">{{ block.settings.text }}</div>
+  {%- endif -%}
+  {%- if block.settings.link_label != blank and block.settings.link_url != blank -%}
+    <a class="aa-link aa-list__link" href="{{ block.settings.link_url }}">{{ block.settings.link_label }}</a>
+  {%- endif -%}
+</li>
+
+{% schema %}
+{
+  "name": "List item",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker",
+      "info": "Small line above the title, e.g. For hotels and restaurants"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "List item"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

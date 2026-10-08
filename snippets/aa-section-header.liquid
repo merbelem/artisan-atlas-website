@@ -1,0 +1,37 @@
+{%- doc -%}
+  Eyebrow, heading, intro and an optional quiet link: the opening of most aa- sections.
+  Renders nothing when all fields are blank.
+
+  @param {object} settings - Section settings with eyebrow, heading, intro, link_label, link_url
+  @param {string} [alignment] - 'start' (default) or 'center'
+  @param {string} [heading_tag] - 'h2' (default) or 'h1'
+
+  @example
+  {% render 'aa-section-header', settings: section.settings, alignment: 'center' %}
+{%- enddoc -%}
+
+{%- liquid
+  assign alignment = alignment | default: 'start'
+  assign heading_tag = heading_tag | default: 'h2'
+  assign has_link = false
+  if settings.link_label != blank and settings.link_url != blank
+    assign has_link = true
+  endif
+-%}
+
+{%- if settings.eyebrow != blank or settings.heading != blank or settings.intro != blank or has_link -%}
+  <header class="aa-section-header aa-section-header--{{ alignment }}">
+    {%- if settings.eyebrow != blank -%}
+      <p class="aa-eyebrow">{{ settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if settings.heading != blank -%}
+      <{{ heading_tag }} class="aa-section-header__heading">{{ settings.heading }}</{{ heading_tag }}>
+    {%- endif -%}
+    {%- if settings.intro != blank -%}
+      <div class="aa-section-header__intro aa-prose rte">{{ settings.intro }}</div>
+    {%- endif -%}
+    {%- if has_link -%}
+      <a class="aa-link aa-section-header__link" href="{{ settings.link_url }}">{{ settings.link_label }}</a>
+    {%- endif -%}
+  </header>
+{%- endif -%}

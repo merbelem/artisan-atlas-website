@@ -1,0 +1,411 @@
+{%- liquid
+  assign s = section.settings
+  assign heading_tag = 'h2'
+  if s.heading_size == 'h1'
+    assign heading_tag = 'h1'
+  endif
+-%}
+
+{% capture children %}
+  <div class="aa-text-media aa-text-media--image-{{ s.image_side }} aa-text-media--media-{{ s.media_width }}">
+    <div class="aa-text-media__text">
+      {%- if s.eyebrow != blank -%}
+        <p class="aa-eyebrow">{{ s.eyebrow }}</p>
+      {%- endif -%}
+      {%- if s.heading != blank -%}
+        <{{ heading_tag }} class="aa-text-media__heading {{ s.heading_size }}">{{ s.heading }}</{{ heading_tag }}>
+      {%- endif -%}
+      {%- if s.body != blank -%}
+        <div class="aa-prose aa-prose--narrow rte">{{ s.body }}</div>
+      {%- endif -%}
+      {%- if s.button_label != blank and s.button_link != blank -%}
+        <a class="aa-text-media__action {{ s.button_style }}" href="{{ s.button_link }}">{{ s.button_label }}</a>
+      {%- endif -%}
+    </div>
+
+    <div class="aa-text-media__media">
+      {% render 'aa-shaped-image',
+        image: s.image,
+        shape: s.shape,
+        caption: s.caption,
+        place: s.place,
+        sizes: '(min-width: 750px) 40vw, 80vw'
+      %}
+    </div>
+  </div>
+{% endcapture %}
+
+{% render 'aa-section', section: section, children: children %}
+
+{% stylesheet %}
+  .aa-text-media {
+    --aa-media-column: 1fr;
+
+    display: grid;
+    gap: var(--aa-space-2xl) clamp(2rem, 7vw, 7rem);
+    align-items: center;
+  }
+
+  .aa-text-media--media-small { --aa-media-column: 0.7fr; }
+  .aa-text-media--media-large { --aa-media-column: 1.3fr; }
+
+  .aa-text-media__text > * + * {
+    margin-top: var(--aa-space-lg);
+  }
+
+  .aa-text-media__heading {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .aa-text-media__action {
+    display: inline-flex;
+    margin-top: var(--aa-space-xl);
+  }
+
+  .aa-text-media__media {
+    justify-self: center;
+    width: min(100%, 420px);
+  }
+
+  .aa-text-media--media-large .aa-text-media__media {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .aa-text-media {
+      grid-template-columns: minmax(0, 1fr) minmax(0, var(--aa-media-column));
+    }
+
+    .aa-text-media--image-left .aa-text-media__media {
+      order: -1;
+    }
+
+    .aa-text-media--image-left {
+      grid-template-columns: minmax(0, var(--aa-media-column)) minmax(0, 1fr);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Text and media",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The studio"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A studio for craft and interiors"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Large"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h3",
+          "label": "Small"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Text",
+      "default": "<p>We work with artisan communities to develop contemporary pieces rooted in their techniques and materials.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "button",
+          "label": "Primary"
+        },
+        {
+          "value": "button-secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "aa-link",
+          "label": "Text link"
+        }
+      ],
+      "default": "button"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "Shape",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "circle-in-square",
+          "label": "Circle in square"
+        },
+        {
+          "value": "stack",
+          "label": "Stacked waves"
+        },
+        {
+          "value": "arch-bowl",
+          "label": "Bowl over cup"
+        },
+        {
+          "value": "short-arch-bowl",
+          "label": "Bowl over arch"
+        },
+        {
+          "value": "bowl-circle",
+          "label": "Circle over bowl"
+        },
+        {
+          "value": "vase-tall",
+          "label": "Tall vase"
+        },
+        {
+          "value": "vase-wide",
+          "label": "Wide vase"
+        },
+        {
+          "value": "vase-pedestal",
+          "label": "Pedestal"
+        }
+      ],
+      "default": "arch"
+    },
+    {
+      "type": "select",
+      "id": "image_side",
+      "label": "Image side",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "media_width",
+      "label": "Image size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "info": "Who or what is shown"
+    },
+    {
+      "type": "text",
+      "id": "place",
+      "label": "Place",
+      "info": "Where it was taken"
+    },
+    {
+      "type": "header",
+      "content": "Motif"
+    },
+    {
+      "type": "select",
+      "id": "motif",
+      "label": "Motif",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "floral-8",
+          "label": "Flower"
+        },
+        {
+          "value": "floral-thin-8",
+          "label": "Fine flower"
+        },
+        {
+          "value": "floral-4",
+          "label": "Leaf fan"
+        },
+        {
+          "value": "reef",
+          "label": "Reef"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        }
+      ],
+      "default": "none",
+      "info": "A faint brand shape behind the content."
+    },
+    {
+      "type": "select",
+      "id": "motif_position",
+      "label": "Motif position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        },
+        {
+          "value": "behind",
+          "label": "Centred behind"
+        }
+      ],
+      "default": "top-left",
+      "visible_if": "{{ section.settings.motif != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "wave_top",
+      "label": "Wavy top edge",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "straight",
+          "label": "Wave"
+        },
+        {
+          "value": "soft",
+          "label": "Soft wave"
+        }
+      ],
+      "default": "none",
+      "info": "Curves this section's background up into the Sand page colour above it."
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "For in-page links, e.g. work-with-us"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text and media",
+      "category": "Artisan Atlas"
+    }
+  ],
+  "class": "section-wrapper"
+}
+{% endschema %}

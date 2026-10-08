@@ -1,0 +1,54 @@
+{%- doc -%}
+  An image, optionally framed in a brand shape, with a who-and-where caption.
+  Falls back to a placeholder in the editor when no image is chosen.
+
+  @param {image} [image] - The image to show
+  @param {string} [shape] - Shape name from aa-shapes.css.liquid, or 'none'
+  @param {string} [caption] - Who or what is shown
+  @param {string} [place] - Where, shown smaller under the caption
+  @param {string} [link] - Wraps the image in a link when set
+  @param {string} [sizes] - The sizes attribute for the responsive image
+  @param {boolean} [eager] - Load eagerly (first screen only)
+
+  @example
+  {% render 'aa-shaped-image', image: block.settings.image, shape: 'arch', caption: 'Burnishing with a river stone', place: 'San Marcos Tlapazola' %}
+{%- enddoc -%}
+
+{%- liquid
+  assign sizes = sizes | default: '(min-width: 750px) 33vw, 80vw'
+  assign mask_class = ''
+  if shape != blank and shape != 'none'
+    assign mask_class = 'aa-mask aa-mask--' | append: shape
+  endif
+  assign loading = 'lazy'
+  if eager
+    assign loading = 'eager'
+  endif
+-%}
+
+<figure class="aa-shaped-image">
+  {%- if link != blank -%}<a class="aa-shaped-image__link" href="{{ link }}">{%- endif -%}
+  <div class="aa-shaped-image__media {{ mask_class }}">
+    {%- if image -%}
+      {{
+        image
+        | image_url: width: 1600
+        | image_tag: widths: '320, 480, 640, 960, 1280, 1600', sizes: sizes, loading: loading, class: 'aa-shaped-image__img'
+      }}
+    {%- else -%}
+      <div class="placeholder-image aa-shaped-image__placeholder">
+        {{ 'lifestyle-1' | placeholder_svg_tag }}
+      </div>
+    {%- endif -%}
+  </div>
+  {%- if link != blank -%}</a>{%- endif -%}
+
+  {%- if caption != blank or place != blank -%}
+    <figcaption class="aa-caption">
+      {{- caption -}}
+      {%- if place != blank -%}
+        <span class="aa-caption__place">{{ place }}</span>
+      {%- endif -%}
+    </figcaption>
+  {%- endif -%}
+</figure>
