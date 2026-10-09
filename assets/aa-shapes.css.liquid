@@ -146,7 +146,10 @@
 /* ---- 3b. Hero wavy bottom edge ----
    Toggle via the Hero section's "Wavy bottom edge" setting. Masks a band of
    the hero's own colour-scheme background over the bottom of the media, so
-   the wave reads as a frame around the media rather than a hard crop. */
+   the wave reads as a frame around the media rather than a hard crop.
+   The wave's size depends only on the page width, so it sits the same in
+   every hero only when heroes share the homepage's proportions: section
+   height "Full screen" and 160px bottom padding (Places matches). */
 .hero__container--wave-bottom::before,
 .hero__container--wave-bottom::after {
   content: '';
