@@ -330,7 +330,9 @@
             "width_mobile": "custom",
             "custom_width_mobile": 100,
             "inherit_color_scheme": true,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-1",
+            "show_phone": false,
+            "message_placeholder": "Let us know how you would like to connect"
           },
           "blocks": {
             "submit-button": {

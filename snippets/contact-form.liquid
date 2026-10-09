@@ -1,5 +1,7 @@
 {%- doc -%}
-  Renders a contact form with name, email, phone, and comment fields.
+  Renders a contact form: name, email, an optional "I am a…" (trade fields),
+  optional phone, and a message. Name, email and message are required. Once
+  sent, the fields are replaced by a thank-you note.
 
   @param {object} settings - Block settings, required for the 'spacing-style' and 'size-style' snippets.
   @param {string} submit_button - HTML for the submit button, rendered via a `content_for` block.
@@ -7,6 +9,17 @@
   @example
   {% render 'contact-form', settings: block.settings, submit_button: content_for_submit_button %}
 {%- enddoc -%}
+
+{%- liquid
+  assign show_phone = true
+  if settings.show_phone == false
+    assign show_phone = false
+  endif
+  assign message_placeholder = 'blocks.contact_form.comment' | t
+  if settings.message_placeholder != blank
+    assign message_placeholder = settings.message_placeholder
+  endif
+-%}
 
 <div
   class="
@@ -23,158 +36,145 @@
   {% assign form_id = block.id | default: section.id | prepend: 'ContactForm-' %}
 
   {%- form 'contact', id: form_id, class: 'contact-form__form' -%}
-    {%- if form.errors -%}
-      <div
-        class="contact-form__error"
-        tabindex="-1"
-        autofocus
-      >
-        {{- 'icon-error.svg' | inline_asset_content -}}
-
-        {{- form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email -}}
-      </div>
-    {%- endif -%}
-
     {%- if form.posted_successfully? -%}
       <div
-        class="contact-form__success"
+        class="contact-form__thanks"
+        role="status"
         tabindex="-1"
         autofocus
       >
-        {{- 'icon-checkmark.svg' | inline_asset_content -}}
-        {{- 'blocks.contact_form.post_success' | t -}}
+        <p class="contact-form__thanks-heading">{{ 'aa.contact.thanks_heading' | t }}</p>
+        <p>{{ 'aa.contact.thanks_body' | t }}</p>
+        <a class="aa-link" href="{{ routes.root_url }}">{{ 'aa.contact.thanks_link' | t }}</a>
       </div>
-    {%- endif -%}
-
-    <div class="contact-form__form-row">
-      <label
-        class="visually-hidden"
-        for="ContactForm-name"
-      >
-        {{- 'blocks.contact_form.name' | t -}}
-      </label>
-      <input
-        type="text"
-        id="ContactForm-name"
-        class="contact-form__input"
-        autocomplete="name"
-        name="contact[name]"
-        value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-        placeholder="{{ 'blocks.contact_form.name' | t }}"
-      >
-
-      <label
-        class="visually-hidden"
-        for="ContactForm-email"
-      >
-        {{- 'blocks.contact_form.email' | t -}}
-        <span aria-hidden="true">*</span></label
-      >
-      <input
-        type="email"
-        id="ContactForm-email"
-        class="contact-form__input"
-        autocomplete="email"
-        name="contact[email]"
-        spellcheck="false"
-        autocapitalize="off"
-        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-        aria-required="true"
-        {% if form.errors contains 'email' %}
-          aria-invalid="true"
-          aria-describedby="ContactForm-email-error"
-        {% endif %}
-        placeholder="{{ 'blocks.contact_form.email' | t }}"
-      >
-    </div>
-
-    {%- if settings.show_trade_fields -%}
-      <label
-        class="visually-hidden"
-        for="ContactForm-role"
-      >
-        {{- 'blocks.contact_form.role_label' | t -}}
-      </label>
-      <select
-        id="ContactForm-role"
-        class="contact-form__input"
-        name="contact[I am a]"
-      >
-        <option value="" disabled selected>{{ 'blocks.contact_form.role_label' | t }}</option>
-        <option value="Boutique or retailer">{{ 'blocks.contact_form.role_retailer' | t }}</option>
-        <option value="Hotel, restaurant or spa">{{ 'blocks.contact_form.role_hospitality' | t }}</option>
-        <option value="Interior designer or architect">{{ 'blocks.contact_form.role_designer' | t }}</option>
-        <option value="Other">{{ 'blocks.contact_form.role_other' | t }}</option>
-      </select>
+    {%- else -%}
+      {%- if form.errors -%}
+        <div
+          class="contact-form__error"
+          role="alert"
+          tabindex="-1"
+          autofocus
+        >
+          {{- 'icon-error.svg' | inline_asset_content -}}
+          <div>
+            <p>{{ 'blocks.contact_form.error_heading' | t }}</p>
+            {{ form.errors | default_errors }}
+          </div>
+        </div>
+      {%- endif -%}
 
       <div class="contact-form__form-row">
-        <label
-          class="visually-hidden"
-          for="ContactForm-venue"
-        >
-          {{- 'blocks.contact_form.venue' | t -}}
-        </label>
-        <input
-          type="text"
-          id="ContactForm-venue"
-          class="contact-form__input"
-          autocomplete="organization"
-          name="contact[Business or venue]"
-          placeholder="{{ 'blocks.contact_form.venue' | t }}"
-        >
+        <div class="contact-form__field">
+          <label
+            class="visually-hidden"
+            for="{{ form_id }}-name"
+          >
+            {{- 'blocks.contact_form.name' | t -}}
+          </label>
+          <input
+            type="text"
+            id="{{ form_id }}-name"
+            class="contact-form__input"
+            autocomplete="name"
+            name="contact[name]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="{{ 'blocks.contact_form.name' | t }}"
+            required
+          >
+          <p class="contact-form__hint">{{ 'aa.contact.hint_name' | t }}</p>
+        </div>
 
-        <label
-          class="visually-hidden"
-          for="ContactForm-city"
-        >
-          {{- 'blocks.contact_form.city' | t -}}
-        </label>
-        <input
-          type="text"
-          id="ContactForm-city"
-          class="contact-form__input"
-          autocomplete="address-level2"
-          name="contact[City]"
-          placeholder="{{ 'blocks.contact_form.city' | t }}"
-        >
+        <div class="contact-form__field">
+          <label
+            class="visually-hidden"
+            for="{{ form_id }}-email"
+          >
+            {{- 'blocks.contact_form.email' | t -}}
+          </label>
+          <input
+            type="email"
+            id="{{ form_id }}-email"
+            class="contact-form__input"
+            autocomplete="email"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            placeholder="{{ 'blocks.contact_form.email' | t }}"
+            required
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+            {% endif %}
+          >
+          <p class="contact-form__hint">{{ 'aa.contact.hint_email' | t }}</p>
+        </div>
       </div>
+
+      {%- if settings.show_trade_fields -%}
+        <div class="contact-form__field">
+          <label
+            class="visually-hidden"
+            for="{{ form_id }}-role"
+          >
+            {{- 'blocks.contact_form.role_label' | t -}}
+          </label>
+          <select
+            id="{{ form_id }}-role"
+            class="contact-form__input"
+            name="contact[I am a]"
+          >
+            <option value="" selected>{{ 'blocks.contact_form.role_label' | t }}</option>
+            <option value="Boutique or retailer">{{ 'blocks.contact_form.role_retailer' | t }}</option>
+            <option value="Hotel, restaurant or spa">{{ 'blocks.contact_form.role_hospitality' | t }}</option>
+            <option value="Interior designer or architect">{{ 'blocks.contact_form.role_designer' | t }}</option>
+            <option value="Other">{{ 'blocks.contact_form.role_other' | t }}</option>
+          </select>
+        </div>
+      {%- endif -%}
+
+      {%- if show_phone -%}
+        <div class="contact-form__field">
+          <label
+            class="visually-hidden"
+            for="{{ form_id }}-phone"
+          >
+            {{- 'blocks.contact_form.phone' | t -}}
+          </label>
+          <input
+            type="tel"
+            id="{{ form_id }}-phone"
+            class="contact-form__input"
+            autocomplete="tel"
+            name="contact[phone]"
+            pattern="[0-9\-]*"
+            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            placeholder="{{ 'blocks.contact_form.phone' | t }}"
+          >
+        </div>
+      {%- endif -%}
+
+      <div class="contact-form__field">
+        <label
+          class="visually-hidden"
+          for="{{ form_id }}-body"
+        >
+          {{- 'aa.contact.message_label' | t -}}
+        </label>
+        <textarea
+          rows="8"
+          id="{{ form_id }}-body"
+          class="contact-form__input contact-form__input--textarea"
+          name="contact[body]"
+          placeholder="{{ message_placeholder | escape }}"
+          required
+        >
+          {{- form.body -}}
+        </textarea>
+        <p class="contact-form__hint">{{ 'aa.contact.hint_message' | t }}</p>
+      </div>
+
+      {{ submit_button }}
     {%- endif -%}
-
-    <label
-      class="visually-hidden"
-      for="ContactForm-phone"
-    >
-      {{- 'blocks.contact_form.phone' | t -}}
-    </label>
-    <input
-      type="tel"
-      id="ContactForm-phone"
-      class="contact-form__input"
-      autocomplete="tel"
-      name="contact[phone]"
-      pattern="[0-9\-]*"
-      value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-      placeholder="{{ 'blocks.contact_form.phone' | t }}"
-    >
-
-    <label
-      class="visually-hidden"
-      for="ContactForm-body"
-    >
-      {{- 'blocks.contact_form.comment' | t -}}
-    </label>
-    <textarea
-      rows="10"
-      id="ContactForm-body"
-      class="contact-form__input contact-form__input--textarea"
-      name="contact[body]"
-      placeholder="{{ 'blocks.contact_form.comment' | t }}"
-    >
-      {{- form.body -}}
-    </textarea>
-
-    {{ submit_button }}
   {%- endform -%}
 </div>
 
@@ -213,10 +213,57 @@
     min-height: var(--input-textarea-min-height);
   }
 
-  .contact-form__error,
-  .contact-form__success {
+  .contact-form__field {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-2xs, 4px);
+    width: 100%;
+  }
+
+  /* Shown only after someone has interacted with a field and left it invalid. */
+  .contact-form__hint {
+    display: none;
+    margin: 0;
+    font-size: var(--font-size--body-sm, 0.875rem);
+    color: var(--color-primary);
+  }
+
+  .contact-form__input:user-invalid {
+    border-color: var(--color-primary);
+  }
+
+  .contact-form__input:user-invalid + .contact-form__hint {
+    display: block;
+  }
+
+  .contact-form__error {
+    display: flex;
+    align-items: flex-start;
     gap: var(--gap-xs);
+  }
+
+  .contact-form__error p {
+    margin: 0;
+  }
+
+  .contact-form__thanks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    padding: var(--padding-xl) 0;
+  }
+
+  .contact-form__thanks:focus {
+    outline: none;
+  }
+
+  .contact-form__thanks p {
+    margin: 0;
+  }
+
+  .contact-form__thanks-heading {
+    font-family: var(--font-heading--family);
+    font-size: var(--font-h3--size);
+    line-height: 1.1;
   }
 {% endstylesheet %}
