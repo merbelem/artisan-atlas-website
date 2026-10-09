@@ -131,7 +131,8 @@
         "padding-block-end": 160,
         "video_1": "shopify://files/videos/Oaxaca nature.mp4",
         "wave_bottom_shape": "asymmetrical",
-        "wave_bottom_height": 85
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 60
       }
     },
     "intro": {

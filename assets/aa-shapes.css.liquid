@@ -147,10 +147,11 @@
    Toggle via the Hero section's "Wavy bottom edge" setting. Masks a band of
    the hero's own colour-scheme background over the bottom of the media, so
    the wave reads as a frame around the media rather than a hard crop.
-   "Wave shape" picks the curve and "Wave height" flattens it (100% = the
-   original proportions). With the defaults, the wave's size depends only on
-   the page width, so heroes match the homepage when they share its
-   proportions: section height "Full screen" and 160px bottom padding. */
+   "Wave shape" picks the curve, "Wave height" flattens it (100% = the
+   original proportions) and "Wave offset" slides it down past the edge.
+   With the defaults, the wave's size depends only on the page width, so
+   heroes match the homepage when they share its proportions: section
+   height "Full screen" and 160px bottom padding. */
 .hero__container--wave-bottom {
   /* Rolling wave (default): the homepage's wave. */
   --aa-hero-wave-mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}');
@@ -176,8 +177,11 @@
   bottom: 0;
   aspect-ratio: var(--aa-hero-wave-ratio);
   transform-origin: bottom;
-  /* "Wave height" setting scales the shape vertically; width is unchanged. */
-  transform: translateY(3%) scaleY(calc(var(--aa-hero-wave-base) * var(--aa-hero-wave-scale, 1)));
+  /* "Wave height" scales the shape vertically (width unchanged). "Wave offset"
+     slides it down by a share of its own height; the hero clips the rest. */
+  transform:
+    translateY(calc(3% + var(--aa-hero-wave-offset, 0%) * var(--aa-hero-wave-base) * var(--aa-hero-wave-scale, 1)))
+    scaleY(calc(var(--aa-hero-wave-base) * var(--aa-hero-wave-scale, 1)));
   z-index: calc(var(--layer-flat) + 1);
   background: rgb(var(--color-background-rgb));
   pointer-events: none;
