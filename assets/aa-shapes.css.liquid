@@ -158,11 +158,12 @@
   --aa-hero-wave-base: 0.8;
 }
 
-/* Asymmetrical wave: the curve used above the contact form, flipped to frame
-   the bottom of the media. */
+/* Asymmetrical wave: frames the bottom of videos and photos; rises on the
+   right, away from left-aligned hero text. (Section-background waves, such as
+   the one behind Contact, use edge-wave-rect-straight.svg instead.) */
 .hero__container--wave-asymmetrical {
-  --aa-hero-wave-mask: url('{{ "edge-wave-rect-straight-bottom.svg" | asset_url }}');
-  --aa-hero-wave-ratio: 1200 / 400;
+  --aa-hero-wave-mask: url('{{ "hero-wave-asymmetrical.svg" | asset_url }}');
+  --aa-hero-wave-ratio: 1205 / 200;
   --aa-hero-wave-base: 1;
 }
 
