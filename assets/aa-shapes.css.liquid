@@ -147,9 +147,25 @@
    Toggle via the Hero section's "Wavy bottom edge" setting. Masks a band of
    the hero's own colour-scheme background over the bottom of the media, so
    the wave reads as a frame around the media rather than a hard crop.
-   The wave's size depends only on the page width, so it sits the same in
-   every hero only when heroes share the homepage's proportions: section
-   height "Full screen" and 160px bottom padding (Places matches). */
+   "Wave shape" picks the curve and "Wave height" flattens it (100% = the
+   original proportions). With the defaults, the wave's size depends only on
+   the page width, so heroes match the homepage when they share its
+   proportions: section height "Full screen" and 160px bottom padding. */
+.hero__container--wave-bottom {
+  /* Rolling wave (default): the homepage's wave. */
+  --aa-hero-wave-mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}');
+  --aa-hero-wave-ratio: 4096 / 559;
+  --aa-hero-wave-base: 0.8;
+}
+
+/* Contact wave: the same curve as the contact section, flipped to frame
+   the bottom of the media. */
+.hero__container--wave-straight {
+  --aa-hero-wave-mask: url('{{ "edge-wave-rect-straight-bottom.svg" | asset_url }}');
+  --aa-hero-wave-ratio: 1200 / 700;
+  --aa-hero-wave-base: 1;
+}
+
 .hero__container--wave-bottom::before,
 .hero__container--wave-bottom::after {
   content: '';
@@ -157,13 +173,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  aspect-ratio: 4096 / 559;
+  aspect-ratio: var(--aa-hero-wave-ratio);
   transform-origin: bottom;
-  transform: translateY(3%) scaleY(0.8);
+  /* "Wave height" setting scales the shape vertically; width is unchanged. */
+  transform: translateY(3%) scaleY(calc(var(--aa-hero-wave-base) * var(--aa-hero-wave-scale, 1)));
   z-index: calc(var(--layer-flat) + 1);
   background: rgb(var(--color-background-rgb));
   pointer-events: none;
 
-  -webkit-mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}') center / 100% 100% no-repeat;
-  mask: url('{{ "hero-wave-bottom-01.svg" | asset_url }}') center / 100% 100% no-repeat;
+  -webkit-mask: var(--aa-hero-wave-mask) center / 100% 100% no-repeat;
+  mask: var(--aa-hero-wave-mask) center / 100% 100% no-repeat;
 }
