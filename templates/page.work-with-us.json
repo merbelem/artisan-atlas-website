@@ -201,7 +201,7 @@
         "link_label": "Meet the artisans",
         "link_url": "/pages/artisans",
         "header_alignment": "center",
-        "motif": "floral-8",
+        "motif": "none",
         "motif_position": "top-left",
         "color_scheme": "scheme-1",
         "wave_top": "none",
