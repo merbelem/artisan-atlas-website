@@ -11,25 +11,36 @@
       -%}
       {% render 'aa-section-header', settings: s, heading_tag: s.heading_level, heading_class: heading_class %}
       {%- if s.email != blank or s.instagram_url != blank -%}
-        <div class="aa-contact__direct">
-          {%- if s.details_heading != blank -%}
-            <p class="aa-contact__direct-heading">{{ s.details_heading }}</p>
+        <ul class="aa-contact__icons list-unstyled" role="list">
+          {%- if s.email != blank -%}
+            <li>
+              <a
+                class="aa-contact__icon-link"
+                href="mailto:{{ s.email }}"
+                aria-label="{{ 'aa.contact.email_label' | t }}: {{ s.email }}"
+              >
+                <svg class="aa-contact__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  {%- render 'icon', icon: 'mailto' -%}
+                </svg>
+              </a>
+            </li>
           {%- endif -%}
-          <ul class="aa-contact__details list-unstyled" role="list">
-            {%- if s.email != blank -%}
-              <li>
-                <span class="aa-contact__label">{{ 'aa.contact.email_label' | t }}</span>
-                <a class="aa-link" href="mailto:{{ s.email }}">{{ s.email }}</a>
-              </li>
-            {%- endif -%}
-            {%- if s.instagram_url != blank -%}
-              <li>
-                <span class="aa-contact__label">{{ 'aa.contact.instagram_label' | t }}</span>
-                <a class="aa-link" href="{{ s.instagram_url }}" target="_blank" rel="noopener">{{ s.instagram_label | default: 'Instagram' }}</a>
-              </li>
-            {%- endif -%}
-          </ul>
-        </div>
+          {%- if s.instagram_url != blank -%}
+            <li>
+              <a
+                class="aa-contact__icon-link"
+                href="{{ s.instagram_url }}"
+                target="_blank"
+                rel="noopener"
+                aria-label="{{ 'aa.contact.instagram_label' | t }}: {{ s.instagram_label }}"
+              >
+                <svg class="aa-contact__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                  {%- render 'icon', icon: 'instagram' -%}
+                </svg>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
       {%- endif -%}
     </div>
     <div class="aa-contact__form">
@@ -46,31 +57,31 @@
     gap: var(--aa-space-2xl) clamp(2rem, 6vw, 6rem);
   }
 
-  .aa-contact__direct {
-    margin-top: var(--aa-space-2xl);
-  }
-
-  .aa-contact__direct-heading {
-    margin: 0 0 var(--aa-space-md);
-    font-family: var(--aa-font-display);
-    font-size: var(--aa-step-1);
-  }
-
-  .aa-contact__details {
-    margin: 0;
+  .aa-contact__icons {
+    display: flex;
+    gap: var(--aa-space-xs);
+    margin: var(--aa-space-2xl) 0 0 -8px;
     padding: 0;
-    display: grid;
-    gap: var(--aa-space-md);
   }
 
-  .aa-contact__label {
-    display: block;
-    margin-bottom: var(--aa-space-2xs);
-    font-size: var(--aa-step--2);
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: rgb(var(--color-foreground-rgb) / .7);
+  /* 44px tap target around a 28px icon; the negative margin above keeps the
+     first icon aligned with the text. */
+  .aa-contact__icon-link {
+    display: inline-flex;
+    padding: 8px;
+    color: var(--color-foreground);
+    transition: color .2s var(--aa-ease);
+  }
+
+  .aa-contact__icon-link:hover,
+  .aa-contact__icon-link:focus-visible {
+    color: var(--color-primary);
+  }
+
+  .aa-contact__icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
   }
 
   @media screen and (min-width: 990px) {
@@ -131,12 +142,6 @@
     },
     {
       "type": "text",
-      "id": "details_heading",
-      "label": "Heading above contact details",
-      "default": "Or write to us directly"
-    },
-    {
-      "type": "text",
       "id": "email",
       "label": "Email",
       "default": "connect@theartisanatlas.com"
@@ -149,8 +154,9 @@
     {
       "type": "text",
       "id": "instagram_label",
-      "label": "Instagram label",
-      "default": "@the.artisanatlas"
+      "label": "Instagram handle",
+      "default": "@the.artisanatlas",
+      "info": "Read out by screen readers with the Instagram icon."
     },
     {
       "type": "header",
