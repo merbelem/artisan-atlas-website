@@ -45,7 +45,7 @@
             "text_HtUjt4": {
               "type": "text",
               "settings": {
-                "text": "<h1>Oaxaca, Mexico</h1>",
+                "text": "<h1>Meet the makers</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -70,7 +70,7 @@
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
-                "text": "<p>Places</p>",
+                "text": "<p>Our artisans · Oaxaca, Mexico</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -138,10 +138,10 @@
     "intro": {
       "type": "aa-text-media",
       "settings": {
-        "eyebrow": "Where we begin",
-        "heading": "Two workshops, one in red clay and one in wool",
+        "eyebrow": "Who we work with",
+        "heading": "A women's collective in red clay, a family workshop in wool",
         "heading_size": "h2",
-        "body": "<p>In the valleys and hills of Oaxaca, craft is part of daily life: towns that have shaped clay for generations, and weaving communities that keep Zapotec textile traditions alive.</p><p>This is where Artisan Atlas begins.</p>",
+        "body": "<p>Artisan Atlas works directly with the people who make each piece. In Oaxaca we begin with two groups: a women's pottery collective in San Marcos Tlapazola, and a family weaving workshop in Teotitlán del Valle.</p><p>Their technique, their pace and their knowledge shape everything we develop together.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
@@ -163,10 +163,10 @@
     "clay": {
       "type": "aa-text-media",
       "settings": {
-        "eyebrow": "San Marcos Tlapazola · Red clay",
-        "heading": "Clay from the hills above the village",
+        "eyebrow": "The potters · San Marcos Tlapazola",
+        "heading": "Women shaping red clay entirely by hand",
         "heading_size": "h2",
-        "body": "<p>A women's pottery collective shapes every piece entirely by hand. The red clay is dug by hand from the hills above the village, mixed with river sand for strength, and kneaded to draw out the air.</p><p>There is no glaze and no paint. Pieces are burnished with river stones and finished with thin layers of red clay, dried in the shade, then fired in the open air, where the smoke leaves marks no two pieces share.</p>",
+        "body": "<p>The potters are a collective of women who shape every piece by hand, with techniques passed down through generations. They dig the red clay from the hills above the village, mix it with river sand for strength, and knead it to draw out the air.</p><p>There is no glaze and no paint. They burnish each piece with river stones, dry it in the shade, and fire it in the open air, where the smoke leaves marks no two pieces share.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
@@ -232,8 +232,8 @@
         "step_5"
       ],
       "settings": {
-        "eyebrow": "From hill to table",
-        "heading": "How a piece of red clay is made",
+        "eyebrow": "How they work",
+        "heading": "From the hillside to the table, by hand",
         "intro": "",
         "link_label": "",
         "link_url": "",
@@ -253,10 +253,10 @@
     "wool": {
       "type": "aa-text-media",
       "settings": {
-        "eyebrow": "Teotitlán del Valle · Wool",
-        "heading": "Woven on the pedal loom",
+        "eyebrow": "The weavers · Teotitlán del Valle",
+        "heading": "A family weaving workshop at the pedal loom",
         "heading_size": "h2",
-        "body": "<p>A family weaving workshop works on the pedal loom: feet set the warp, hands pass the shuttle. Patterns are kept in memory or lightly sketched, so even with the same design, no two pieces are identical.</p><p>Every colour is naturally dyed: reds and pinks from cochineal, blues from indigo, yellows and oranges from pericón and marigold, browns from walnut.</p>",
+        "body": "<p>In a family-run workshop, spinning, dyeing and weaving are shared within the family. They weave on the pedal loom: feet set the warp, hands pass the shuttle. Patterns are kept in memory, so even with the same design, no two pieces are identical.</p><p>Every colour is naturally dyed: reds and pinks from cochineal, blues from indigo, yellows and oranges from pericón and marigold, browns from walnut.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
@@ -279,7 +279,7 @@
       "type": "aa-statement",
       "settings": {
         "eyebrow": "",
-        "statement": "No two pieces are identical. The variation is the mark of the hand.",
+        "statement": "Every piece carries the hand of the person who made it.",
         "attribution": "",
         "link_label": "",
         "link_url": "",
@@ -302,7 +302,7 @@
           "settings": {
             "title": "Colección Tierra",
             "text": "<p>Red clay tableware: large and medium plates, soup and pasta bowls, and a cup. Shaped by hand without molds, and fired in the open air.</p><p>Prototypes are being made now.</p>",
-            "kicker": "Red clay · San Marcos Tlapazola"
+            "kicker": "With the potters of San Marcos Tlapazola"
           }
         },
         "piece_2": {
@@ -310,7 +310,7 @@
           "settings": {
             "title": "Wool rugs",
             "text": "<p>Organically shaped rugs, hand-woven wool on a cotton warp and naturally dyed, designed together with the workshop.</p><p>In design.</p>",
-            "kicker": "Wool · Teotitlán del Valle"
+            "kicker": "With the weavers of Teotitlán del Valle"
           }
         }
       },
@@ -341,7 +341,7 @@
       "type": "aa-statement",
       "settings": {
         "eyebrow": "",
-        "statement": "More places to come. We add artisan groups slowly, and only where we can build a long-term partnership.",
+        "statement": "More artisans to come. We add artisan groups slowly, and only where we can build a long-term partnership.",
         "attribution": "",
         "link_label": "Work with us",
         "link_url": "/pages/work-with-us",

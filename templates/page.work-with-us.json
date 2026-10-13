@@ -4,7 +4,7 @@
       "type": "aa-text-media",
       "settings": {
         "eyebrow": "Work with us",
-        "heading": "Pieces made with artisan communities, for your spaces",
+        "heading": "Work with the makers behind the pieces",
         "heading_size": "h1",
         "body": "<p>We develop pieces with artisan groups for shops, hotels, restaurants and the people who design their spaces.</p><p>Every collection starts with a conversation: about your space, and about what the makers do best.</p>",
         "button_label": "Start a conversation",
@@ -22,63 +22,6 @@
         "wave_top": "none",
         "anchor_id": "",
         "padding-block-start": 80,
-        "padding-block-end": 64
-      }
-    },
-    "audience": {
-      "type": "aa-list",
-      "blocks": {
-        "audience_1": {
-          "type": "_aa-list-item",
-          "settings": {
-            "title": "Boutiques and concept stores",
-            "text": "<p>Pieces in small runs, with the story behind them.</p>"
-          }
-        },
-        "audience_2": {
-          "type": "_aa-list-item",
-          "settings": {
-            "title": "Hotels, restaurants and spas",
-            "text": "<p>Rooms and tables furnished with handmade work.</p>"
-          }
-        },
-        "audience_3": {
-          "type": "_aa-list-item",
-          "settings": {
-            "title": "Interior designers and architects",
-            "text": "<p>Sourcing for residential and commercial projects.</p>"
-          }
-        },
-        "audience_4": {
-          "type": "_aa-list-item",
-          "settings": {
-            "title": "Galleries and curated spaces",
-            "text": "<p>Objects shown as the craft they are.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "audience_1",
-        "audience_2",
-        "audience_3",
-        "audience_4"
-      ],
-      "settings": {
-        "eyebrow": "Who we work with",
-        "heading": "For spaces that want their rooms to hold a story",
-        "intro": "",
-        "link_label": "",
-        "link_url": "",
-        "header_alignment": "start",
-        "layout": "columns",
-        "columns": 4,
-        "numbered": false,
-        "motif": "none",
-        "motif_position": "top-left",
-        "color_scheme": "scheme-1",
-        "wave_top": "none",
-        "anchor_id": "",
-        "padding-block-start": 32,
         "padding-block-end": 64
       }
     },
@@ -139,65 +82,6 @@
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "wave_top": "soft",
         "anchor_id": "what-we-do",
-        "padding-block-start": 64,
-        "padding-block-end": 64
-      }
-    },
-    "where_we_work": {
-      "type": "aa-shaped-gallery",
-      "blocks": {
-        "place_1": {
-          "type": "_aa-shaped-image",
-          "settings": {
-            "image": "shopify://shop_images/hand_holding_muitle.png",
-            "shape": "stack",
-            "caption": "Red clay, shaped by hand",
-            "place": "San Marcos Tlapazola"
-          }
-        },
-        "place_2": {
-          "type": "_aa-shaped-image",
-          "settings": {
-            "shape": "arch",
-            "caption": "Burnished with river stones",
-            "place": "San Marcos Tlapazola"
-          }
-        },
-        "place_3": {
-          "type": "_aa-shaped-image",
-          "settings": {
-            "shape": "vase-wide",
-            "caption": "Wool on the pedal loom",
-            "place": "Teotitlán del Valle"
-          }
-        },
-        "place_4": {
-          "type": "_aa-shaped-image",
-          "settings": {
-            "shape": "circle",
-            "caption": "Dyed with plants and cochineal",
-            "place": "Teotitlán del Valle"
-          }
-        }
-      },
-      "block_order": [
-        "place_1",
-        "place_2",
-        "place_3",
-        "place_4"
-      ],
-      "settings": {
-        "eyebrow": "Where we work",
-        "heading": "From Oaxaca",
-        "intro": "<p>Two collections, in clay and in wool, are in development. We add artisan groups slowly and only where we can build a long-term partnership.</p>",
-        "link_label": "",
-        "link_url": "",
-        "header_alignment": "center",
-        "motif": "floral-8",
-        "motif_position": "top-left",
-        "color_scheme": "scheme-1",
-        "wave_top": "none",
-        "anchor_id": "where-we-work",
         "padding-block-start": 64,
         "padding-block-end": 64
       }
@@ -267,6 +151,65 @@
         "padding-block-end": 80
       }
     },
+    "where_we_work": {
+      "type": "aa-shaped-gallery",
+      "blocks": {
+        "place_1": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "image": "shopify://shop_images/hand_holding_muitle.png",
+            "shape": "stack",
+            "caption": "Red clay, shaped by hand",
+            "place": "San Marcos Tlapazola"
+          }
+        },
+        "place_2": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "arch",
+            "caption": "Burnished with river stones",
+            "place": "San Marcos Tlapazola"
+          }
+        },
+        "place_3": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "vase-wide",
+            "caption": "Wool on the pedal loom",
+            "place": "Teotitlán del Valle"
+          }
+        },
+        "place_4": {
+          "type": "_aa-shaped-image",
+          "settings": {
+            "shape": "circle",
+            "caption": "Dyed with plants and cochineal",
+            "place": "Teotitlán del Valle"
+          }
+        }
+      },
+      "block_order": [
+        "place_1",
+        "place_2",
+        "place_3",
+        "place_4"
+      ],
+      "settings": {
+        "eyebrow": "Where we work",
+        "heading": "From Oaxaca",
+        "intro": "<p>Two collections, in clay and in wool, are in development. We add artisan groups slowly and only where we can build a long-term partnership.</p>",
+        "link_label": "Meet the artisans",
+        "link_url": "/pages/places",
+        "header_alignment": "center",
+        "motif": "floral-8",
+        "motif_position": "top-left",
+        "color_scheme": "scheme-1",
+        "wave_top": "none",
+        "anchor_id": "where-we-work",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
     "practicalities": {
       "type": "aa-faq",
       "blocks": {
@@ -308,7 +251,7 @@
       "settings": {
         "eyebrow": "Questions",
         "heading": "Practicalities",
-        "intro": "",
+        "intro": "<p>The details depend on the makers, the pieces and your space, so we will always talk them through with you. <a href=\"#contact-us\" title=\"Connect\">Write to us</a></p>",
         "link_label": "",
         "link_url": "",
         "color_scheme": "scheme-1",
@@ -372,10 +315,9 @@
   },
   "order": [
     "intro",
-    "audience",
     "services",
-    "where_we_work",
     "working_together",
+    "where_we_work",
     "practicalities",
     "contact"
   ]
