@@ -48,66 +48,14 @@
         "wave_top": "none",
         "anchor_id": "contact-us",
         "padding-block-start": 120,
-        "padding-block-end": 128,
+        "padding-block-end": 64,
         "heading_level": "h1",
         "motif": "none",
         "motif_position": "bottom-left"
       }
-    },
-    "practicalities": {
-      "type": "aa-faq",
-      "blocks": {
-        "faq_1": {
-          "type": "_aa-faq-item",
-          "settings": {
-            "question": "Is there a minimum order?",
-            "answer": "<p>Minimums depend on the piece and the workshop. We'll suggest a quantity that works for you and for the makers.</p>"
-          }
-        },
-        "faq_2": {
-          "type": "_aa-faq-item",
-          "settings": {
-            "question": "How long does production take?",
-            "answer": "<p>Handmade pieces take time. We agree a realistic timeline with the makers before you commit, and keep you updated as the work progresses.</p>"
-          }
-        },
-        "faq_3": {
-          "type": "_aa-faq-item",
-          "settings": {
-            "question": "Can pieces be made to our specifications?",
-            "answer": "<p>Often, yes: sizes, colours and quantities can be adapted within each workshop's technique. We'll tell you honestly what's possible.</p>"
-          }
-        },
-        "faq_4": {
-          "type": "_aa-faq-item",
-          "settings": {
-            "question": "Where do you deliver?",
-            "answer": "<p>Tell us where your space is and we'll quote delivery with the order.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4"
-      ],
-      "settings": {
-        "eyebrow": "Questions",
-        "heading": "Practicalities",
-        "intro": "",
-        "link_label": "",
-        "link_url": "",
-        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
-        "wave_top": "soft",
-        "anchor_id": "",
-        "padding-block-start": 96,
-        "padding-block-end": 120
-      }
     }
   },
   "order": [
-    "contact",
-    "practicalities"
+    "contact"
   ]
 }
