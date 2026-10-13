@@ -332,7 +332,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
             "show_phone": false,
-            "message_placeholder": "Let us know how you would like to connect"
+            "message_placeholder": "Let us know how you would like to connect",
+            "privacy_note": "We'll only use your details to reply to you."
           },
           "blocks": {
             "submit-button": {

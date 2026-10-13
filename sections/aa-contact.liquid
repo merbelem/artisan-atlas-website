@@ -11,14 +11,25 @@
       -%}
       {% render 'aa-section-header', settings: s, heading_tag: s.heading_level, heading_class: heading_class %}
       {%- if s.email != blank or s.instagram_url != blank -%}
-        <ul class="aa-contact__details list-unstyled" role="list">
-          {%- if s.email != blank -%}
-            <li><a class="aa-link" href="mailto:{{ s.email }}">{{ s.email }}</a></li>
+        <div class="aa-contact__direct">
+          {%- if s.details_heading != blank -%}
+            <p class="aa-contact__direct-heading">{{ s.details_heading }}</p>
           {%- endif -%}
-          {%- if s.instagram_url != blank -%}
-            <li><a class="aa-link" href="{{ s.instagram_url }}" target="_blank" rel="noopener">{{ s.instagram_label | default: 'Instagram' }}</a></li>
-          {%- endif -%}
-        </ul>
+          <ul class="aa-contact__details list-unstyled" role="list">
+            {%- if s.email != blank -%}
+              <li>
+                <span class="aa-contact__label">{{ 'aa.contact.email_label' | t }}</span>
+                <a class="aa-link" href="mailto:{{ s.email }}">{{ s.email }}</a>
+              </li>
+            {%- endif -%}
+            {%- if s.instagram_url != blank -%}
+              <li>
+                <span class="aa-contact__label">{{ 'aa.contact.instagram_label' | t }}</span>
+                <a class="aa-link" href="{{ s.instagram_url }}" target="_blank" rel="noopener">{{ s.instagram_label | default: 'Instagram' }}</a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
       {%- endif -%}
     </div>
     <div class="aa-contact__form">
@@ -35,11 +46,31 @@
     gap: var(--aa-space-2xl) clamp(2rem, 6vw, 6rem);
   }
 
+  .aa-contact__direct {
+    margin-top: var(--aa-space-2xl);
+  }
+
+  .aa-contact__direct-heading {
+    margin: 0 0 var(--aa-space-md);
+    font-family: var(--aa-font-display);
+    font-size: var(--aa-step-1);
+  }
+
   .aa-contact__details {
-    margin: var(--aa-space-xl) 0 0;
+    margin: 0;
     padding: 0;
     display: grid;
-    gap: var(--aa-space-xs);
+    gap: var(--aa-space-md);
+  }
+
+  .aa-contact__label {
+    display: block;
+    margin-bottom: var(--aa-space-2xs);
+    font-size: var(--aa-step--2);
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgb(var(--color-foreground-rgb) / .7);
   }
 
   @media screen and (min-width: 990px) {
@@ -100,6 +131,12 @@
     },
     {
       "type": "text",
+      "id": "details_heading",
+      "label": "Heading above contact details",
+      "default": "Or write to us directly"
+    },
+    {
+      "type": "text",
       "id": "email",
       "label": "Email",
       "default": "connect@theartisanatlas.com"
@@ -114,6 +151,76 @@
       "id": "instagram_label",
       "label": "Instagram label",
       "default": "@the.artisanatlas"
+    },
+    {
+      "type": "header",
+      "content": "Motif"
+    },
+    {
+      "type": "select",
+      "id": "motif",
+      "label": "Motif",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "floral-8",
+          "label": "Flower"
+        },
+        {
+          "value": "floral-thin-8",
+          "label": "Fine flower"
+        },
+        {
+          "value": "floral-4",
+          "label": "Leaf fan"
+        },
+        {
+          "value": "reef",
+          "label": "Reef"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        }
+      ],
+      "default": "none",
+      "info": "A faint brand shape behind the content."
+    },
+    {
+      "type": "select",
+      "id": "motif_position",
+      "label": "Motif position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        },
+        {
+          "value": "behind",
+          "label": "Centred behind"
+        }
+      ],
+      "default": "bottom-left",
+      "visible_if": "{{ section.settings.motif != 'none' }}"
     },
     {
       "type": "header",

@@ -161,7 +161,7 @@
           {{- 'aa.contact.message_label' | t -}}
         </label>
         <textarea
-          rows="8"
+          rows="5"
           id="{{ form_id }}-body"
           class="contact-form__input contact-form__input--textarea"
           name="contact[body]"
@@ -174,6 +174,10 @@
       </div>
 
       {{ submit_button }}
+
+      {%- if settings.privacy_note != blank -%}
+        <p class="contact-form__note">{{ settings.privacy_note }}</p>
+      {%- endif -%}
     {%- endif -%}
   {%- endform -%}
 </div>
@@ -274,6 +278,12 @@
   /* "I am a…" reads as a placeholder until an option is chosen. */
   .contact-form__form select.contact-form__input:has(option[value='']:checked) {
     color: rgb(var(--color-input-text-rgb) / 0.55);
+  }
+
+  .contact-form__note {
+    margin: 0;
+    font-size: var(--font-size--body-sm, 0.875rem);
+    color: rgb(var(--color-foreground-rgb) / 0.7);
   }
 
   /* Align the button with the fields rather than centring it. */

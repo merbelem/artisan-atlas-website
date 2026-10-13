@@ -14,7 +14,8 @@
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
             "show_phone": false,
-            "message_placeholder": "Let us know how you would like to connect"
+            "message_placeholder": "Let us know how you would like to connect",
+            "privacy_note": "We'll only use your details to reply to you."
           },
           "blocks": {
             "submit-button": {
@@ -49,7 +50,10 @@
         "anchor_id": "contact-us",
         "padding-block-start": 120,
         "padding-block-end": 128,
-        "heading_level": "h1"
+        "heading_level": "h1",
+        "motif": "floral-4",
+        "motif_position": "bottom-left",
+        "details_heading": "Or write to us directly"
       }
     },
     "practicalities": {
