@@ -229,12 +229,22 @@
     color: var(--color-primary);
   }
 
-  /* A bolder Clay outline on invalid fields; the inset shadow doubles the
-     border's weight without changing the field's size. */
-  .contact-form__input:user-invalid,
-  .contact-form__input[aria-invalid='true'] {
-    border-color: var(--color-primary);
-    box-shadow: inset 0 0 0 1px var(--color-primary);
+  /* Invalid fields get a thick Clay outline. base.css draws input borders as
+     an inset shadow on .contact-form__form .contact-form__input, so match its
+     selector (plus the state) to take precedence; size doesn't change. */
+  .contact-form__form .contact-form__input:user-invalid,
+  .contact-form__form .contact-form__input[aria-invalid='true'] {
+    box-shadow: inset 0 0 0 3px var(--color-primary);
+  }
+
+  /* "I am a…" reads as a placeholder until an option is chosen. */
+  .contact-form__form select.contact-form__input:has(option[value='']:checked) {
+    color: rgb(var(--color-input-text-rgb) / 0.55);
+  }
+
+  /* Align the button with the fields rather than centring it. */
+  .contact-form__form .submit-button {
+    margin: 0;
   }
 
   .contact-form__input:user-invalid + .contact-form__hint {
