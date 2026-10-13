@@ -184,7 +184,8 @@
           "settings": {
             "shape": "circle",
             "caption": "Dyed with plants and cochineal",
-            "place": "Teotitlán del Valle"
+            "place": "Teotitlán del Valle",
+            "image": "shopify://shop_images/Colour_Process_Light.png"
           }
         }
       },
