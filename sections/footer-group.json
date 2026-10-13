@@ -97,20 +97,11 @@
                 "footer_mark": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/A.svg",
+                    "image": "shopify://shop_images/Artisan_Atlas.svg",
                     "image_ratio": "adapt",
                     "width": "fit-content",
                     "width_mobile": "fit-content",
-                    "custom_class": "aa-footer-mark"
-                  },
-                  "blocks": {}
-                },
-                "footer_name": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Artisan Atlas</h3>",
-                    "type_preset": "h3",
-                    "font": "var(--font-heading--family)"
+                    "custom_class": "aa-footer-mark aa-footer-wordmark"
                   },
                   "blocks": {}
                 },
@@ -127,7 +118,6 @@
               },
               "block_order": [
                 "footer_mark",
-                "footer_name",
                 "footer_line"
               ]
             },
@@ -256,7 +246,8 @@
               "settings": {
                 "show_powered_by": false,
                 "font_size": "0.75rem",
-                "case": "none"
+                "case": "none",
+                "legal_name": "Artisan Atlas Ltd"
               },
               "blocks": {}
             },
@@ -304,7 +295,8 @@
                 "social_link_nJ8rCy",
                 "social_link_KdaBr8",
                 "social_link_TePPbF"
-              ]
+              ],
+              "disabled": true
             }
           },
           "block_order": []

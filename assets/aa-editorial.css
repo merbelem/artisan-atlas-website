@@ -201,9 +201,11 @@
   opacity: .88;
 }
 
-/* Footer brand mark (the "A"): a small, fixed size whatever the column width. */
-.aa-footer-mark {
-  width: 44px;
+/* ---- Footer ---- */
+
+/* Wordmark: the header logo, at footer size. */
+.aa-footer-wordmark {
+  width: clamp(200px, 22vw, 280px);
 }
 
 .aa-footer-mark img {
@@ -211,8 +213,50 @@
   height: auto;
 }
 
-/* The mark artwork is dark brown; on the dark schemes (Espresso, Clay) tint
+/* The logo artwork is dark brown; on the dark schemes (Espresso, Clay) tint
    it to Sand so it stays visible. */
 :is(.color-scheme-3, .color-scheme-4) .aa-footer-mark img {
   filter: brightness(0) invert(94%) sepia(6%);
+}
+
+/* Column labels use the site's eyebrow style, and all columns start on the
+   same line. (The doubled class outranks the theme's .h5.h5 preset.) */
+footer :is(.menu__heading.menu__heading, .text-block h5) {
+  margin-block-start: 0;
+  padding-block-start: 0;
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--2);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground-rgb) / .75);
+}
+
+/* The menu wraps its label in inner spans with their own type styles. */
+footer .menu__heading * {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+footer .text-block > :first-child {
+  margin-block-start: 0;
+}
+
+/* Quiet links: no underline until hover. */
+footer :is(.text-block, .menu) a {
+  text-decoration: none;
+}
+
+footer :is(.text-block, .menu) a:hover,
+footer :is(.text-block, .menu) a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
+}
+
+/* Bottom row in the body font throughout. */
+footer .footer-utilities :is(a, button, .footer-utilities__text) {
+  font-family: var(--aa-font-body);
 }

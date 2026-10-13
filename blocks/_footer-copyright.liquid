@@ -11,7 +11,7 @@
 >
   <span class="footer-utilities__text">
     &copy; {{ 'now' | date: '%Y' }}
-    {{ shop.name | link_to: routes.root_url -}}
+    {{ block_settings.legal_name | default: shop.name | link_to: routes.root_url -}}
     {%- if block_settings.show_powered_by -%}
       , {{ powered_by_link }}
     {%- endif -%}
@@ -23,6 +23,12 @@
   "name": "t:names.copyright",
   "tag": null,
   "settings": [
+    {
+      "type": "text",
+      "id": "legal_name",
+      "label": "Name",
+      "info": "Shown after the year, e.g. Artisan Atlas Ltd. Leave empty to use the store name."
+    },
     {
       "type": "checkbox",
       "id": "show_powered_by",
