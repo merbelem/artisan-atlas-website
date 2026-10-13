@@ -4,7 +4,7 @@
       "type": "aa-text-media",
       "settings": {
         "eyebrow": "Work with us",
-        "heading": "Work with the makers behind the pieces",
+        "heading": "Your space, their craft",
         "heading_size": "h1",
         "body": "<p>We develop pieces with artisan groups for shops, hotels, restaurants and the people who design their spaces.</p><p>Every collection starts with a conversation: about your space, and about what the makers do best.</p>",
         "button_label": "Start a conversation",
@@ -199,7 +199,7 @@
         "heading": "From Oaxaca",
         "intro": "<p>Two collections, in clay and in wool, are in development. We add artisan groups slowly and only where we can build a long-term partnership.</p>",
         "link_label": "Meet the artisans",
-        "link_url": "/pages/places",
+        "link_url": "/pages/artisans",
         "header_alignment": "center",
         "motif": "floral-8",
         "motif_position": "top-left",
