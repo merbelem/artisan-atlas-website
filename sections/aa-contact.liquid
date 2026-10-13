@@ -3,7 +3,13 @@
 {% capture children %}
   <div class="aa-contact">
     <div class="aa-contact__text">
-      {% render 'aa-section-header', settings: s %}
+      {%- liquid
+        assign heading_class = ''
+        if s.heading_level == 'h1'
+          assign heading_class = 'h2'
+        endif
+      -%}
+      {% render 'aa-section-header', settings: s, heading_tag: s.heading_level, heading_class: heading_class %}
       {%- if s.email != blank or s.instagram_url != blank -%}
         <ul class="aa-contact__details list-unstyled" role="list">
           {%- if s.email != blank -%}
@@ -65,6 +71,23 @@
       "id": "heading",
       "label": "Heading",
       "default": "Start a conversation"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Section heading (H2)"
+        },
+        {
+          "value": "h1",
+          "label": "Page heading (H1)"
+        }
+      ],
+      "default": "h2",
+      "info": "Use Page heading when this is the main heading of the page. Each page should have one."
     },
     {
       "type": "richtext",

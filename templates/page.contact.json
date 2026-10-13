@@ -48,7 +48,8 @@
         "wave_top": "none",
         "anchor_id": "contact-us",
         "padding-block-start": 120,
-        "padding-block-end": 128
+        "padding-block-end": 128,
+        "heading_level": "h1"
       }
     },
     "practicalities": {

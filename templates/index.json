@@ -54,7 +54,7 @@
             "text_HtUjt4": {
               "type": "text",
               "settings": {
-                "text": "<h2>Handmade pieces from artisan communities, developed with the people who make them.</h2>",
+                "text": "<h1>Handmade pieces from artisan communities, developed with the people who make them.</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",

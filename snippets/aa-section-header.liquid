@@ -5,6 +5,7 @@
   @param {object} settings - Section settings with eyebrow, heading, intro, link_label, link_url
   @param {string} [alignment] - 'start' (default) or 'center'
   @param {string} [heading_tag] - 'h2' (default) or 'h1'
+  @param {string} [heading_class] - Extra class for the heading, e.g. 'h2' to keep an h1 at h2 size
 
   @example
   {% render 'aa-section-header', settings: section.settings, alignment: 'center' %}
@@ -25,7 +26,7 @@
       <p class="aa-eyebrow">{{ settings.eyebrow }}</p>
     {%- endif -%}
     {%- if settings.heading != blank -%}
-      <{{ heading_tag }} class="aa-section-header__heading">{{ settings.heading }}</{{ heading_tag }}>
+      <{{ heading_tag }} class="aa-section-header__heading {{ heading_class }}">{{ settings.heading }}</{{ heading_tag }}>
     {%- endif -%}
     {%- if settings.intro != blank -%}
       <div class="aa-section-header__intro aa-prose rte">{{ settings.intro }}</div>
