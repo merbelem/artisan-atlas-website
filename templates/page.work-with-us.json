@@ -21,8 +21,8 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "",
-        "padding-block-start": 120,
-        "padding-block-end": 96
+        "padding-block-start": 80,
+        "padding-block-end": 64
       }
     },
     "audience": {
@@ -78,8 +78,8 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "",
-        "padding-block-start": 48,
-        "padding-block-end": 96
+        "padding-block-start": 32,
+        "padding-block-end": 64
       }
     },
     "services": {
@@ -139,8 +139,8 @@
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "wave_top": "soft",
         "anchor_id": "what-we-do",
-        "padding-block-start": 96,
-        "padding-block-end": 96
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "where_we_work": {
@@ -198,8 +198,8 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "where-we-work",
-        "padding-block-start": 96,
-        "padding-block-end": 96
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "working_together": {
@@ -263,8 +263,8 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "working-together",
-        "padding-block-start": 96,
-        "padding-block-end": 120
+        "padding-block-start": 64,
+        "padding-block-end": 80
       }
     },
     "practicalities": {
@@ -314,8 +314,8 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "",
-        "padding-block-start": 48,
-        "padding-block-end": 120
+        "padding-block-start": 32,
+        "padding-block-end": 80
       }
     },
     "contact": {
@@ -356,17 +356,17 @@
         "form"
       ],
       "settings": {
-        "eyebrow": "Contact",
+        "eyebrow": "Connect",
         "heading": "Start a conversation",
-        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We will reply personally.</p>",
+        "intro": "<p>Tell us about your shop or your space, and what you are looking for. We read every message and reply personally.</p>",
         "email": "connect@theartisanatlas.com",
         "instagram_url": "https://www.instagram.com/the.artisanatlas/",
         "instagram_label": "@the.artisanatlas",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "wave_top": "straight",
         "anchor_id": "contact-us",
-        "padding-block-start": 96,
-        "padding-block-end": 128
+        "padding-block-start": 64,
+        "padding-block-end": 88
       }
     }
   },
