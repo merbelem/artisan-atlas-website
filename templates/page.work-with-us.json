@@ -334,8 +334,8 @@
         "place_1": {
           "type": "_aa-shaped-image",
           "settings": {
-            "image": "shopify://shop_images/clay_hands.png",
-            "shape": "vase-wide",
+            "image": "shopify://shop_images/shaping_product_wide.png",
+            "shape": "circle",
             "caption": "Red clay, shaped by hand",
             "place": "San Marcos Tlapazola",
             "link": ""
@@ -345,8 +345,8 @@
         "place_2": {
           "type": "_aa-shaped-image",
           "settings": {
-            "image": "shopify://shop_images/donated_oven.png",
-            "shape": "arch",
+            "image": "shopify://shop_images/Donated_Oven.png",
+            "shape": "vase-wide",
             "caption": "Burnished with river stones",
             "place": "San Marcos Tlapazola",
             "link": ""
@@ -357,7 +357,7 @@
           "type": "_aa-shaped-image",
           "settings": {
             "image": "shopify://shop_images/Isabel_at_Loom_Light.png",
-            "shape": "vase-wide",
+            "shape": "short-arch-bowl",
             "caption": "Wool on the pedal loom",
             "place": "Teotitlán del Valle",
             "link": ""
@@ -368,7 +368,7 @@
           "type": "_aa-shaped-image",
           "settings": {
             "image": "shopify://shop_images/Colour_Process_Light.png",
-            "shape": "arch-bowl",
+            "shape": "arch",
             "caption": "Dyed with plants and cochineal",
             "place": "Teotitlán del Valle",
             "link": ""
