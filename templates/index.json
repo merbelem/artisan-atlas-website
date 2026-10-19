@@ -51,6 +51,31 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "text_heroEyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>A studio for craft and interiors</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_HtUjt4": {
               "type": "text",
               "settings": {
@@ -148,31 +173,6 @@
                 "button_trade",
                 "button_where"
               ]
-            },
-            "text_heroEyebrow": {
-              "type": "text",
-              "settings": {
-                "text": "<p>A studio for craft and interiors</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "uppercase",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -206,6 +206,9 @@
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "wave_divider_bottom": true,
+        "wave_bottom_shape": "rolling",
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 0,
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -222,11 +225,12 @@
         "eyebrow": "The studio",
         "heading": "We are a design studio working directly with artisan groups",
         "heading_size": "h2",
+        "heading_level": "auto",
         "body": "<p>We look for craft that grows out of local materials and place, and that is a real source of income for the community around it.</p><p>We start from the techniques each group already uses, and develop pieces together. Quantities, timelines and pricing are agreed with the makers.</p>",
         "button_label": "How we work",
         "button_link": "#how-we-work",
         "button_style": "button-secondary",
-        "image": "shopify://shop_images/home-decor-natural-1-middle.jpg",
+        "image": "shopify://shop_images/Weaver_collaboration_Wide_2.png",
         "shape": "arch",
         "image_side": "right",
         "media_width": "medium",
@@ -243,6 +247,7 @@
     },
     "aa_pieces": {
       "type": "aa-pieces",
+      "disabled": true,
       "settings": {
         "eyebrow": "Colección Tierra",
         "heading": "Pieces in development",
@@ -250,6 +255,7 @@
         "link_label": "",
         "link_url": "",
         "header_alignment": "start",
+        "collection": "",
         "products_to_show": 6,
         "default_status": "in_development",
         "color_scheme": "scheme-1",
@@ -257,8 +263,7 @@
         "anchor_id": "",
         "padding-block-start": 96,
         "padding-block-end": 96
-      },
-      "disabled": true
+      }
     },
     "aa_services": {
       "type": "aa-list",
@@ -266,34 +271,46 @@
         "service_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For boutiques and concept stores",
             "title": "Wholesale",
             "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready.</p>",
-            "kicker": "For boutiques and concept stores"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For hotels, restaurants and spas",
             "title": "Hospitality curation",
             "text": "<p>Tableware, textiles and objects chosen for your rooms, produced to the makers' capacity.</p>",
-            "kicker": "For hotels, restaurants and spas"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For brands and studios",
             "title": "Bespoke collaborations",
             "text": "<p>Custom collections developed with one or more artisan groups, from first sample to finished piece.</p>",
-            "kicker": "For brands and studios"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For interior designers and architects",
             "title": "Project sourcing",
             "text": "<p>Sizes, colours and quantities for your projects, made within each workshop's technique.</p>",
-            "kicker": "For interior designers and architects"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -346,30 +363,46 @@
         "value_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Prices agreed openly",
-            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>"
-          }
+            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "At the workshop's pace",
-            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>"
-          }
+            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Techniques stay with their makers",
-            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>"
-          }
+            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Local, natural materials",
-            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>"
-          }
+            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -403,15 +436,20 @@
         "form": {
           "type": "contact-form",
           "settings": {
-            "show_trade_fields": true,
             "width": "custom",
             "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
+            "show_trade_fields": true,
+            "show_phone": false,
+            "privacy_note": "",
+            "message_placeholder": "Let us know how you would like to connect",
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
-            "show_phone": false,
-            "message_placeholder": "Let us know how you would like to connect"
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {
@@ -437,10 +475,13 @@
       "settings": {
         "eyebrow": "Connect",
         "heading": "Start a conversation",
+        "heading_level": "h2",
         "intro": "<p>Tell us about your shop or your space, and what you are looking for. We read every message and reply personally.</p>",
         "email": "connect@theartisanatlas.com",
         "instagram_url": "https://www.instagram.com/the.artisanatlas/",
         "instagram_label": "@the.artisanatlas",
+        "motif": "none",
+        "motif_position": "bottom-left",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "wave_top": "straight",
         "anchor_id": "contact-us",
