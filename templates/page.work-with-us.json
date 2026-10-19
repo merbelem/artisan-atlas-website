@@ -334,8 +334,8 @@
         "place_1": {
           "type": "_aa-shaped-image",
           "settings": {
-            "image": "shopify://shop_images/hand_holding_muitle.png",
-            "shape": "stack",
+            "image": "shopify://shop_images/clay_hands.png",
+            "shape": "vase-wide",
             "caption": "Red clay, shaped by hand",
             "place": "San Marcos Tlapazola",
             "link": ""
@@ -345,6 +345,7 @@
         "place_2": {
           "type": "_aa-shaped-image",
           "settings": {
+            "image": "shopify://shop_images/donated_oven.png",
             "shape": "arch",
             "caption": "Burnished with river stones",
             "place": "San Marcos Tlapazola",
@@ -367,7 +368,7 @@
           "type": "_aa-shaped-image",
           "settings": {
             "image": "shopify://shop_images/Colour_Process_Light.png",
-            "shape": "circle",
+            "shape": "arch-bowl",
             "caption": "Dyed with plants and cochineal",
             "place": "Teotitlán del Valle",
             "link": ""
