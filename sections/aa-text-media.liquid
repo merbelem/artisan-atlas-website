@@ -4,6 +4,9 @@
   if s.heading_size == 'h1'
     assign heading_tag = 'h1'
   endif
+  if s.heading_level != blank and s.heading_level != 'auto'
+    assign heading_tag = s.heading_level
+  endif
 -%}
 
 {% capture children %}
@@ -126,6 +129,27 @@
         }
       ],
       "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_level",
+      "label": "Heading level",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Automatic"
+        },
+        {
+          "value": "h1",
+          "label": "Page heading (H1)"
+        },
+        {
+          "value": "h2",
+          "label": "Section heading (H2)"
+        }
+      ],
+      "default": "auto",
+      "info": "Automatic makes Large headings the page heading. Choose Section heading when a video header above already has the page heading."
     },
     {
       "type": "richtext",

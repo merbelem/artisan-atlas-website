@@ -1,9 +1,144 @@
 {
   "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "group_heroCta": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 28,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_HtUjt4": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>The studio</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_heroEyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Craft · Culture · Care</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_heroEyebrow",
+            "text_HtUjt4"
+          ]
+        }
+      },
+      "block_order": [
+        "group_heroCta"
+      ],
+      "name": "Hero",
+      "settings": {
+        "media_type_1": "video",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "wave_divider_bottom": true,
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 160,
+        "video_1": "shopify://files/videos/Oaxaca nature.mp4",
+        "wave_bottom_shape": "asymmetrical",
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 60
+      }
+    },
     "intro": {
       "type": "aa-text-media",
       "settings": {
-        "eyebrow": "The studio",
+        "eyebrow": "",
         "heading": "A studio for craft and interiors",
         "heading_size": "h1",
         "body": "<p>Artisan Atlas is a design studio working directly with artisan groups. We develop contemporary pieces with them, rooted in the techniques and materials each group already uses.</p><p>We make them for shops, hotels, restaurants and the people who design their spaces. Founded in the UK in 2024, we are beginning in Oaxaca, Mexico.</p>",
@@ -21,8 +156,9 @@
         "color_scheme": "scheme-1",
         "wave_top": "none",
         "anchor_id": "",
-        "padding-block-start": 120,
-        "padding-block-end": 96
+        "padding-block-start": 64,
+        "padding-block-end": 96,
+        "heading_level": "h2"
       }
     },
     "pillars": {
@@ -196,6 +332,7 @@
     }
   },
   "order": [
+    "hero",
     "intro",
     "pillars",
     "statement",
