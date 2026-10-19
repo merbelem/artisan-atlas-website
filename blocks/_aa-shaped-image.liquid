@@ -1,0 +1,97 @@
+<li class="aa-scroller__item" {{ block.shopify_attributes }}>
+  {% render 'aa-shaped-image',
+    image: block.settings.image,
+    shape: block.settings.shape,
+    caption: block.settings.caption,
+    place: block.settings.place,
+    link: block.settings.link,
+    sizes: '(min-width: 750px) 300px, 60vw'
+  %}
+</li>
+
+{% schema %}
+{
+  "name": "Shaped image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "shape",
+      "label": "Shape",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "circle-in-square",
+          "label": "Circle in square"
+        },
+        {
+          "value": "stack",
+          "label": "Stacked waves"
+        },
+        {
+          "value": "arch-bowl",
+          "label": "Bowl over cup"
+        },
+        {
+          "value": "short-arch-bowl",
+          "label": "Bowl over arch"
+        },
+        {
+          "value": "bowl-circle",
+          "label": "Circle over bowl"
+        },
+        {
+          "value": "vase-tall",
+          "label": "Tall vase"
+        },
+        {
+          "value": "vase-wide",
+          "label": "Wide vase"
+        },
+        {
+          "value": "vase-pedestal",
+          "label": "Pedestal"
+        }
+      ],
+      "default": "arch"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "info": "Who or what is shown"
+    },
+    {
+      "type": "text",
+      "id": "place",
+      "label": "Place"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shaped image"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

@@ -27,7 +27,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 48,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -54,6 +54,73 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "footer_brand": {
+              "type": "group",
+              "name": "Menus",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "flex-start",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "width": "custom",
+                "custom_width": 40,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "footer_mark": {
+                  "type": "image",
+                  "settings": {
+                    "image": "shopify://shop_images/Artisan_Atlas.svg",
+                    "image_ratio": "adapt",
+                    "width": "fit-content",
+                    "width_mobile": "fit-content",
+                    "custom_class": "aa-footer-mark aa-footer-wordmark"
+                  },
+                  "blocks": {}
+                },
+                "footer_line": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A studio for craft and interiors, working directly with artisan communities. Beginning in Oaxaca, Mexico.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "max_width": "narrow"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "footer_mark",
+                "footer_line"
+              ]
+            },
             "group_CPh9EU": {
               "type": "group",
               "name": "Menus",
@@ -67,9 +134,9 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 64,
                 "width": "custom",
-                "custom_width": 50,
+                "custom_width": 45,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -97,18 +164,17 @@
                 "menu_yiQQfm": {
                   "type": "menu",
                   "name": "t:names.menu",
-                  "disabled": true,
                   "settings": {
-                    "menu": "footer",
-                    "heading": "Shop",
+                    "menu": "new-site-menu",
+                    "heading": "Explore",
                     "menu_spacing": 12,
                     "show_as_accordion": false,
                     "accordion_icon": "caret",
                     "accordion_dividers": false,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
-                    "heading_preset": "h4",
-                    "link_preset": "h5",
+                    "heading_preset": "h5",
+                    "link_preset": "paragraph",
                     "padding-block-start": 0,
                     "padding-block-end": 12,
                     "padding-inline-start": 0,
@@ -116,55 +182,19 @@
                   },
                   "blocks": {}
                 },
-                "menu_MYcwzY": {
-                  "type": "menu",
-                  "name": "t:names.menu",
-                  "disabled": true,
+                "footer_connect": {
+                  "type": "text",
                   "settings": {
-                    "menu": "",
-                    "heading": "Learn",
-                    "menu_spacing": 12,
-                    "show_as_accordion": false,
-                    "accordion_icon": "caret",
-                    "accordion_dividers": false,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "heading_preset": "h4",
-                    "link_preset": "h5",
-                    "padding-block-start": 0,
-                    "padding-block-end": 12,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "menu_7KHG7D": {
-                  "type": "menu",
-                  "name": "t:names.menu",
-                  "disabled": true,
-                  "settings": {
-                    "menu": "",
-                    "heading": "Connect",
-                    "menu_spacing": 12,
-                    "show_as_accordion": false,
-                    "accordion_icon": "caret",
-                    "accordion_dividers": false,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "heading_preset": "h4",
-                    "link_preset": "h5",
-                    "padding-block-start": 0,
-                    "padding-block-end": 12,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "text": "<h5>Connect</h5><p><a href=\"mailto:connect@theartisanatlas.com\">connect@theartisanatlas.com</a></p><p><a href=\"https://www.instagram.com/the.artisanatlas/\">Instagram</a></p>",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)"
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
                 "menu_yiQQfm",
-                "menu_MYcwzY",
-                "menu_7KHG7D"
+                "footer_connect"
               ]
             },
             "email_signup_RrJwUL": {
@@ -175,7 +205,7 @@
                 "width": "custom",
                 "custom_width": 34,
                 "inherit_color_scheme": true,
-                "heading": "Sign up for our newsletter",
+                "heading": "Occasional updates from the studio",
                 "heading_preset": "h4",
                 "color_scheme": "",
                 "border_style": "underline",
@@ -196,6 +226,7 @@
             }
           },
           "block_order": [
+            "footer_brand",
             "group_CPh9EU",
             "email_signup_RrJwUL"
           ]
@@ -215,7 +246,8 @@
               "settings": {
                 "show_powered_by": false,
                 "font_size": "0.75rem",
-                "case": "none"
+                "case": "none",
+                "legal_name": "Artisan Atlas Ltd"
               },
               "blocks": {}
             },
@@ -263,7 +295,8 @@
                 "social_link_nJ8rCy",
                 "social_link_KdaBr8",
                 "social_link_TePPbF"
-              ]
+              ],
+              "disabled": true
             }
           },
           "block_order": []
@@ -285,7 +318,7 @@
         "gap": 64,
         "section_width": "page-width",
         "section_height": "",
-        "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
+        "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
