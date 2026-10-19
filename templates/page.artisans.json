@@ -51,31 +51,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_HtUjt4": {
-              "type": "text",
-              "settings": {
-                "text": "<h1>Meet the makers</h1>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
@@ -89,6 +64,31 @@
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_HtUjt4": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Meet the makers</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
                 "wrap": "pretty",
                 "color": "",
                 "background": false,
@@ -114,6 +114,7 @@
       "name": "Hero",
       "settings": {
         "media_type_1": "video",
+        "video_1": "shopify://files/videos/Oaxaca nature.mp4",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -130,6 +131,9 @@
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "wave_divider_bottom": true,
+        "wave_bottom_shape": "asymmetrical",
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 60,
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -137,11 +141,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 160,
-        "video_1": "shopify://files/videos/Oaxaca nature.mp4",
-        "wave_bottom_shape": "asymmetrical",
-        "wave_bottom_height": 100,
-        "wave_bottom_offset": 60
+        "padding-block-end": 160
       }
     },
     "intro": {
@@ -150,6 +150,7 @@
         "eyebrow": "Who we work with",
         "heading": "A women's collective in red clay, a family workshop in wool",
         "heading_size": "h2",
+        "heading_level": "auto",
         "body": "<p>Artisan Atlas works directly with the people who make each piece. In Oaxaca we begin with two groups: a women's pottery collective in San Marcos Tlapazola, and a family weaving workshop in Teotitlán del Valle.</p><p>Their technique, their pace and their knowledge shape everything we develop together.</p>",
         "button_label": "",
         "button_link": "",
@@ -175,12 +176,13 @@
         "eyebrow": "The potters · San Marcos Tlapazola",
         "heading": "Women shaping red clay entirely by hand",
         "heading_size": "h2",
+        "heading_level": "auto",
         "body": "<p>The potters are a collective of women who shape every piece by hand, with techniques passed down through generations. They dig the red clay from the hills above the village, mix it with river sand for strength, and knead it to draw out the air.</p><p>There is no glaze and no paint. They burnish each piece with river stones, dry it in the shade, and fire it in the open air, where the smoke leaves marks no two pieces share.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
-        "image": "",
-        "shape": "stack",
+        "image": "shopify://shop_images/shaping_product.png",
+        "shape": "arch-bowl",
         "image_side": "left",
         "media_width": "medium",
         "caption": "Red clay, shaped by hand",
@@ -200,37 +202,57 @@
         "step_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Dig",
-            "text": "<p>Clay is dug by hand from the hills above the village.</p>"
-          }
+            "text": "<p>Clay is dug by hand from the hills above the village.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Prepare",
-            "text": "<p>It is soaked, mixed with river sand, and kneaded by hand to remove the air.</p>"
-          }
+            "text": "<p>It is soaked, mixed with river sand, and kneaded by hand to remove the air.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Shape",
-            "text": "<p>Each piece is shaped by hand, with corn cobs, leather and wooden tools.</p>"
-          }
+            "text": "<p>Each piece is shaped by hand, with corn cobs, leather and wooden tools.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Burnish",
-            "text": "<p>Thin layers of red clay are polished with river stones, in place of a glaze.</p>"
-          }
+            "text": "<p>Thin layers of red clay are polished with river stones, in place of a glaze.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_5": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Fire",
-            "text": "<p>Pieces are fired in the open air; the smoke leaves its own marks.</p>"
-          }
+            "text": "<p>Pieces are fired in the open air; the smoke leaves its own marks.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -265,6 +287,7 @@
         "eyebrow": "The weavers · Teotitlán del Valle",
         "heading": "A family weaving workshop at the pedal loom",
         "heading_size": "h2",
+        "heading_level": "auto",
         "body": "<p>In a family-run workshop, spinning, dyeing and weaving are shared within the family. They weave on the pedal loom: feet set the warp, hands pass the shuttle. Patterns are kept in memory, so even with the same design, no two pieces are identical.</p><p>Every colour is naturally dyed: reds and pinks from cochineal, blues from indigo, yellows and oranges from pericón and marigold, browns from walnut.</p>",
         "button_label": "",
         "button_link": "",
@@ -309,18 +332,24 @@
         "piece_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "With the potters of San Marcos Tlapazola",
             "title": "Colección Tierra",
             "text": "<p>Red clay tableware: large and medium plates, soup and pasta bowls, and a cup. Shaped by hand without molds, and fired in the open air.</p><p>Prototypes are being made now.</p>",
-            "kicker": "With the potters of San Marcos Tlapazola"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "piece_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "With the weavers of Teotitlán del Valle",
             "title": "Wool rugs",
             "text": "<p>Organically shaped rugs, hand-woven wool on a cotton warp and naturally dyed, designed together with the workshop.</p><p>In design.</p>",
-            "kicker": "With the weavers of Teotitlán del Valle"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
