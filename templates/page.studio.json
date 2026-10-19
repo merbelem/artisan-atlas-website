@@ -252,6 +252,7 @@
     },
     "founder": {
       "type": "aa-text-media",
+      "disabled": true,
       "settings": {
         "eyebrow": "Founder",
         "heading": "Maria-Belem Woodford",
