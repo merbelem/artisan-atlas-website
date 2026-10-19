@@ -1,0 +1,9 @@
+{%- doc -%}
+  Outputs the wave-edge classes for a section wrapper (see aa-shapes.css.liquid).
+
+  @param {string} wave - 'none', 'straight' or 'soft'
+
+  @example
+  <div class="section{% render 'aa-wave-class', wave: section.settings.wave_top %}">
+{%- enddoc -%}
+{%- if wave == 'straight' %} aa-wave-top{% elsif wave == 'soft' %} aa-wave-top aa-wave-top--soft{% endif -%}

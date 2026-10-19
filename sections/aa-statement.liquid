@@ -1,0 +1,239 @@
+{%- assign s = section.settings -%}
+
+{% capture children %}
+  <figure class="aa-statement-block aa-statement-block--{{ s.alignment }} aa-statement-block--{{ s.size }}">
+    {%- if s.eyebrow != blank -%}
+      <p class="aa-eyebrow">{{ s.eyebrow }}</p>
+    {%- endif -%}
+    <blockquote class="aa-statement">{{ s.statement }}</blockquote>
+    {%- if s.attribution != blank -%}
+      <figcaption class="aa-statement__attribution">{{ s.attribution }}</figcaption>
+    {%- endif -%}
+    {%- if s.link_label != blank and s.link_url != blank -%}
+      <a class="aa-link aa-statement-block__link" href="{{ s.link_url }}">{{ s.link_label }}</a>
+    {%- endif -%}
+  </figure>
+{% endcapture %}
+
+{% render 'aa-section', section: section, children: children, class: 'aa-statement-section' %}
+
+{% stylesheet %}
+  .aa-statement-block {
+    max-width: 56rem;
+    margin: 0;
+  }
+
+  .aa-statement-block--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .aa-statement-block--large .aa-statement {
+    font-size: var(--aa-step-5);
+  }
+
+  .aa-statement-block__link {
+    display: inline-block;
+    margin-top: var(--aa-space-xl);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Statement",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "statement",
+      "label": "Statement",
+      "default": "We begin with the maker's technique, and design from there."
+    },
+    {
+      "type": "text",
+      "id": "attribution",
+      "label": "Attribution"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "start",
+          "label": "Left"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "size",
+      "label": "Size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Motif"
+    },
+    {
+      "type": "select",
+      "id": "motif",
+      "label": "Motif",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "floral-8",
+          "label": "Flower"
+        },
+        {
+          "value": "floral-thin-8",
+          "label": "Fine flower"
+        },
+        {
+          "value": "floral-4",
+          "label": "Leaf fan"
+        },
+        {
+          "value": "reef",
+          "label": "Reef"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "arch",
+          "label": "Arch"
+        }
+      ],
+      "default": "floral-thin-8",
+      "info": "A faint brand shape behind the content."
+    },
+    {
+      "type": "select",
+      "id": "motif_position",
+      "label": "Motif position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        },
+        {
+          "value": "behind",
+          "label": "Centred behind"
+        }
+      ],
+      "default": "behind",
+      "visible_if": "{{ section.settings.motif != 'none' }}"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "select",
+      "id": "wave_top",
+      "label": "Wavy top edge",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "straight",
+          "label": "Wave"
+        },
+        {
+          "value": "soft",
+          "label": "Soft wave"
+        }
+      ],
+      "default": "none",
+      "info": "Curves this section's background up into the Sand page colour above it."
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "For in-page links, e.g. work-with-us"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 128
+    }
+  ],
+  "presets": [
+    {
+      "name": "Statement",
+      "category": "Artisan Atlas"
+    }
+  ],
+  "class": "section-wrapper"
+}
+{% endschema %}

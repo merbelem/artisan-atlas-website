@@ -19,7 +19,7 @@
 %}
 
 {% capture class %}
-  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style {{ block_settings.custom_class }}
+  image-block image-block--{{ block.id }} image-block--height-{{ block_settings.height }} spacing-style size-style {% if block_settings.shape != blank and block_settings.shape != 'none' %}aa-mask aa-mask--{{ block_settings.shape }}{% endif %} {{ block_settings.custom_class }}
 {% endcapture %}
 
 {% capture style %}
@@ -125,10 +125,33 @@
       "label": "t:settings.link"
     },
     {
+      "type": "select",
+      "id": "shape",
+      "label": "Shape",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "arch", "label": "Arch" },
+        { "value": "circle", "label": "Circle" },
+        { "value": "circle-in-square", "label": "Circle in square" },
+        { "value": "stack", "label": "Stacked waves" },
+        { "value": "arch-bowl", "label": "Bowl over cup" },
+        { "value": "short-arch-bowl", "label": "Bowl over arch" },
+        { "value": "bowl-circle", "label": "Circle over bowl" },
+        { "value": "vase-tall", "label": "Tall vase" },
+        { "value": "vase-wide", "label": "Wide vase" },
+        { "value": "vase-pedestal", "label": "Pedestal" },
+        { "value": "band-rounded", "label": "Band – wavy bottom" },
+        { "value": "band-low", "label": "Band – wavy top and bottom" },
+        { "value": "band-wave", "label": "Band – ribbon" }
+      ],
+      "default": "none",
+      "info": "Frames the image in a brand shape. Fixed shapes set their own proportions; bands keep the image ratio."
+    },
+    {
       "type": "text",
       "id": "custom_class",
       "label": "Custom class",
-      "info": "Space-separated CSS classes, e.g. aa-image-circle"
+      "info": "Space-separated CSS classes for one-off styling."
     },
     {
       "type": "header",

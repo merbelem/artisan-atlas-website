@@ -9,7 +9,7 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
   class="section section--{{ section.settings.section_width }}
-  color-{{ section.settings.color_scheme }}{% if anchor == 'contact-us' %} aa-contact-wave{% endif %}{% if section.settings.wave_divider_top %} aa-wave-divider-top{% endif %}"
+  color-{{ section.settings.color_scheme }}{% render 'aa-wave-class', wave: section.settings.wave_top %}"
   {% if anchor != blank %}id="{{ anchor | escape }}"{% endif %}
 
   {% if request.visual_preview_mode %}

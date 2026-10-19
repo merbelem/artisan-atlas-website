@@ -232,8 +232,8 @@
   {% endcomment %}
 
   <div
-    class="hero__container spacing-style section section--full-width{% if section.settings.wave_divider_bottom %} hero__container--wave-bottom{% endif %}"
-    style="      {% render 'spacing-style', settings: section.settings %}"
+    class="hero__container spacing-style section section--full-width{% if section.settings.wave_divider_bottom %} hero__container--wave-bottom hero__container--wave-{{ section.settings.wave_bottom_shape }}{% endif %}"
+    style="      {% render 'spacing-style', settings: section.settings %}{% if section.settings.wave_divider_bottom %} --aa-hero-wave-scale: {{ section.settings.wave_bottom_height | divided_by: 100.0 }}; --aa-hero-wave-offset: {{ section.settings.wave_bottom_offset }}%;{% endif %}"
   >
     {%- if section.settings.link != blank -%}
       <a
@@ -772,6 +772,41 @@
       "label": "Wavy bottom edge",
       "default": false,
       "info": "Masks a wave-shaped band of this section's color over the bottom of the media."
+    },
+    {
+      "type": "select",
+      "id": "wave_bottom_shape",
+      "label": "Wave shape",
+      "options": [
+        { "value": "rolling", "label": "Rolling wave" },
+        { "value": "asymmetrical", "label": "Asymmetrical wave" }
+      ],
+      "default": "rolling",
+      "visible_if": "{{ section.settings.wave_divider_bottom }}"
+    },
+    {
+      "type": "range",
+      "id": "wave_bottom_height",
+      "label": "Wave height",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100,
+      "info": "Flattens the wave so it frames the media without hiding as much of it.",
+      "visible_if": "{{ section.settings.wave_divider_bottom }}"
+    },
+    {
+      "type": "range",
+      "id": "wave_bottom_offset",
+      "label": "Wave offset",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 0,
+      "info": "Slides the wave down past the bottom edge, keeping its shape, so less of the media is covered.",
+      "visible_if": "{{ section.settings.wave_divider_bottom }}"
     },
     {
       "type": "checkbox",

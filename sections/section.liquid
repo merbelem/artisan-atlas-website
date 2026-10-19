@@ -32,11 +32,16 @@
       "info": "Example: signature-product (no spaces)"
     },
     {
-      "type": "checkbox",
-      "id": "wave_divider_top",
+      "type": "select",
+      "id": "wave_top",
       "label": "Wavy top edge",
-      "default": false,
-      "info": "Curves this section's background up into whatever sits above it."
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "straight", "label": "Wave" },
+        { "value": "soft", "label": "Soft wave" }
+      ],
+      "default": "none",
+      "info": "Curves this section's background up into the Sand page colour above it."
     },
     {
       "type": "header",

@@ -1,0 +1,267 @@
+/* ===========================
+   Artisan Atlas – Editorial primitives
+   Small patterns shared by more than one aa- section. Colour always comes
+   from the surrounding colour scheme (--color-*), never from a hex.
+   =========================== */
+
+/* Eyebrow: small label above a heading ("The studio", "From Oaxaca"). */
+.aa-eyebrow {
+  display: block;
+  margin: 0 0 var(--aa-space-md);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--2);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground-rgb) / .75);
+}
+
+/* Caption under shaped or documentary images: who and where. */
+.aa-caption {
+  margin-top: var(--aa-space-sm);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--1);
+  line-height: 1.5;
+  color: rgb(var(--color-foreground-rgb) / .85);
+}
+
+.aa-caption__place {
+  display: block;
+  font-size: var(--aa-step--2);
+  letter-spacing: .06em;
+  color: rgb(var(--color-foreground-rgb) / .7);
+}
+
+/* Spitzkant numerals for services and process steps (01, 02 …). */
+.aa-numeral {
+  display: block;
+  font-family: var(--aa-font-display);
+  font-size: var(--aa-step-3);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+/* Large display statement / pull quote. */
+.aa-statement {
+  margin: 0;
+  font-family: var(--aa-font-display);
+  font-size: var(--aa-step-4);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+.aa-statement__attribution {
+  display: block;
+  margin-top: var(--aa-space-lg);
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--1);
+  letter-spacing: .04em;
+}
+
+/* Comfortable reading width for body copy. */
+.aa-prose {
+  max-width: var(--aa-measure);
+  text-wrap: pretty;
+}
+
+.aa-prose > * + * {
+  margin-top: 1em;
+}
+
+.aa-prose--narrow {
+  max-width: var(--aa-measure-narrow);
+}
+
+/* Fine rule between list items (services, values, process). */
+.aa-rule {
+  border: 0;
+  border-top: 1px solid rgb(var(--color-foreground-rgb) / .2);
+  margin: 0;
+}
+
+/* Quiet text link with an underline that sits away from the baseline. */
+.aa-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
+  transition: color .2s var(--aa-ease);
+}
+
+.aa-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Section reveal: a slow, slight rise. Opt in with .aa-reveal; skipped for
+   reduced motion and in the theme editor, where content must stay visible. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .aa-reveal {
+      animation: aa-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes aa-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Section header: eyebrow, heading, intro, link (snippets/aa-section-header). */
+.aa-section-header {
+  max-width: 48rem;
+}
+
+.aa-section-header > * + * {
+  margin-top: var(--aa-space-md);
+}
+
+.aa-section-header__heading {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.aa-section-header__link {
+  display: inline-block;
+  margin-top: var(--aa-space-lg);
+}
+
+.aa-section-header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.aa-section-header--center .aa-prose {
+  margin-inline: auto;
+}
+
+/* Horizontal row that scrolls with snap points; centres when it fits.
+   Used by the shaped gallery and the pieces row. */
+.aa-scroller {
+  --aa-scroller-item: clamp(200px, 24vw, 300px);
+
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  justify-content: safe center;
+  margin: var(--aa-space-2xl) 0 0;
+  padding: 0 0 var(--aa-space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-foreground-rgb) / .25) transparent;
+  overscroll-behavior-x: contain;
+}
+
+.aa-scroller:focus-visible {
+  outline: 1px solid var(--color-foreground);
+  outline-offset: 6px;
+}
+
+.aa-scroller__item {
+  flex: 0 0 var(--aa-scroller-item);
+  scroll-snap-align: start;
+}
+
+/* Shaped image (snippets/aa-shaped-image). */
+.aa-shaped-image {
+  margin: 0;
+}
+
+.aa-shaped-image__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Stand-in until an image is chosen: a faint fill in the brand shape. */
+.aa-shaped-image__placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--aa-shape-ratio, 4 / 5);
+  background: rgb(var(--color-foreground-rgb) / .1);
+}
+
+.aa-shaped-image__link {
+  display: block;
+  transition: opacity .3s var(--aa-ease);
+}
+
+.aa-shaped-image__link:hover {
+  opacity: .88;
+}
+
+/* ---- Footer ---- */
+
+/* Wordmark: the header logo, at footer size. */
+.aa-footer-wordmark {
+  width: clamp(200px, 22vw, 280px);
+}
+
+.aa-footer-mark img {
+  width: 100%;
+  height: auto;
+}
+
+/* The logo artwork is dark brown; on the dark schemes (Espresso, Clay) tint
+   it to Sand so it stays visible. */
+:is(.color-scheme-3, .color-scheme-4) .aa-footer-mark img {
+  filter: brightness(0) invert(94%) sepia(6%);
+}
+
+/* Column labels use the site's eyebrow style, and all columns start on the
+   same line. (The doubled class outranks the theme's .h5.h5 preset.) */
+footer :is(.menu__heading.menu__heading, .text-block h5) {
+  margin-block-start: 0;
+  padding-block-start: 0;
+  font-family: var(--aa-font-body);
+  font-size: var(--aa-step--2);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-foreground-rgb) / .75);
+}
+
+/* The menu wraps its label in inner spans with their own type styles. */
+footer .menu__heading * {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+footer .text-block > :first-child {
+  margin-block-start: 0;
+}
+
+/* Quiet links: no underline until hover. */
+footer :is(.text-block, .menu) a {
+  text-decoration: none;
+}
+
+/* Every footer link behaves the same on hover: colour stays, an underline
+   appears. The theme's paragraph-link rule (base.css) would otherwise fade
+   the underline out and recolour links that sit inside a <p>; the doubled
+   classes and :not() outrank it. */
+footer :is(.text-block.text-block, .menu.menu) a:not(.button):is(:hover, :focus-visible) {
+  color: var(--color-primary);
+  text-decoration-line: underline;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .3em;
+}
+
+/* Bottom row in the body font throughout. */
+footer .footer-utilities :is(a, button, .footer-utilities__text) {
+  font-family: var(--aa-font-body);
+}
