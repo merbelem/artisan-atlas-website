@@ -374,13 +374,26 @@
             "link": ""
           },
           "blocks": {}
+        },
+        "aa_shaped_image_UPLnmA": {
+          "type": "_aa-shaped-image",
+          "name": "Shaped image",
+          "settings": {
+            "image": "shopify://shop_images/Yarn.png",
+            "shape": "stack",
+            "caption": "Yarn colors",
+            "place": "Teotitlán del Valle",
+            "link": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "place_1",
         "place_2",
         "place_3",
-        "place_4"
+        "place_4",
+        "aa_shaped_image_UPLnmA"
       ],
       "settings": {
         "eyebrow": "Where we work",
