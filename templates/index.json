@@ -139,40 +139,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-                "button_trade": {
-                  "type": "button",
-                  "settings": {
-                    "label": "Start a conversation",
-                    "link": "#contact-us",
-                    "open_in_new_tab": false,
-                    "style_class": "button",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                },
-                "button_where": {
-                  "type": "button",
-                  "settings": {
-                    "label": "Work with us",
-                    "link": "/pages/work-with-us",
-                    "open_in_new_tab": false,
-                    "style_class": "button-secondary",
-                    "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "button_trade",
-                "button_where"
-              ]
+              "blocks": {}
             }
           },
           "block_order": [
