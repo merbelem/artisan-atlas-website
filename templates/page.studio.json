@@ -51,31 +51,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_HtUjt4": {
-              "type": "text",
-              "settings": {
-                "text": "<h1>The studio</h1>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
@@ -89,6 +64,31 @@
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_HtUjt4": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>The studio</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
                 "wrap": "pretty",
                 "color": "",
                 "background": false,
@@ -114,6 +114,7 @@
       "name": "Hero",
       "settings": {
         "media_type_1": "video",
+        "video_1": "shopify://files/videos/Oaxaca urban.mp4",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -130,6 +131,9 @@
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "wave_divider_bottom": true,
+        "wave_bottom_shape": "asymmetrical",
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 60,
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -137,11 +141,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 160,
-        "video_1": "shopify://files/videos/Oaxaca urban.mp4",
-        "wave_bottom_shape": "asymmetrical",
-        "wave_bottom_height": 100,
-        "wave_bottom_offset": 60
+        "padding-block-end": 160
       }
     },
     "intro": {
@@ -150,11 +150,12 @@
         "eyebrow": "",
         "heading": "A studio for craft and interiors",
         "heading_size": "h1",
+        "heading_level": "h2",
         "body": "<p>Artisan Atlas is a design studio working directly with artisan groups. We develop contemporary pieces with them, rooted in the techniques and materials each group already uses.</p><p>We make them for shops, hotels, restaurants and the people who design their spaces. Founded in the UK in 2024, we are beginning in Oaxaca, Mexico.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
-        "image": "shopify://shop_images/hand_holding_muitle.png",
+        "image": "shopify://shop_images/Pedal_Loom.png",
         "shape": "arch",
         "image_side": "right",
         "media_width": "medium",
@@ -166,8 +167,7 @@
         "wave_top": "none",
         "anchor_id": "",
         "padding-block-start": 64,
-        "padding-block-end": 96,
-        "heading_level": "h2"
+        "padding-block-end": 96
       }
     },
     "pillars": {
@@ -176,23 +176,35 @@
         "pillar_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Craft",
-            "text": "<p>Celebrating handmade processes and natural materials, and the skill it takes to work them by hand.</p>"
-          }
+            "text": "<p>Celebrating handmade processes and natural materials, and the skill it takes to work them by hand.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "pillar_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Culture",
-            "text": "<p>Connecting traditions and their stories, told with the communities who keep them alive.</p>"
-          }
+            "text": "<p>Connecting traditions and their stories, told with the communities who keep them alive.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "pillar_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Care",
-            "text": "<p>Thoughtful, ethical and enduring choices: in what we make, how it is made, and who it supports.</p>"
-          }
+            "text": "<p>Thoughtful, ethical and enduring choices: in what we make, how it is made, and who it supports.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -244,6 +256,7 @@
         "eyebrow": "Founder",
         "heading": "Maria-Belem Woodford",
         "heading_size": "h2",
+        "heading_level": "auto",
         "body": "<p>A former software engineer turned creative entrepreneur, Maria-Belem founded Artisan Atlas to connect craftsmanship with contemporary living, and to help keep cultural heritage alive through design.</p><p>She works directly with each workshop, in Spanish, English and German.</p>",
         "button_label": "",
         "button_link": "",
@@ -269,30 +282,46 @@
         "value_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Prices agreed openly",
-            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>"
-          }
+            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "At the workshop's pace",
-            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>"
-          }
+            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Techniques stay with their makers",
-            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>"
-          }
+            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "value_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Local, natural materials",
-            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>"
-          }
+            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
