@@ -293,7 +293,7 @@
         "button_link": "",
         "button_style": "button-secondary",
         "image": "shopify://shop_images/Isabel_at_Loom_Light.png",
-        "shape": "vase-wide",
+        "shape": "stack",
         "image_side": "right",
         "media_width": "medium",
         "caption": "At the pedal loom",
