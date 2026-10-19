@@ -51,31 +51,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_HtUjt4": {
-              "type": "text",
-              "settings": {
-                "text": "<h1>Work with us</h1>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
@@ -89,6 +64,31 @@
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "uppercase",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_HtUjt4": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Work with us</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
                 "wrap": "pretty",
                 "color": "",
                 "background": false,
@@ -114,6 +114,7 @@
       "name": "Hero",
       "settings": {
         "media_type_1": "video",
+        "video_1": "shopify://files/videos/Oaxaca clay.mp4",
         "media_type_2": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -130,6 +131,9 @@
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "wave_divider_bottom": true,
+        "wave_bottom_shape": "asymmetrical",
+        "wave_bottom_height": 100,
+        "wave_bottom_offset": 60,
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
@@ -137,11 +141,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 160,
-        "video_1": "shopify://files/videos/Oaxaca clay.mp4",
-        "wave_bottom_shape": "asymmetrical",
-        "wave_bottom_height": 100,
-        "wave_bottom_offset": 60
+        "padding-block-end": 160
       }
     },
     "intro": {
@@ -150,11 +150,12 @@
         "eyebrow": "",
         "heading": "Your space, their craft",
         "heading_size": "h1",
+        "heading_level": "h2",
         "body": "<p>We develop pieces with artisan groups for shops, hotels, restaurants and the people who design their spaces.</p><p>Every collection starts with a conversation: about your space, and about what the makers do best.</p>",
         "button_label": "Start a conversation",
         "button_link": "#contact-us",
         "button_style": "button",
-        "image": "shopify://shop_images/Pedal_Loom.png",
+        "image": "shopify://shop_images/macrina_working_1.png",
         "shape": "arch",
         "image_side": "right",
         "media_width": "medium",
@@ -166,8 +167,7 @@
         "wave_top": "none",
         "anchor_id": "",
         "padding-block-start": 64,
-        "padding-block-end": 64,
-        "heading_level": "h2"
+        "padding-block-end": 64
       }
     },
     "services": {
@@ -176,34 +176,46 @@
         "service_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For boutiques and concept stores",
             "title": "Wholesale",
             "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready. Each piece arrives with the story of where and how it was made.</p>",
-            "kicker": "For boutiques and concept stores"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For hotels, restaurants and spas",
             "title": "Hospitality curation",
             "text": "<p>Tableware, textiles and objects chosen for your rooms and tables, produced to the makers' capacity. We plan quantities and timing with you and the workshop from the start.</p>",
-            "kicker": "For hotels, restaurants and spas"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For brands and studios",
             "title": "Bespoke collaborations",
             "text": "<p>Custom collections developed with one or more artisan groups, from first sample to finished piece. Forms, colours and sizes are designed within each workshop's technique.</p>",
-            "kicker": "For brands and studios"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "service_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "For interior designers and architects",
             "title": "Project sourcing",
             "text": "<p>Sizes, colours and quantities for residential and commercial projects, made within each workshop's technique. We tell you honestly what is possible, and how long it will take.</p>",
-            "kicker": "For interior designers and architects"
-          }
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -237,37 +249,57 @@
         "step_1": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Conversation",
-            "text": "<p>Tell us about your space or your shop, what you need and when.</p>"
-          }
+            "text": "<p>Tell us about your space or your shop, what you need and when.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_2": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Selection",
-            "text": "<p>We match your brief with a workshop whose technique and material fit.</p>"
-          }
+            "text": "<p>We match your brief with a workshop whose technique and material fit.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_3": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Samples",
-            "text": "<p>Prototypes are made and refined with the makers before anything is produced.</p>"
-          }
+            "text": "<p>Prototypes are made and refined with the makers before anything is produced.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_4": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Production",
-            "text": "<p>Pieces are made in small batches, at the pace hand work needs.</p>"
-          }
+            "text": "<p>Pieces are made in small batches, at the pace hand work needs.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         },
         "step_5": {
           "type": "_aa-list-item",
           "settings": {
+            "kicker": "",
             "title": "Delivery",
-            "text": "<p>Each piece arrives with the story of where and how it was made.</p>"
-          }
+            "text": "<p>Each piece arrives with the story of where and how it was made.</p>",
+            "link_label": "",
+            "link_url": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -305,34 +337,42 @@
             "image": "shopify://shop_images/hand_holding_muitle.png",
             "shape": "stack",
             "caption": "Red clay, shaped by hand",
-            "place": "San Marcos Tlapazola"
-          }
+            "place": "San Marcos Tlapazola",
+            "link": ""
+          },
+          "blocks": {}
         },
         "place_2": {
           "type": "_aa-shaped-image",
           "settings": {
             "shape": "arch",
             "caption": "Burnished with river stones",
-            "place": "San Marcos Tlapazola"
-          }
+            "place": "San Marcos Tlapazola",
+            "link": ""
+          },
+          "blocks": {}
         },
         "place_3": {
           "type": "_aa-shaped-image",
           "settings": {
+            "image": "shopify://shop_images/Isabel_at_Loom_Light.png",
             "shape": "vase-wide",
             "caption": "Wool on the pedal loom",
             "place": "Teotitlán del Valle",
-            "image": "shopify://shop_images/Isabel_at_Loom_Light.png"
-          }
+            "link": ""
+          },
+          "blocks": {}
         },
         "place_4": {
           "type": "_aa-shaped-image",
           "settings": {
+            "image": "shopify://shop_images/Colour_Process_Light.png",
             "shape": "circle",
             "caption": "Dyed with plants and cochineal",
             "place": "Teotitlán del Valle",
-            "image": "shopify://shop_images/Colour_Process_Light.png"
-          }
+            "link": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -365,28 +405,32 @@
           "settings": {
             "question": "Is there a minimum order?",
             "answer": "<p>Minimums depend on the piece and the workshop. We'll suggest a quantity that works for you and for the makers.</p>"
-          }
+          },
+          "blocks": {}
         },
         "faq_2": {
           "type": "_aa-faq-item",
           "settings": {
             "question": "How long does production take?",
             "answer": "<p>Handmade pieces take time. We agree a realistic timeline with the makers before you commit, and keep you updated as the work progresses.</p>"
-          }
+          },
+          "blocks": {}
         },
         "faq_3": {
           "type": "_aa-faq-item",
           "settings": {
             "question": "Can pieces be made to our specifications?",
             "answer": "<p>Often, yes: sizes, colours and quantities can be adapted within each workshop's technique. We'll tell you honestly what's possible.</p>"
-          }
+          },
+          "blocks": {}
         },
         "faq_4": {
           "type": "_aa-faq-item",
           "settings": {
             "question": "Where do you deliver?",
             "answer": "<p>Tell us where your space is and we'll quote delivery with the order.</p>"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -414,15 +458,20 @@
         "form": {
           "type": "contact-form",
           "settings": {
-            "show_trade_fields": true,
             "width": "custom",
             "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
+            "show_trade_fields": true,
+            "show_phone": false,
+            "privacy_note": "",
+            "message_placeholder": "Let us know how you would like to connect",
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
-            "show_phone": false,
-            "message_placeholder": "Let us know how you would like to connect"
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {
@@ -448,10 +497,13 @@
       "settings": {
         "eyebrow": "Connect",
         "heading": "Start a conversation",
+        "heading_level": "h2",
         "intro": "<p>Tell us about your shop or your space, and what you are looking for. We read every message and reply personally.</p>",
         "email": "connect@theartisanatlas.com",
         "instagram_url": "https://www.instagram.com/the.artisanatlas/",
         "instagram_label": "@the.artisanatlas",
+        "motif": "none",
+        "motif_position": "bottom-left",
         "color_scheme": "scheme-6569cff2-6bc6-4188-a473-bae0a44e6ac5",
         "wave_top": "straight",
         "anchor_id": "contact-us",
