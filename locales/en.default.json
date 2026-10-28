@@ -337,6 +337,7 @@
       "hint_name": "Please add your name",
       "hint_email": "Please add a valid email address",
       "hint_message": "Please add a short message",
+      "thanks_eyebrow": "Message sent",
       "thanks_heading": "Thank you.",
       "thanks_body": "Your message is with us. We read every message and reply personally.",
       "thanks_link": "Back to the homepage",

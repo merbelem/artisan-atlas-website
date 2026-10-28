@@ -43,7 +43,8 @@
         tabindex="-1"
         autofocus
       >
-        <p class="contact-form__thanks-heading">{{ 'aa.contact.thanks_heading' | t }}</p>
+        <p class="aa-eyebrow">{{ 'aa.contact.thanks_eyebrow' | t }}</p>
+        <p class="contact-form__thanks-heading h2">{{ 'aa.contact.thanks_heading' | t }}</p>
         <p>{{ 'aa.contact.thanks_body' | t }}</p>
         <a class="aa-link" href="{{ routes.root_url }}">{{ 'aa.contact.thanks_link' | t }}</a>
       </div>
@@ -305,11 +306,13 @@
     margin: 0;
   }
 
+  /* Mirrors the section header beside it (eyebrow, heading, text) so the two
+     columns line up: no top padding, same spacing as .aa-section-header. */
   .contact-form__thanks {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
-    padding: var(--padding-xl) 0;
+    align-items: flex-start;
+    gap: var(--aa-space-md);
   }
 
   .contact-form__thanks:focus {
@@ -321,8 +324,6 @@
   }
 
   .contact-form__thanks-heading {
-    font-family: var(--font-heading--family);
-    font-size: var(--font-h3--size);
-    line-height: 1.1;
+    text-wrap: balance;
   }
 {% endstylesheet %}

@@ -69,18 +69,17 @@
       }
     </style>
     <style>
-      /* Fade the header without moving it vertically. Fade in relatively quickly, but fade out slowly. */
+      /* Fade the header without moving it vertically. Fade in relatively quickly, but fade out slowly.
+         Visibility flips only once the fade-out ends, so the links stay clickable while still visible. */
       #header-group > .header-section {
-        transition-property: opacity;
-        transition-duration: 350ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
         will-change: opacity;
       }
 
       #header-group.aa-header-hidden > .header-section {
         opacity: 0;
-        pointer-events: none;
-        transition-duration: 1200ms;
+        visibility: hidden;
+        transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 1200ms;
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -113,22 +112,22 @@
           header.classList.remove('aa-header-hidden');
         };
 
+        // Stay visible at the top of the page, while a nav link has focus, or while the pointer is over the header.
+        const shouldStay = () =>
+          window.scrollY <= topThreshold ||
+          header.contains(document.activeElement) ||
+          header.matches(':hover');
+
         const hideAfterIdle = () => {
           window.clearTimeout(hideTimer);
 
-          if (
-            window.scrollY <= topThreshold ||
-            header.contains(document.activeElement)
-          ) {
+          if (shouldStay()) {
             showHeader();
             return;
           }
 
           hideTimer = window.setTimeout(() => {
-            if (
-              window.scrollY > topThreshold &&
-              !header.contains(document.activeElement)
-            ) {
+            if (!shouldStay()) {
               header.classList.add('aa-header-hidden');
             }
           }, idleDelay);
@@ -139,7 +138,26 @@
           hideAfterIdle();
         };
 
+        // Bring a hidden header back when the pointer moves up into its band.
+        let pointerFrame;
+        const handlePointerMove = (event) => {
+          if (pointerFrame || !header.classList.contains('aa-header-hidden')) return;
+
+          pointerFrame = window.requestAnimationFrame(() => {
+            pointerFrame = null;
+            // #header-group is display: contents, so measure the header section inside it.
+            const band = header.querySelector('.header-section') ?? header;
+            if (event.clientY <= band.getBoundingClientRect().bottom) {
+              showHeader();
+              hideAfterIdle();
+            }
+          });
+        };
+
         window.addEventListener('scroll', handleScroll, { passive: true });
+        document.addEventListener('pointermove', handlePointerMove, { passive: true });
+        header.addEventListener('pointerenter', showHeader);
+        header.addEventListener('pointerleave', hideAfterIdle);
         header.addEventListener('focusin', showHeader);
         header.addEventListener('focusout', hideAfterIdle);
 
