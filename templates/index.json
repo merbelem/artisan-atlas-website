@@ -54,7 +54,7 @@
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
-                "text": "<p>A studio for craft and interiors</p>",
+                "text": "<p>Craft and interiors studio</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -79,7 +79,7 @@
             "text_HtUjt4": {
               "type": "text",
               "settings": {
-                "text": "<h1>Handmade pieces from artisan communities, developed with the people who make them.</h1>",
+                "text": "<h1>Pieces for contemporary interiors, rooted in the people and places that make them.</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -193,7 +193,7 @@
         "heading": "We are a design studio working directly with artisan groups",
         "heading_size": "h2",
         "heading_level": "auto",
-        "body": "<p>We look for craft that grows out of local materials and place, and that is a real source of income for the community around it.</p><p>We start from the techniques each group already uses, and develop pieces together. Quantities, timelines and pricing are agreed with the makers.</p>",
+        "body": "<p>We travel to workshops where craft grows out of local materials and long heritage, and where the work is a real source of income for the community around it.</p><p>Each collection starts with what a group already makes well. We design with the makers, carefully and at their pace, so every piece points back to a real place and the people who shaped it.</p>",
         "button_label": "How we work",
         "button_link": "#how-we-work",
         "button_style": "button-secondary",
@@ -216,9 +216,9 @@
       "type": "aa-pieces",
       "disabled": true,
       "settings": {
-        "eyebrow": "Colección Tierra",
+        "eyebrow": "Tierra Collection · Oaxaca",
         "heading": "Pieces in development",
-        "intro": "<p>Tableware in red clay, shaped by hand without molds and fired in the open air by a women's pottery collective in San Marcos Tlapazola.</p>",
+        "intro": "<p>Tableware in red clay dug from the hills above San Marcos Tlapazola, and shaped by hand by a women's pottery collective.</p>",
         "link_label": "",
         "link_url": "",
         "header_alignment": "start",
@@ -240,7 +240,7 @@
           "settings": {
             "kicker": "For boutiques and concept stores",
             "title": "Wholesale",
-            "text": "<p>Small production runs, sold in batches. Tell us about your shop and we will share the lookbook and terms when the first collections are ready.</p>",
+            "text": "<p>Small, carefully made runs, offered in batches. Tell us about your shop and we'll share the lookbook and terms as the first collections are ready.</p>",
             "link_label": "",
             "link_url": ""
           },
@@ -309,7 +309,7 @@
       "type": "aa-statement",
       "settings": {
         "eyebrow": "",
-        "statement": "We begin with the maker's technique, and design from there.",
+        "statement": "Behind every piece is a maker, and a skill carried through generations.",
         "attribution": "",
         "link_label": "",
         "link_url": "",
@@ -331,19 +331,8 @@
           "type": "_aa-list-item",
           "settings": {
             "kicker": "",
-            "title": "Prices agreed openly",
-            "text": "<p>Quantities, timelines and pricing are agreed with the makers before any work begins.</p>",
-            "link_label": "",
-            "link_url": ""
-          },
-          "blocks": {}
-        },
-        "value_2": {
-          "type": "_aa-list-item",
-          "settings": {
-            "kicker": "",
-            "title": "At the workshop's pace",
-            "text": "<p>Production follows the rhythm of the workshop: hand work, drying, firing and the season.</p>",
+            "title": "Care",
+            "text": "<p>Timelines and prices are agreed with the makers, and follow the rhythm of hand work, drying, firing and the seasons.</p>",
             "link_label": "",
             "link_url": ""
           },
@@ -353,8 +342,8 @@
           "type": "_aa-list-item",
           "settings": {
             "kicker": "",
-            "title": "Techniques stay with their makers",
-            "text": "<p>We design within a tradition, never take it away from the people who hold it.</p>",
+            "title": "Culture",
+            "text": "<p>We design within a tradition, and the technique stays with the people who hold it.</p>",
             "link_label": "",
             "link_url": ""
           },
@@ -364,8 +353,8 @@
           "type": "_aa-list-item",
           "settings": {
             "kicker": "",
-            "title": "Local, natural materials",
-            "text": "<p>Clay dug by hand from the hills above the village. Wool dyed with plants and cochineal.</p>",
+            "title": "Craft",
+            "text": "<p>Local, natural materials: clay from the hills above the village, wool naturally dyed with local plants.</p>",
             "link_label": "",
             "link_url": ""
           },
@@ -373,20 +362,19 @@
         }
       },
       "block_order": [
-        "value_1",
-        "value_2",
+        "value_4",
         "value_3",
-        "value_4"
+        "value_1"
       ],
       "settings": {
         "eyebrow": "How we work",
-        "heading": "Made with the people who make it",
+        "heading": "From their hands, on their terms",
         "intro": "",
         "link_label": "",
         "link_url": "",
         "header_alignment": "start",
         "layout": "columns",
-        "columns": 4,
+        "columns": 3,
         "numbered": false,
         "motif": "floral-4",
         "motif_position": "top-right",

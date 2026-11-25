@@ -177,7 +177,7 @@
         "heading": "Women shaping red clay entirely by hand",
         "heading_size": "h2",
         "heading_level": "auto",
-        "body": "<p>The potters are a collective of women who shape every piece by hand, with techniques passed down through generations. They dig the red clay from the hills above the village, mix it with river sand for strength, and knead it to draw out the air.</p><p>There is no glaze and no paint. They burnish each piece with river stones, dry it in the shade, and fire it in the open air, where the smoke leaves marks no two pieces share.</p>",
+        "body": "<p>The potters are a collective of women who shape every piece by hand, with techniques passed down through generations. They dig the red clay from the hills above the village, mix it with river sand for strength, and knead it to draw out the air.</p><p>There is no glaze and no paint. They burnish each piece with river stones, dry it in the shade, and fire it in the group's kiln.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "button-secondary",
@@ -248,7 +248,7 @@
           "settings": {
             "kicker": "",
             "title": "Fire",
-            "text": "<p>Pieces are fired in the open air; the smoke leaves its own marks.</p>",
+            "text": "<p>Once fully dry, pieces are fired in the group's kiln.</p>",
             "link_label": "",
             "link_url": ""
           },
@@ -334,7 +334,7 @@
           "settings": {
             "kicker": "With the potters of San Marcos Tlapazola",
             "title": "Tierra Collection",
-            "text": "<p>Red clay tableware: large and medium plates, soup and pasta bowls, and a cup. Shaped by hand without molds, and fired in the open air.</p><p>Prototypes are being made now.</p>",
+            "text": "<p>Red clay tableware: large and medium plates, soup and pasta bowls, and a cup. Shaped by hand without molds.</p><p>Prototypes are being made now.</p>",
             "link_label": "",
             "link_url": ""
           },
