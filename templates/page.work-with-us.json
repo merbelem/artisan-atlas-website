@@ -155,7 +155,7 @@
         "button_label": "Start a conversation",
         "button_link": "#contact-us",
         "button_style": "button",
-        "image": "shopify://shop_images/Macrina_polishing.png",
+        "image": "shopify://shop_images/Macrina_polishing_V2.png",
         "shape": "arch",
         "image_side": "right",
         "media_width": "medium",
@@ -334,7 +334,7 @@
         "place_1": {
           "type": "_aa-shaped-image",
           "settings": {
-            "image": "shopify://shop_images/shaping_product_wide.png",
+            "image": "shopify://shop_images/working_with_clay.png",
             "shape": "circle",
             "caption": "Red clay, shaped by hand",
             "place": "San Marcos Tlapazola",
