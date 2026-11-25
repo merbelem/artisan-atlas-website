@@ -54,7 +54,7 @@
             "text_heroEyebrow": {
               "type": "text",
               "settings": {
-                "text": "<p>Our artisans · Oaxaca, Mexico</p>",
+                "text": "<p>The artisans · Oaxaca, Mexico</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
